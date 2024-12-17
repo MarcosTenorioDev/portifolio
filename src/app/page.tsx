@@ -13,7 +13,7 @@ export default function Home() {
           priority
         />
         <p>teste</p>
-        <p className="font-roboto font-bold">teste roboto</p>
+        <p className="font-roboto font-bold border-red-500 border-4">teste roboto</p>
         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2">
             Get started by editing{" "}
