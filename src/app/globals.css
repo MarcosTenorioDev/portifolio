@@ -147,3 +147,53 @@
     pointer-events: none;
   }
 }
+
+/* select class */
+@layer utilities {
+  .clip-custom-select {
+    position: relative;
+    border: 0px solid red;
+    clip-path: polygon(
+      0px 0px,
+      /* Ponto 1: Canto superior esquerdo */ calc(100% - 13px) 0px,
+      /* Ponto 2: Corta 13px da borda superior direita */ 100% 13px,
+      /* Ponto 3: Canto superior direito com corte diagonal */ 100% 100%,
+      /* Ponto 4: Canto inferior direito */ 13px 100%,
+      /* Ponto 5: Corta 13px da borda inferior esquerda */ 0px calc(100% - 13px)
+        /* Ponto 6: Canto inferior esquerdo com corte diagonal */
+    );
+  }
+
+  /* Aplica o estilo da borda somente no modo escuro */
+  .clip-custom-select {
+    border: 2px solid hsl(var(--border));
+  }
+
+  /* Estilo condicional para o pseudo-elemento `::after` no dark mode */
+  .clip-custom-select::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -45px;
+    rotate: 45deg;
+    width: 100px;
+    height: 4px;
+    background-color: hsl(var(--border));
+    border: 2.8px solid hsl(var(--border));
+    pointer-events: none;
+  }
+
+  /* Estilo condicional para o pseudo-elemento `::before` no dark mode */
+  .clip-custom-select::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -45px;
+    rotate: 45deg;
+    width: 100px;
+    height: 4px;
+    background-color: hsl(var(--border));
+    border: 2.8px solid hsl(var(--border));
+    pointer-events: none;
+  }
+}

@@ -11,34 +11,36 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useTranslations } from "next-intl";
 
 export function ModeToggle() {
   const { setTheme } = useTheme();
+  const t = useTranslations("HomePage");
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="link" className="text-white">
           <div className="flex items-center gap-2 transition-all dark:hidden">
-            <p>Light Mode</p>
+            <p>{t('Navbar.LightMode')}</p>
             <Sun />
           </div>
           <div className="items-center gap-2 transition-all hidden dark:flex">
-            <p>Dark Mode</p>
+          <p>{t('Navbar.DarkMode')}</p>
             <Moon />
           </div>
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align="end" className="clip-custom-select p-2 bg-card dark">
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
+        {t('Navbar.Light')}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
+        {t('Navbar.Dark')}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
+        {t('Navbar.System')}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

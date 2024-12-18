@@ -77,7 +77,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: Locale };
 }) {
-  const { locale } = params;
+  const { locale } = await params;
 
   // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale as any)) {

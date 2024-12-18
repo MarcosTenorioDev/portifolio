@@ -1,6 +1,14 @@
 {
     "HomePage": {
-      "title": "Olá Mundo!",
-      "about": "Esta é a página inicial do meu site."
+      "Navbar": {
+        "Projects": "Projetos",
+        "Blog": "Blog",
+        "ContactMe": "Contato",
+        "LightMode": "Modo Claro",
+        "DarkMode": "Modo Escuro",
+        "Light": "Claro",
+        "Dark": "Escuro",
+        "System": "Sistema"
+      }
     }
   }

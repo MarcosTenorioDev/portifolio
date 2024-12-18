@@ -16,7 +16,7 @@ export default function HomePage() {
   return (
     <div className="grid border-4 border-red-500 font-roboto grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <BigNavbar />
-      <h1>{t('title')}</h1>
+      {/* <h1>{t('title')}</h1>
       <Link href="/about">{t('about')}</Link>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Image
@@ -50,7 +50,7 @@ export default function HomePage() {
             </p>
           </div>
         </div>
-      </main>
+      </main> */}
     </div>
   );
 }

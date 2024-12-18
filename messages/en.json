@@ -1,6 +1,14 @@
 {
-    "HomePage": {
-      "title": "Hello world!",
-      "about": "Go to the about page"
+  "HomePage": {
+    "Navbar": {
+      "Projects": "Projects",
+      "Blog": "Blog",
+      "ContactMe": "Contact Me",
+      "LightMode": "Light Mode",
+      "DarkMode": "Dark Mode",
+      "Light": "Light",
+      "Dark": "Dark",
+      "System": "System"
     }
   }
+}

@@ -1,27 +1,29 @@
+import { useTranslations } from "next-intl";
 import LocaleSwitcherButtons from "../LocaleSwitcherButton";
 import { ModeToggle } from "../ModeToggle";
 import { Button } from "../ui/button";
 
 const BigNavbar = () => {
+  const t = useTranslations('HomePage');
   return (
     <div className="clip-custom-card bg-primary p-6 w-full">
       <nav>
         <ul className="flex text-base">
           <li>
             <Button variant={"link"} className="text-white">
-              Projects
+              {t('Navbar.Projects')}
             </Button>
           </li>
           <li>
             {" "}
             <Button variant={"link"} className="text-white">
-              Blog
+            {t('Navbar.Blog')}
             </Button>
           </li>
           <li>
             {" "}
             <Button variant={"link"} className="text-white">
-              Contact-me
+            {t('Navbar.ContactMe')}
             </Button>
           </li>
           <div className="flex-1 flex justify-end">
