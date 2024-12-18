@@ -11,7 +11,8 @@ const ProfileCard = () => {
   const t = useTranslations("HomePage");
 
   return (
-    <Card className="2xl:max-w-[450px] h-full max-h-[500px] 2xl:max-h-[700px] overflow-hidden relative group clip-custom-card">
+    <div className="card-wrap">
+      <Card className="2xl:max-w-[450px] h-full max-h-[500px] 2xl:max-h-[700px] overflow-hidden relative group clip-custom-card">
       <div className="p-8 space-y-4 h-full flex flex-col justify-center items-center">
         {/* Profile Image */}
         <div className="relative 2xl:w-[93%] 2xl:max-w-[450px] mx-auto aspect-square overflow-hidden rounded-lg clip-custom-card">
@@ -41,6 +42,8 @@ const ProfileCard = () => {
         </div>
       </div>
     </Card>
+    </div>
+    
   );
 };
 

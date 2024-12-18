@@ -20,12 +20,12 @@ const SocialMediaButton = ({ icon: Icon, label, href }: SocialMediaButtonProps) 
       <Tooltip>
         <TooltipTrigger asChild>
           <Link href={href} target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" className="bg-transparent border-none shadow-none hover:rounded-xl" size="icon">
-              <Icon className="h-5 w-5" />
+            <Button variant="outline" className="bg-transparent border-none shadow-none rounded-xl" size="icon">
+              <Icon  />
             </Button>
           </Link>
         </TooltipTrigger>
-        <TooltipContent className="rounded-[2px]">
+        <TooltipContent className="rounded-[4px] dark:border-border dark:border" >
           <p>{label}</p>
         </TooltipContent>
       </Tooltip>
