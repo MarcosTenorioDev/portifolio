@@ -9,6 +9,9 @@
         "Light": "Claro",
         "Dark": "Escuro",
         "System": "Sistema"
-      }
+      },
+      "ProfileCard": {
+      "Description": "Um Engenheiro de Software que desenvolveu inúmeras soluções inovadoras."
+    }
     }
   }

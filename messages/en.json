@@ -9,6 +9,9 @@
       "Light": "Light",
       "Dark": "Dark",
       "System": "System"
+    },
+    "ProfileCard": {
+      "Description": "A Software Engineer who has developed countless innovative solutions."
     }
   }
 }

@@ -5,13 +5,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { Github, Linkedin, Mail } from "lucide-react";
 import SocialMediaButton from "./SocialMediaButton";
+import { useTranslations } from "next-intl";
 
 const ProfileCard = () => {
+  const t = useTranslations("HomePage");
+
   return (
-    <Card className="md:max-w-[450px] h-full max-h-[500px] md:max-h-[700px] overflow-hidden relative group clip-custom-card">
+    <Card className="2xl:max-w-[450px] h-full max-h-[500px] 2xl:max-h-[700px] overflow-hidden relative group clip-custom-card">
       <div className="p-8 space-y-4 h-full flex flex-col justify-center items-center">
         {/* Profile Image */}
-        <div className="relative md:w-[93%] md:max-w-[450px] mx-auto aspect-square overflow-hidden rounded-lg clip-custom-card">
+        <div className="relative 2xl:w-[93%] 2xl:max-w-[450px] mx-auto aspect-square overflow-hidden rounded-lg clip-custom-card">
           <Image
             src={Me}
             alt="Profile"
@@ -27,7 +30,7 @@ const ProfileCard = () => {
 
         {/* Description */}
         <p className="text-lg font-medium text-center leading-relaxed">
-          A Software Engineer who has developed countless innovative solutions.
+          {t("ProfileCard.Description")}
         </p>
 
         {/* Social Links */}
