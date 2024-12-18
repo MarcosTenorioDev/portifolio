@@ -1,3 +1,4 @@
+import LocaleSwitcherButtons from "../LocaleSwitcherButton";
 import { ModeToggle } from "../ModeToggle";
 import { Button } from "../ui/button";
 
@@ -25,9 +26,7 @@ const BigNavbar = () => {
           </li>
           <div className="flex-1 flex justify-end">
             <li className="text-white">
-              <Button variant={"link"} className="text-white">
-                pt-br
-              </Button>
+             <LocaleSwitcherButtons label="Change language" />
             </li>
             <li>
               <ModeToggle />
