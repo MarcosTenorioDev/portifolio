@@ -3,64 +3,147 @@
 @tailwind utilities;
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --radius: 0.5rem
+    --background: 239 0% 100%;
+    --foreground: 239 0% 10%;
+    --card: #efefef;
+    --card-foreground: 239 0% 15%;
+    --popover: 239 0% 100%;
+    --popover-foreground: 239 95% 10%;
+    --primary: 239 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 239 10% 90%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 201 10% 95%;
+    --muted-foreground: 239 0% 40%;
+    --accent: 201 10% 90%;
+    --accent-foreground: 239 0% 15%;
+    --destructive: 0 50% 50%;
+    --destructive-foreground: 239 0% 100%;
+    --border: 239 20% 82%;
+    --input: 239 20% 50%;
+    --ring: 239 0% 0%;
+    --radius: 0rem;
   }
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%
+    --background: 239 10% 10%;
+    --foreground: 239 0% 100%;
+    --card: #000000;
+    --card-foreground: 239 0% 100%;
+    --popover: 239 10% 5%;
+    --popover-foreground: 239 0% 100%;
+    --primary: 239 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 239 10% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 201 10% 25%;
+    --muted-foreground: 239 0% 65%;
+    --accent: 201 10% 25%;
+    --accent-foreground: 239 0% 95%;
+    --destructive: 0 50% 50%;
+    --destructive-foreground: 239 0% 100%;
+    --border: 250 0% 100%;
+    --input: 239 20% 50%;
+    --ring: 239 0% 0%;
+    --radius: 0rem;
   }
 }
-@layer base {
-  * {
-    @apply border-border;
+
+/* card class */
+@layer utilities {
+  .clip-custom-card {
+    position: relative;
+    border: 0px solid red;
+    clip-path: polygon(
+      0px 0px,
+      /* Ponto 1: Canto superior esquerdo */ calc(100% - 27px) 0px,
+      /* Ponto 2: Corta 27px da borda superior direita */ 100% 27px,
+      /* Ponto 3: Canto superior direito com corte diagonal */ 100% 100%,
+      /* Ponto 4: Canto inferior direito */ 27px 100%,
+      /* Ponto 5: Corta 27px da borda inferior esquerda */ 0px calc(100% - 27px)
+        /* Ponto 6: Canto inferior esquerdo com corte diagonal */
+    );
   }
-  body {
-    @apply bg-background text-foreground;
+
+  /* Aplica o estilo da borda somente no modo escuro */
+  .dark .clip-custom-card {
+    border: 2px solid hsl(var(--border));
+  }
+
+  /* Estilo condicional para o pseudo-elemento `::after` no dark mode */
+  .dark .clip-custom-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -30px;
+    rotate: 45deg;
+    width: 100px;
+    height: 4px;
+    background-color: hsl(var(--border));
+    border: 2.8px solid hsl(var(--border));
+    pointer-events: none;
+  }
+
+  /* Estilo condicional para o pseudo-elemento `::before` no dark mode */
+  .dark .clip-custom-card::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -30px;
+    rotate: 45deg;
+    width: 100px;
+    height: 4px;
+    background-color: hsl(var(--border));
+    border: 2.8px solid hsl(var(--border));
+    pointer-events: none;
+  }
+}
+
+/* button class */
+@layer utilities {
+  .clip-custom-button {
+    position: relative;
+    border: 0px solid red;
+    clip-path: polygon(
+      0px 0px,
+      /* Ponto 1: Canto superior esquerdo */ calc(100% - 13px) 0px,
+      /* Ponto 2: Corta 13px da borda superior direita */ 100% 13px,
+      /* Ponto 3: Canto superior direito com corte diagonal */ 100% 100%,
+      /* Ponto 4: Canto inferior direito */ 13px 100%,
+      /* Ponto 5: Corta 13px da borda inferior esquerda */ 0px calc(100% - 13px)
+        /* Ponto 6: Canto inferior esquerdo com corte diagonal */
+    );
+  }
+
+  /* Aplica o estilo da borda somente no modo escuro */
+  .dark .clip-custom-button {
+    border: 2px solid hsl(var(--border));
+  }
+
+  /* Estilo condicional para o pseudo-elemento `::after` no dark mode */
+  .dark .clip-custom-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -45px;
+    rotate: 45deg;
+    width: 100px;
+    height: 4px;
+    background-color: hsl(var(--border));
+    border: 2.8px solid hsl(var(--border));
+    pointer-events: none;
+  }
+
+  /* Estilo condicional para o pseudo-elemento `::before` no dark mode */
+  .dark .clip-custom-button::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -45px;
+    rotate: 45deg;
+    width: 100px;
+    height: 4px;
+    background-color: hsl(var(--border));
+    border: 2.8px solid hsl(var(--border));
+    pointer-events: none;
   }
 }
