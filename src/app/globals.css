@@ -92,6 +92,7 @@
     rotate: 45deg;
     width: 100px;
     height: 4px;
+    z-index: 1;
     background-color: hsl(var(--border));
     border: 2.8px solid hsl(var(--border));
     pointer-events: none;

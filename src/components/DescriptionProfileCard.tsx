@@ -5,7 +5,7 @@ import { Card, CardContent, CardFooter } from "./ui/card";
 const DescriptionProfileCard = () => {
     return (
       <div className="card-wrap">
-        <Card className="clip-custom-card w-full pt-6 min-w-[300px] flex flex-col justify-between">
+        <Card className="clip-custom-card w-full pt-6 flex flex-col justify-between">
           <CardContent>
             <p className="sm:text-justify text-center">
               Lorem Ipsum is simply dummy text of the printing and typesetting

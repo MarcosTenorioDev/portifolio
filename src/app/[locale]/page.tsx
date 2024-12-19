@@ -16,13 +16,41 @@ import TechSkillsCard from "@/components/TechSkillsCard";
 import DetailsProfileCard from "@/components/DetailsProfileCard";
 import DescriptionProfileCard from "@/components/DescriptionProfileCard";
 import ExperienceCard from "@/components/ExperienceCardProps";
+import EducationCard from "@/components/EducationCard";
+import unicap from "@/../public/images/academic/unicap-logo.jpeg";
+import unicapBanner from "@/../public/images/academic/banner-unicap.jpeg";
+import fcx from "@/../public/images/academic/fcx-logo.jpeg";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
+
+  const education = [
+    {
+      logo: unicap,
+      title: "Technologist Degree In Internet Systems",
+      institution: "CATHOLIC UNIVERSITY OF PERNAMBUCO",
+      dateRange: "Aug-2022 / Dez-2024",
+      alt: "Catholic University of Pernambuco logo",
+      hoverImage: unicapBanner,
+      description:
+        "The course aims to train professionals capable of developing, implementing and managing web systems, using the most modern technologies and methodologies in the area.",
+    },
+    {
+      logo: fcx,
+      title: "Software Residency, Porto Digital",
+      institution: "Ferreira Costa - FCx Labs",
+      dateRange: "Feb-2023 / Jul-2023 (5 Months)",
+      alt: "Ferreira Costa - FCx Labs logo",
+      hoverImage: unicapBanner,
+      description:
+        "The course aims to train professionals capable of developing, implementing and managing web systems, using the most modern technologies and methodologies in the area.",
+    },
+  ];
+
   return (
-    <div className="grid pb-10 font-roboto max-w-[1680px] mx-auto items-start justify-items-center gap-20 px-10 md:px-20 pt-6">
+    <div className="grid pb-10 font-roboto max-w-[1680px] mx-auto items-start justify-items-center gap-12 px-4 sm:px-10 md:px-20 pt-6">
       <BigNavbar />
-      <div className="w-full mt-6 h-full flex flex-col xl:flex-row gap-10">
+      <div className="w-full h-full flex flex-col xl:flex-row gap-10">
         <div className="w-full">
           <ProfileCard />
         </div>
@@ -37,13 +65,32 @@ export default function HomePage() {
         </div>
       </div>
       <div className="w-full">
-        <h2 className="text-center lg:text-end w-full text-[72px] italic font-bold mb-6">2 YEARS OF <br/>EXPERIENCE</h2>
+        <h2 className="text-center lg:text-end w-full text-[42px] sm:text-[72px] italic font-bold mb-6">
+          2 YEARS OF <br />
+          EXPERIENCE
+        </h2>
         <ExperienceCard
-        title="Direction Systems"
-        subtitle="Desenvolvedor Fullstack"
-        description="Atuei como desenvolvedor fullstack, com experiência em Front-end utilizando Angular, React e Bootstrap, e no Back-end com .NET C#. Durante minha trajetoria, desenvolvi integrações de APIs, implementei gateways de pagamento e contribui ativamente no gerenciamento de projetos. Além disso, trabalhei com metodologias ageis, promovendo uma colaboração eficiente em equipe."
-        dateRange="Nov-2023 / Jul-2024"
-      />
+          title="Direction Systems"
+          subtitle="Desenvolvedor Fullstack"
+          description="Atuei como desenvolvedor fullstack, com experiência em Front-end utilizando Angular, React e Bootstrap, e no Back-end com .NET C#. Durante minha trajetoria, desenvolvi integrações de APIs, implementei gateways de pagamento e contribui ativamente no gerenciamento de projetos. Além disso, trabalhei com metodologias ageis, promovendo uma colaboração eficiente em equipe."
+          dateRange="Nov-2023 / Jul-2024"
+        />
+      </div>
+      <div className="w-full">
+        <h2 className="text-center lg:text-start w-full text-[42px] sm:text-[72px] italic font-bold mb-6">
+          Academic summary <br /> and courses
+        </h2>
+
+        {education.map((edu, index) => {
+          return (
+            <div key={index}>
+              <EducationCard {...edu} />
+              {index < education.length - 1 && (
+                <hr className="my-4 border-t border-muted border-1" />
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
