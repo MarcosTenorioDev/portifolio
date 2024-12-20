@@ -1,53 +1,17 @@
-import { ModeToggle } from "@/components/ModeToggle";
 import BigNavbar from "@/components/Navbars/BigNavbar";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "@/components/ui/card";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
-import { Download, FileDown, Mail } from "lucide-react";
 import ProfileCard from "@/components/ProfileCard";
 import TechSkillsCard from "@/components/TechSkillsCard";
 import DetailsProfileCard from "@/components/DetailsProfileCard";
 import DescriptionProfileCard from "@/components/DescriptionProfileCard";
 import ExperienceCard from "@/components/ExperienceCardProps";
 import EducationCard from "@/components/EducationCard";
-import unicap from "@/../public/images/academic/unicap-logo.jpeg";
-import unicapBanner from "@/../public/images/academic/banner-unicap.jpeg";
-import fcx from "@/../public/images/academic/fcx-logo.jpeg";
 import obon from "@/../public/images/projects/obon/obon-home.png";
 import ProjectCard from "@/components/ProjectCard";
+import { education } from "@/constants/education";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
-
-  const education = [
-    {
-      logo: unicap,
-      title: "Technologist Degree In Internet Systems",
-      institution: "CATHOLIC UNIVERSITY OF PERNAMBUCO",
-      dateRange: "Aug-2022 / Dez-2024",
-      alt: "Catholic University of Pernambuco logo",
-      hoverImage: unicapBanner,
-      description:
-        "The course aims to train professionals capable of developing, implementing and managing web systems, using the most modern technologies and methodologies in the area.",
-    },
-    {
-      logo: fcx,
-      title: "Software Residency, Porto Digital",
-      institution: "Ferreira Costa - FCx Labs",
-      dateRange: "Feb-2023 / Jul-2023 (5 Months)",
-      alt: "Ferreira Costa - FCx Labs logo",
-      hoverImage: unicapBanner,
-      description:
-        "The course aims to train professionals capable of developing, implementing and managing web systems, using the most modern technologies and methodologies in the area.",
-    },
-  ];
 
   return (
     <div className="grid pb-10 font-roboto max-w-[1680px] mx-auto items-start justify-items-center gap-12 px-4 sm:px-10 md:px-20 pt-6">
