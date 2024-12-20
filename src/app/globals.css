@@ -202,3 +202,29 @@
 .card-wrap {
   filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
 }
+
+.overlay:after {
+  content: "";
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
+  height: 300%;
+  width: 300%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2; /* Menor opacidade para um efeito mais sutil */
+  animation: animateGrain 8s steps(10) infinite;
+}
+
+@keyframes animateGrain {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -10%); }
+  20% { transform: translate(-15%, -20%); }
+  30% { transform: translate(-5%, -10%); }
+  40% { transform: translate(-15%, -20%); }
+  50% { transform: translate(-5%, -10%); }
+  60% { transform: translate(-15%, -20%); }
+  70% { transform: translate(-5%, -10%); }
+  80% { transform: translate(-15%, -20%); }
+  90% { transform: translate(-5%, -10%); }
+  100% { transform: translate(-15%, -20%); }
+}

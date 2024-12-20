@@ -20,6 +20,8 @@ import EducationCard from "@/components/EducationCard";
 import unicap from "@/../public/images/academic/unicap-logo.jpeg";
 import unicapBanner from "@/../public/images/academic/banner-unicap.jpeg";
 import fcx from "@/../public/images/academic/fcx-logo.jpeg";
+import obon from "@/../public/images/projects/obon/obon-home.png";
+import ProjectCard from "@/components/ProjectCard";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
@@ -91,6 +93,39 @@ export default function HomePage() {
             </div>
           );
         })}
+      </div>
+      <div className="w-full">
+        <h2 className="text-center lg:text-end w-full text-[42px] sm:text-[72px] italic font-bold">
+          Featured Cases
+        </h2>
+        <h3 className="text-center lg:text-start w-full text-sm md:text-base lg:text-lg text-muted-foreground mx-auto lg:mx-0 italic font-bold mb-6 max-w-[600px]">
+          My creative spirit comes alive in the digital realm. With nimble
+          fingers flying across the keyboard, I craft clear experiences out of
+          nothing but ones and zeroes.
+        </h3>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-10">
+          <ProjectCard
+            imageSrc={obon}
+            subtitle="///Events platform"
+            title="Obon"
+          />
+           <ProjectCard
+            imageSrc={obon}
+            subtitle="///Events platform"
+            title="Obon"
+          />
+          <ProjectCard
+            imageSrc={obon}
+            subtitle="///Events platform"
+            title="Obon"
+          />
+          <ProjectCard
+            imageSrc={obon}
+            subtitle="///Events platform"
+            title="Obon"
+          />
+        </div>
       </div>
     </div>
   );
