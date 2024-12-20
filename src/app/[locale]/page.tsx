@@ -9,6 +9,7 @@ import EducationCard from "@/components/EducationCard";
 import obon from "@/../public/images/projects/obon/obon-home.png";
 import ProjectCard from "@/components/ProjectCard";
 import { education } from "@/constants/education";
+import PostsCard from "@/components/PostsCard";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
@@ -62,7 +63,7 @@ export default function HomePage() {
         <h2 className="text-center lg:text-end w-full text-[42px] sm:text-[72px] italic font-bold">
           Featured Cases
         </h2>
-        <h3 className="text-center lg:text-start w-full text-sm md:text-base lg:text-lg text-muted-foreground mx-auto lg:mx-0 italic font-bold mb-6 max-w-[600px]">
+        <h3 className="text-center lg:text-start w-full text-sm md:text-base lg:text-lg text-muted-foreground mx-auto lg:mx-0 italic font-light mb-6 max-w-[600px]">
           My creative spirit comes alive in the digital realm. With nimble
           fingers flying across the keyboard, I craft clear experiences out of
           nothing but ones and zeroes.
@@ -74,11 +75,6 @@ export default function HomePage() {
             subtitle="///Events platform"
             title="Obon"
           />
-           <ProjectCard
-            imageSrc={obon}
-            subtitle="///Events platform"
-            title="Obon"
-          />
           <ProjectCard
             imageSrc={obon}
             subtitle="///Events platform"
@@ -88,6 +84,50 @@ export default function HomePage() {
             imageSrc={obon}
             subtitle="///Events platform"
             title="Obon"
+          />
+          <ProjectCard
+            imageSrc={obon}
+            subtitle="///Events platform"
+            title="Obon"
+          />
+        </div>
+      </div>
+
+      <div className="w-full">
+        <h2 className="text-center w-full text-[42px] sm:text-[72px] italic font-bold">
+          Latest Posts
+        </h2>
+        <h3 className="text-center w-full text-sm md:text-base lg:text-lg text-muted-foreground mx-auto italic font-light mb-16 max-w-[800px]">
+          Explore insights on tech, health, and psychology.Dive into my blog,
+          where I share bite-sized reflections and practical ideas. If something
+          sparks your curiosity, feel free to reach out—I'd love to chat and
+          hear your thoughts!
+        </h3>
+
+        <div className="flex flex-col gap-8 sm:grid sm:grid-cols-2 sm:gap-y-16 sm:gap-x-8 sm:mx-auto ">
+          <PostsCard
+            alt="Imagem de um computador"
+            description="JavaScript can be a little tricky sometimes, even when you re dealing with simple-lookingJavaScript can be a little tricky sometimes, even when you re dealing with simple-looking"
+            src={obon}
+            title="If You Can Answer These 7 Questions If You Can Answer These 7 Questions"
+          />
+          <PostsCard
+            alt="Imagem de um computador"
+            description="JavaScript can be a little tricky sometimes, even when you re dealing with simple-lookingJavaScript can be a little tricky sometimes, even when you re dealing with simple-looking"
+            src={obon}
+            title="If You Can Answer These 7 Questions If You Can Answer These 7 Questions"
+          />
+          <PostsCard
+            alt="Imagem de um computador"
+            description="JavaScript can be a little tricky sometimes, even when you re dealing with simple-lookingJavaScript can be a little tricky sometimes, even when you re dealing with simple-looking"
+            src={obon}
+            title="If You Can Answer These 7 Questions If You Can Answer These 7 Questions"
+          />
+          <PostsCard
+            alt="Imagem de um computador"
+            description="JavaScript can be a little tricky sometimes, even when you re dealing with simple-lookingJavaScript can be a little tricky sometimes, even when you re dealing with simple-looking"
+            src={obon}
+            title="If You Can Answer These 7 Questions If You Can Answer These 7 Questions"
           />
         </div>
       </div>

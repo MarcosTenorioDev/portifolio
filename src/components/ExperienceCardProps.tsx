@@ -32,9 +32,9 @@ export default function ExperienceCard({
             <p className="text-opacity-70 italic font-light">{subtitle}</p>
           </div>
           
-          <p className="text-sm leading-relaxed">{description}</p>
+          <p className="text-sm leading-relaxed font-no">{description}</p>
 
-          <div className="text-sm font-extrabold">
+          <div className="text-sm font-bold">
             {dateRange}
           </div>
         </div>
