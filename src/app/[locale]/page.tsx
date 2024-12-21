@@ -1,5 +1,4 @@
 import BigNavbar from "@/components/Navbars/BigNavbar";
-import { useTranslations } from "next-intl";
 import ProfileCard from "@/components/ProfileCard";
 import TechSkillsCard from "@/components/TechSkillsCard";
 import DetailsProfileCard from "@/components/DetailsProfileCard";
@@ -16,13 +15,11 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import {
   ExternalLink,
-  SquareArrowOutUpRightIcon,
-  SquareArrowUpRight,
 } from "lucide-react";
 import Footer from "@/components/Footer";
 
 export default function HomePage() {
-  const t = useTranslations("HomePage");
+  /* const t = useTranslations("HomePage"); */
 
   return (
     <>
@@ -111,7 +108,7 @@ export default function HomePage() {
           <h3 className="text-center w-full text-sm md:text-base lg:text-lg text-muted-foreground mx-auto italic font-light mb-16 max-w-[800px]">
             Explore insights on tech, health, and psychology.Dive into my blog,
             where I share bite-sized reflections and practical ideas. If
-            something sparks your curiosity, feel free to reach out—I'd love to
+            something sparks your curiosity, feel free to reach out—I&apos;d love to
             chat and hear your thoughts!
           </h3>
 
@@ -145,7 +142,7 @@ export default function HomePage() {
 
         <div className="w-full md:mt-16 flex flex-col justify-center items-center gap-4">
           <h2 className="text-center w-full text-[42px] sm:text-[72px] italic font-bold">
-            LET'S WORK <br /> TOGETHER
+            LET&apos;S WORK <br /> TOGETHER
           </h2>
 
           <Button

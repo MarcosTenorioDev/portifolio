@@ -104,7 +104,7 @@ export const techs = [
   },
 ];
 
-export default {
+const techIcons = {
   Angular,
   AWSLogo,
   Bootstrap,
@@ -123,3 +123,5 @@ export default {
   TailwindCSSIcon,
   TypeScriptIcon,
 };
+
+export default techIcons;

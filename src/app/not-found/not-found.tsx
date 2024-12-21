@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const NotFound = () => {
@@ -9,12 +10,12 @@ const NotFound = () => {
           <p className="text-lg mb-8">
             Oops! The page you are looking for does not exist.
           </p>
-          <a
+          <Link
             href="/"
             className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
           >
             Go Back Home
-          </a>
+          </Link>
         </div>
       </body>
     </html>

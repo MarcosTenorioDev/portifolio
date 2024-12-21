@@ -1,8 +1,7 @@
 "use client";
 
-import { Locale, routing, usePathname, useRouter } from "@/i18n/routing";
+import { Locale, usePathname, useRouter } from "@/i18n/routing";
 import { useParams } from "next/navigation";
-import { ReactNode } from "react";
 import { Button } from "./ui/button";
 
 type Props = {

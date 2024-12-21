@@ -3,7 +3,7 @@ import { Roboto_Mono } from "next/font/google";
 import "../globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { notFound } from "next/navigation";
-import { Locale, routing } from "@/i18n/routing";
+import { routing } from "@/i18n/routing";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 
@@ -69,6 +69,7 @@ export const metadata: Metadata = {
     images: ["https://avatars.githubusercontent.com/u/107797969?v=4"],
   },
 };
+type Locale = "en" | "pt"; 
 
 export default async function RootLayout({
   children,
@@ -77,10 +78,10 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: Locale };
 }) {
-  const { locale } = await params;
+  const { locale } = params;
 
   // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale)) {
     notFound();
   }
 

@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import { Card } from '@/components/ui/card'
 
 interface ExperienceCardProps {
@@ -17,13 +16,10 @@ export default function ExperienceCard({
   description,
   dateRange,
 }: ExperienceCardProps) {
-  const [isHovered, setIsHovered] = useState(false)
 
   return (
     <Card
       className="relative w-full overflow-hidden transition-all duration-300 border-none font-roboto bg-transparent text-justify shadow-none hover:bg-muted rounded-[4px]"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       <div className="p-6">
         <div className="space-y-4">

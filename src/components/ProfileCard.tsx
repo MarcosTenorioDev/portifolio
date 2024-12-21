@@ -2,7 +2,6 @@ import React from "react";
 import { Card } from "./ui/card";
 import Me from "@/../public/images/me.jpg";
 import Image from "next/image";
-import Link from "next/link";
 import { Github, Linkedin, Mail } from "lucide-react";
 import SocialMediaButton from "./SocialMediaButton";
 import { useTranslations } from "next-intl";
