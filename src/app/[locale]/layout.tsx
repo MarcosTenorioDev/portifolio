@@ -3,7 +3,7 @@ import { Roboto_Mono } from "next/font/google";
 import "../globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
+import { Locale, routing } from "@/i18n/routing";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 
@@ -68,17 +68,16 @@ export const metadata: Metadata = {
       "Desenvolvedor fullstack com experiência em projetos SaaS, React, Next.js, Node.js, Fastify, PostgreSQL, Tailwind CSS e muito mais.",
     images: ["https://avatars.githubusercontent.com/u/107797969?v=4"],
   },
-};
-type Locale = "en" | "pt"; 
+}; 
 
 export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 }) {
-  const { locale } = params;
+  const { locale } = await params;
 
   // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale)) {
