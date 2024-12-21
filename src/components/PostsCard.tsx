@@ -17,8 +17,6 @@ const PostsCard = ({alt, description, src, title}: PostCardProps) => {
             src={src}
             alt={alt}
             className="hover:scale-110 transition-transform duration-300 ease-in-out"
-            layout="fill"
-            objectFit="cover"
           />
         </div>
       </div>
