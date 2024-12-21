@@ -13,10 +13,8 @@ import cyberpunkBoy from "@/../public/images/cyberpunkBoy.svg";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import {
-  ExternalLink,
-} from "lucide-react";
 import Footer from "@/components/Footer";
+import ExternalLink from "@/components/ExternalLink";
 
 export default function HomePage() {
   /* const t = useTranslations("HomePage"); */
@@ -24,7 +22,7 @@ export default function HomePage() {
   return (
     <>
       <div className="grid pb-10 font-roboto max-w-[1680px] mx-auto items-start justify-items-center gap-12 px-4 sm:px-10 md:px-20 pt-6">
-        <BigNavbar />
+        {/* <BigNavbar /> */}
         <div className="w-full h-full flex flex-col xl:flex-row gap-10">
           <div className="w-full">
             <ProfileCard />
@@ -101,15 +99,16 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="w-full">
+        {/* Blog - Coming soon */}
+        {/* <div className="w-full">
           <h2 className="text-center w-full text-[34px] sm:text-[64px] italic font-bold">
             Latest Posts
           </h2>
           <h3 className="text-center w-full text-sm md:text-base lg:text-lg text-muted-foreground mx-auto italic font-light mb-16 max-w-[800px]">
             Explore insights on tech, health, and psychology.Dive into my blog,
             where I share bite-sized reflections and practical ideas. If
-            something sparks your curiosity, feel free to reach out—I&apos;d love to
-            chat and hear your thoughts!
+            something sparks your curiosity, feel free to reach out—I&apos;d
+            love to chat and hear your thoughts!
           </h3>
 
           <div className="flex flex-col gap-8 sm:grid sm:grid-cols-2 sm:gap-y-16 sm:gap-x-8 sm:mx-auto ">
@@ -138,7 +137,7 @@ export default function HomePage() {
               title="If You Can Answer These 7 Questions If You Can Answer These 7 Questions"
             />
           </div>
-        </div>
+        </div> */}
 
         <div className="w-full md:mt-16 flex flex-col justify-center items-center gap-4">
           <h2 className="text-center w-full text-[42px] sm:text-[72px] italic font-bold">
@@ -177,55 +176,24 @@ export default function HomePage() {
           </p>
 
           <div className="flex justify-center items-center gap-4 w-full mt-5">
-            <Link
+            <ExternalLink
+              ariaLabel="Acesse meu perfil no GitHub"
               href={"https://github.com/MarcosTenorioDev"}
-              className="flex items-center justify-center"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Acesse meu perfil no GitHub"
-            >
-              <Button
-                variant={"link"}
-                className="dark:text-white text-md px-2"
-                title="Visite meu GitHub"
-              >
-                Github
-              </Button>
-              <ExternalLink size={28} />
-            </Link>
-            <Link
+              label="Github"
+              title="Acesse meu perfil no GitHub"
+            />
+             <ExternalLink
+              ariaLabel="Acesse meu perfil no GitHub"
               href={"https://github.com/MarcosTenorioDev"}
-              className="flex items-center justify-center"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Acesse meu perfil no GitHub"
-            >
-              <Button
-                variant={"link"}
-                className="dark:text-white text-md px-2"
-                title="Visite meu GitHub"
-              >
-                Github
-              </Button>
-              <ExternalLink size={28} />
-            </Link>
-
-            <Link
+              label="Github"
+              title="Acesse meu perfil no GitHub"
+            />
+             <ExternalLink
+              ariaLabel="Acesse meu perfil no GitHub"
               href={"https://github.com/MarcosTenorioDev"}
-              className="flex items-center justify-center"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Acesse meu perfil no GitHub"
-            >
-              <Button
-                variant={"link"}
-                className="dark:text-white text-md px-2"
-                title="Visite meu GitHub"
-              >
-                Github
-              </Button>
-              <ExternalLink size={28} />
-            </Link>
+              label="Github"
+              title="Acesse meu perfil no GitHub"
+            /> 
           </div>
         </div>
       </div>

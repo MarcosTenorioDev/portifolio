@@ -3,8 +3,8 @@ import { Button } from "./ui/button";
 
 const Footer = () => {
   return (
-    <footer className="w-full border-t py-8 mt-6">
-      <div className="max-w-[1680px] mx-auto flex justify-between items-center">
+    <footer className="w-full border-t py-8 sm:mt-6">
+      <div className="max-w-[1680px] mx-auto flex flex-col sm:flex-row justify-between items-center px-6">
         <div className="w-fit">
           <span className="flex items-center justify-center font-roboto">
             {" "}
@@ -27,14 +27,14 @@ const Footer = () => {
           </span>
         </div>
 
-        <Link
-          href={"#"}
-          className=""
-          aria-label="Go to top"
-        >
-            <Button variant={"link"} className="dark:text-white text-md px-2 font-normal font-roboto" title="Go to top">
-                Go back to top
-            </Button>
+        <Link href={"#"} className="" aria-label="Go to top">
+          <Button
+            variant={"link"}
+            className="dark:text-white text-md px-2 font-normal font-roboto"
+            title="Go to top"
+          >
+            Go back to top
+          </Button>
         </Link>
       </div>
     </footer>
