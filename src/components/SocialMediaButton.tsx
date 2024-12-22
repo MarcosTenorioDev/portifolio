@@ -1,4 +1,3 @@
-import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Tooltip,
   TooltipContent,
@@ -7,7 +6,6 @@ import {
 } from "@/components/ui/tooltip";
 import Link from "next/link";
 import { LucideIcon } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 interface SocialMediaButtonProps {
   icon: LucideIcon;

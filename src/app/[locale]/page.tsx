@@ -8,13 +8,12 @@ import EducationCard from "@/components/EducationCard";
 import obon from "@/../public/images/projects/obon/obon-home.png";
 import ProjectCard from "@/components/ProjectCard";
 import { education } from "@/constants/education";
-import PostsCard from "@/components/PostsCard";
 import cyberpunkBoy from "@/../public/images/cyberpunkBoy.svg";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { Button, buttonVariants } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import ExternalLink from "@/components/ExternalLink";
+import { cn } from "@/lib/utils";
 
 export default function HomePage() {
   /* const t = useTranslations("HomePage"); */
@@ -22,7 +21,7 @@ export default function HomePage() {
   return (
     <>
       <div className="grid pb-10 font-roboto max-w-[1680px] mx-auto items-start justify-items-center gap-12 px-4 sm:px-10 md:px-20 pt-6">
-        {/* <BigNavbar /> */}
+        <BigNavbar />
         <div className="w-full h-full flex flex-col xl:flex-row gap-10">
           <div className="w-full">
             <ProfileCard />
@@ -144,12 +143,21 @@ export default function HomePage() {
             LET&apos;S WORK <br /> TOGETHER
           </h2>
 
-          <Button
-            variant="default"
-            className="clip-custom-button p-6 px-8 font-bold dark:bg-white dark:text-black"
+          <span
+            className={cn(
+              buttonVariants({ variant: "default" }),
+              "clip-custom-button p-6 px-8 font-bold dark:bg-white dark:text-black cursor-pointer relative overflow-hidden group"
+            )}
           >
             Contact now*
-          </Button>
+            <Button
+              variant="default"
+              className="p-6 px-8 font-bold dark:bg-black dark:text-white absolute top-0 -left-[105%] transition-all duration-300 ease-out group-hover:left-0 z-10"
+            >
+              Contact now*
+            </Button>
+          </span>
+
           <div className="w-full flex justify-around items-center">
             <p className="w-[200px] lg:w-[270px] text-center font-light italic hidden sm:flex">
               software is an <br /> outlet for your vision.
@@ -182,18 +190,18 @@ export default function HomePage() {
               label="Github"
               title="Acesse meu perfil no GitHub"
             />
-             <ExternalLink
+            <ExternalLink
               ariaLabel="Acesse meu perfil no GitHub"
               href={"https://github.com/MarcosTenorioDev"}
               label="Github"
               title="Acesse meu perfil no GitHub"
             />
-             <ExternalLink
+            <ExternalLink
               ariaLabel="Acesse meu perfil no GitHub"
               href={"https://github.com/MarcosTenorioDev"}
               label="Github"
               title="Acesse meu perfil no GitHub"
-            /> 
+            />
           </div>
         </div>
       </div>
