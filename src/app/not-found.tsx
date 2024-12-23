@@ -17,7 +17,7 @@ const NotFound = () => {
         quality={100}
         priority
       />
-      <div className="absolute inset-0 flex flex-col justify-between border-[25px] border-black overflow-hidden">
+      <div className="absolute inset-0 flex flex-col justify-between border-[15px] md:border-[25px] border-black overflow-hidden">
         <Link
           href="/"
           passHref
