@@ -34,7 +34,7 @@ export default function EducationCard({
           />
         </div>
 
-        <div className="space-y-1 flex flex-col h-full pt-2 ">
+        <div className="space-y-1 flex flex-col h-[140px] pt-2">
           <h2 className="text-2xl leading-tight font-semibold w-full text-center sm:text-start">{title}</h2>
           <p className="text-sm uppercase text-muted-foreground italic">
             {institution}
