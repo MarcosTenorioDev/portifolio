@@ -3,9 +3,8 @@
 import { useTranslations } from "next-intl";
 import LocaleSwitcherButtons from "../LocaleSwitcherButton";
 import { ModeToggle } from "../ModeToggle";
-import { Button, buttonVariants } from "../ui/button";
+import { Button } from "../ui/button";
 import { useState, useEffect } from "react";
-import { cn } from "@/lib/utils";
 import {
   Sheet,
   SheetClose,

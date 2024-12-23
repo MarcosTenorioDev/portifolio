@@ -10,10 +10,8 @@ import ProjectCard from "@/components/ProjectCard";
 import { education } from "@/constants/education";
 import cyberpunkBoy from "@/../public/images/cyberpunkBoy.svg";
 import Image from "next/image";
-import { Button, buttonVariants } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import ExternalLink from "@/components/ExternalLink";
-import { cn } from "@/lib/utils";
 import ButtonAnimated from "@/components/ButtonAnimated";
 
 export default function HomePage() {

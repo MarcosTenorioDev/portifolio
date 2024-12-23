@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "./ui/button";
-import { Button, ButtonProps } from "@/components/ui/button";  // Importando Button e ButtonProps
+import { ButtonProps } from "@/components/ui/button";  // Importando Button e ButtonProps
 
 interface ButtonAnimatedProps extends ButtonProps {
   className?: string; // Permite personalizar a classe externa
