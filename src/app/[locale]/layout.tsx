@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto_Mono } from "next/font/google";
+import { Roboto_Mono, Space_Grotesk } from "next/font/google";
 import "../globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { notFound } from "next/navigation";
@@ -12,6 +12,13 @@ const robotoMono = Roboto_Mono({
   subsets: ["latin"],
   weight: ["300", "400", "700"],
   style: ["normal", "italic"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-grotesk",
+  subsets: ["latin"],
+  weight: ["700"],
+  style: ["normal"],
 });
 
 export const metadata: Metadata = {
@@ -90,7 +97,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${robotoMono.variable} antialiased`}>
+      <body className={`${robotoMono.variable} ${spaceGrotesk.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

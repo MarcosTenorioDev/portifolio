@@ -27,7 +27,7 @@ const SocialMediaButton = ({
             target="_blank"
             rel="noopener noreferrer"
             className={
-              "bg-transparent border-none rounded-xl shadow-none text-white border border-input hover:bg-accent hover:text-accent-foreground p-3"
+              "bg-transparent border-none rounded-xl shadow-none dark:text-white border border-input hover:bg-accent hover:text-accent-foreground p-3"
             }
           >
             <Icon className="w-6 h-6" />

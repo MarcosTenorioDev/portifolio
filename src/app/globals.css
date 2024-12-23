@@ -5,7 +5,7 @@
   :root {
     --background: 239 0% 100%;
     --foreground: 239 0% 10%;
-    --card: #EFEFEF;
+    --card: #efefef;
     --card-foreground: 239 0% 15%;
     --popover: 239 0% 100%;
     --popover-foreground: 239 95% 10%;
@@ -132,7 +132,7 @@
     background-color: hsl(var(--border));
     border: 2.8px solid hsl(var(--border));
     pointer-events: none;
-    z-index:11
+    z-index: 11;
   }
 
   /* Estilo condicional para o pseudo-elemento `::before` no dark mode */
@@ -147,7 +147,7 @@
     background-color: hsl(var(--border));
     border: 2.8px solid hsl(var(--border));
     pointer-events: none;
-    z-index:11
+    z-index: 11;
   }
 }
 
@@ -217,16 +217,102 @@
   animation: animateGrain 8s steps(10) infinite;
 }
 
-@keyframes animateGrain {
-  0%, 100% { transform: translate(0, 0); }
-  10% { transform: translate(-5%, -10%); }
-  20% { transform: translate(-15%, -20%); }
-  30% { transform: translate(-5%, -10%); }
-  40% { transform: translate(-15%, -20%); }
-  50% { transform: translate(-5%, -10%); }
-  60% { transform: translate(-15%, -20%); }
-  70% { transform: translate(-5%, -10%); }
-  80% { transform: translate(-15%, -20%); }
-  90% { transform: translate(-5%, -10%); }
-  100% { transform: translate(-15%, -20%); }
+.menuBg {
+  content: "";
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
+  height: 300%;
+  width: 300%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.1; /* Menor opacidade para um efeito mais sutil */
+  animation: animateGrain 8s steps(10) infinite;
+  z-index: -1;
 }
+
+@keyframes animateGrain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, -20%);
+  }
+  30% {
+    transform: translate(-5%, -10%);
+  }
+  40% {
+    transform: translate(-15%, -20%);
+  }
+  50% {
+    transform: translate(-5%, -10%);
+  }
+  60% {
+    transform: translate(-15%, -20%);
+  }
+  70% {
+    transform: translate(-5%, -10%);
+  }
+  80% {
+    transform: translate(-15%, -20%);
+  }
+  90% {
+    transform: translate(-5%, -10%);
+  }
+  100% {
+    transform: translate(-15%, -20%);
+  }
+}
+
+
+@layer utilities {
+  .BtnAnimated {
+    position: absolute;
+    border: 1px solid hsl(var(--border));
+    clip-path: polygon(
+      0px 0px,
+      /* Ponto 1: Canto superior esquerdo */ calc(100% - 13px) 0px,
+      /* Ponto 2: Corta 13px da borda superior direita */ 100% 13px,
+      /* Ponto 3: Canto superior direito com corte diagonal */ 100% 100%,
+      /* Ponto 4: Canto inferior direito */ 13px 100%,
+      /* Ponto 5: Corta 13px da borda inferior esquerda */ 0px calc(100% - 13px)
+        /* Ponto 6: Canto inferior esquerdo com corte diagonal */
+    );
+  }
+
+  /* Estilo condicional para o pseudo-elemento `::after` no dark mode */
+  .BtnAnimated::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -43px;
+    rotate: 45deg;
+    width: 100px;
+    height: 4px;
+    background-color: hsl(var(--border));
+    border: 2.3px solid hsl(var(--border));
+    pointer-events: none;
+    z-index: 11;
+  }
+
+  /* Estilo condicional para o pseudo-elemento `::before` no dark mode */
+  .BtnAnimated::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -43px;
+    rotate: 45deg;
+    width: 100px;
+    height: 4px;
+    background-color: hsl(var(--border));
+    border: 2.3px solid hsl(var(--border));
+    pointer-events: none;
+    z-index: 11;
+  }
+}
+
+/* hsl(var(--border))
+ */

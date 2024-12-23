@@ -28,11 +28,11 @@ export default function LocaleSwitcherButtons({ label }: Props) {
     <div
       role="group"
       aria-label={label}
-      className="flex gap-2 justify-center items-center"
+      className="flex gap-2 justify-center items-center w-full h-full"
     >
       <Button
           onClick={() => onLocaleChange(locale === "en" ? "pt" : "en")}
-          className="text-white"
+          className="text-white p-0 w-full h-full"
           aria-label={`Switch to ${locale}`}
           variant={"link"}
         >

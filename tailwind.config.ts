@@ -54,7 +54,10 @@ export default {
   		fontFamily: {
   			roboto: [
   				'var(--font-roboto-mono)'
-  			]
+  			],
+			spaceGrotesk: [
+				'var(--font-grotesk)'
+			]
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

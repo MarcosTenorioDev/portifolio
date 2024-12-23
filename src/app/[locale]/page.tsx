@@ -14,15 +14,16 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import ExternalLink from "@/components/ExternalLink";
 import { cn } from "@/lib/utils";
+import ButtonAnimated from "@/components/ButtonAnimated";
 
 export default function HomePage() {
   /* const t = useTranslations("HomePage"); */
 
   return (
     <>
-      <div className="grid pb-10 font-roboto max-w-[1680px] mx-auto items-start justify-items-center gap-12 px-4 sm:px-10 md:px-20 pt-6">
+      <div className="grid pb-10 font-roboto max-w-[1680px] mx-auto items-start gap-12 px-4 sm:px-10 md:px-20 mt-[52px] md:mt-[145px]">
         <BigNavbar />
-        <div className="w-full h-full flex flex-col xl:flex-row gap-10">
+        <div className="w-full h-full flex flex-col xl:flex-row gap-10 mt-8 md:mt-0">
           <div className="w-full">
             <ProfileCard />
           </div>
@@ -143,21 +144,9 @@ export default function HomePage() {
             LET&apos;S WORK <br /> TOGETHER
           </h2>
 
-          <span
-            className={cn(
-              buttonVariants({ variant: "default" }),
-              "clip-custom-button p-6 px-8 font-bold dark:bg-white dark:text-black cursor-pointer relative overflow-hidden group"
-            )}
-          >
-            Contact now*
-            <Button
-              variant="default"
-              className="p-6 px-8 font-bold dark:bg-black dark:text-white absolute top-0 -left-[105%] transition-all duration-300 ease-out group-hover:left-0 z-10"
-            >
-              Contact now*
-            </Button>
-          </span>
-
+          <div>
+            <ButtonAnimated className="p-6 px-8">Contact now*</ButtonAnimated>
+          </div>
           <div className="w-full flex justify-around items-center">
             <p className="w-[200px] lg:w-[270px] text-center font-light italic hidden sm:flex">
               software is an <br /> outlet for your vision.
@@ -183,7 +172,7 @@ export default function HomePage() {
             user experiences is evident in every project I build.
           </p>
 
-          <div className="flex justify-center items-center gap-4 w-full mt-5">
+          <div className="flex flex-wrap justify-center items-center gap-4 w-full mt-5">
             <ExternalLink
               ariaLabel="Acesse meu perfil no GitHub"
               href={"https://github.com/MarcosTenorioDev"}

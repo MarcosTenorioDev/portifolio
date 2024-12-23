@@ -20,7 +20,7 @@ export function ModeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="link" className="text-white">
+        <Button variant="link" className="dark:text-white md:text-white p-0">
           <div className="flex items-center gap-2 transition-all dark:hidden">
             <p>{t('Navbar.LightMode')}</p>
             <Sun />
