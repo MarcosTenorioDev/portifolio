@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto_Mono, Space_Grotesk } from "next/font/google";
 import "../globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from 'next-themes';
 import { notFound } from "next/navigation";
 import { Locale, routing } from "@/i18n/routing";
 import { getMessages } from "next-intl/server";
