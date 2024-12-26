@@ -97,7 +97,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${robotoMono.variable} ${spaceGrotesk.variable} antialiased`}>
+      <body className={`${robotoMono.variable} ${spaceGrotesk.variable} antialiased bg-background`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

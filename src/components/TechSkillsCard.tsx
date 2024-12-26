@@ -5,7 +5,7 @@ import { techs } from "@/constants/techs";
 
 const TechSkillsCard = () => {
   return (
-    <Card className="clip-custom-card bg-primary text-white">
+    <Card className="clip-custom-card bg-primary text-white !border-black !border-0 dark:!border-border dark:!border-2">
       <CardHeader className="pb-0 w-[97%] mx-auto">
         <h2 className="text-2xl font-bold text-center xl:text-start">
           Lorem Ipsum is simply

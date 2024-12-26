@@ -3,31 +3,31 @@
 @tailwind utilities;
 @layer base {
   :root {
-    --background: 239 0% 100%;
-    --foreground: 239 0% 10%;
-    --card: #efefef;
-    --card-foreground: 239 0% 15%;
-    --popover: 239 0% 100%;
-    --popover-foreground: 239 95% 10%;
-    --primary: 239 0% 0%;
+    --background: 258 100% 99%;
+    --foreground: 258 5% 10%;
+    --card: 258 50% 99%;
+    --card-foreground: 258 5% 15%;
+    --popover: 258 100% 99%;
+    --popover-foreground: 258 100% 10%;
+    --primary: 258 0% 0%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 239 10% 90%;
+    --secondary: 258 30% 90%;
     --secondary-foreground: 0 0% 0%;
-    --muted: 201 10% 95%;
-    --muted-foreground: 239 0% 40%;
-    --accent: 201 10% 90%;
-    --accent-foreground: 239 0% 15%;
-    --destructive: 0 50% 50%;
-    --destructive-foreground: 239 0% 100%;
-    --border: 239 20% 82%;
-    --input: 239 20% 50%;
-    --ring: 239 0% 0%;
+    --muted: 220 30% 95%;
+    --muted-foreground: 258 5% 40%;
+    --accent: 220 30% 90%;
+    --accent-foreground: 258 5% 15%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 258 5% 99%;
+    --border: 258 30% 82%;
+    --input: 258 30% 50%;
+    --ring: 258 0% 0%;
     --radius: 0rem;
-  }
+   }
   .dark {
     --background: 239 10% 10%;
     --foreground: 239 0% 100%;
-    --card: #000000;
+    --card: 0 0% 0%;
     --card-foreground: 239 0% 100%;
     --popover: 239 10% 5%;
     --popover-foreground: 239 0% 100%;
@@ -52,7 +52,7 @@
 @layer utilities {
   .clip-custom-card {
     position: relative;
-    border: 0px solid red;
+    border: 2px solid hsl(var(--border));
     clip-path: polygon(
       0px 0px,
       /* Ponto 1: Canto superior esquerdo */ calc(100% - 27px) 0px,
@@ -64,13 +64,8 @@
     );
   }
 
-  /* Aplica o estilo da borda somente no modo escuro */
-  .dark .clip-custom-card {
-    border: 2px solid hsl(var(--border));
-  }
-
   /* Estilo condicional para o pseudo-elemento `::after` no dark mode */
-  .dark .clip-custom-card::after {
+  .clip-custom-card::after {
     content: "";
     position: absolute;
     top: 0;
@@ -84,7 +79,7 @@
   }
 
   /* Estilo condicional para o pseudo-elemento `::before` no dark mode */
-  .dark .clip-custom-card::before {
+  .clip-custom-card::before {
     content: "";
     position: absolute;
     bottom: 0;

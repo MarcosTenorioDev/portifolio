@@ -13,7 +13,7 @@ function DetailsProfileCard(){
             <p className="my-auto"> Lorem Ipsum is simply </p>
           </CardContent>
         </Card>
-        <Card className="clip-custom-card sm:w-[200px] md:w-[300px] xl:w-[300px] flex justify-center p-5 bg-primary text-white dark:bg-white dark:text-black dark:!border-0">
+        <Card className="clip-custom-card sm:w-[200px] !border-0 md:w-[300px] xl:w-[300px] flex justify-center p-5 bg-primary text-white dark:bg-white dark:text-black dark:!border-0">
           <CardContent className="p-0">
             <p className="my-auto"> Lorem Ipsum is simply </p>
           </CardContent>

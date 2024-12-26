@@ -67,7 +67,7 @@ const BigNavbar = () => {
       } transition-all duration-300 ease-out w-full flex justify-between fixed max-w-[1680px] px-4 sm:px-10 md:px-20 top-0 z-[30] left-1/2 transform -translate-x-1/2 pt-7`}
     >
       <div className="card-wrap w-full hidden md:block">
-        <div className="clip-custom-card bg-primary p-6 pr-10">
+        <div className="clip-custom-card bg-primary p-6 pr-10 !border-0">
           <nav>
             <ul className="flex text-base">
               <li>
