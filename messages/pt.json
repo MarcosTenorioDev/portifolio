@@ -31,7 +31,20 @@
     },
     "Projects": {
       "title": "Projetos",
-      "description": "Meu espírito criativo ganha vida no reino digital. Com o teclado, transformo ideias em soluções inovadoras e de alta qualidade, tudo a partir de uns e zeros."
+      "description": "Meu espírito criativo ganha vida no reino digital. Com o teclado, transformo ideias em soluções inovadoras e de alta qualidade, tudo a partir de uns e zeros..."
+    },
+    "Contact": {
+      "title": {
+        "first": "ENTRE EM",
+        "second": "CONTATO"
+      },
+      "button": "Contate agora*",
+      "leftMessage":{
+        "first":"software é o resultado",
+        "second": "para a sua ideia."
+      },
+      "rightMessage":"Com um teclado como pincel, pinto experiências vívidas usando nada além da linguagem de uns e zeros.",
+      "about":"Residente em <span>Recife, Brazil,</span> sou um desenvolvedor fullstack altamente qualificado, sempre trabalhando com inovação. Minha paixão por design limpo e minimalista, arquitetura escalável e experiência de usuário intuitivas é evidente em todos os projetos que construo."
     }
   }
 }
