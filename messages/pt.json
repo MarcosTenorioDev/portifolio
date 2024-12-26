@@ -17,9 +17,21 @@
       "Content": "Desenvolvedor Fullstack formado em Tecnologia em Sistemas para Internet pela UNIVERSIDADE CATÓLICA DE PERNAMBUCO, com experiência em soluções SaaS, CRMs e interfaces intuitivas. Atuei em projetos de gestão de eventos, CRM Hospitalar, plataforma de criação de conteúdos... Sempre focado em boas práticas, acessibilidade e design responsivo.",
       "ButtonLabel": "Baixar CV"
     },
-    "TechsCard":{
+    "TechsCard": {
       "Title": "Ferramentas e Tecnologias",
       "Description": "Essas são as tecnologias que domino e utilizo para transformar ideias em realidade."
+    },
+    "Experience": {
+      "first": "2 ANOS DE",
+      "second": "EXPERIÊNCIA"
+    },
+    "Academic": {
+      "first": "HISTÓRICO ACADÊMICO",
+      "second": "E CURSOS"
+    },
+    "Projects": {
+      "title": "Projetos",
+      "description": "Meu espírito criativo ganha vida no reino digital. Com o teclado, transformo ideias em soluções inovadoras e de alta qualidade, tudo a partir de uns e zeros."
     }
   }
 }

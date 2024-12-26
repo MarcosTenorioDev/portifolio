@@ -20,6 +20,18 @@
     "TechsCard": {
       "Title": "Technologies I work with",
       "Description": " These are the technologies I have mastered and use to bring ideas tolife."
+    },
+    "Experience": {
+      "first": "2 YEARS OF",
+      "second": "EXPERIENCE"
+    },
+    "Academic": {
+      "first": "Academic Summary",
+      "second": "and courses"
+    },
+    "Projects": {
+      "title": "Featured Cases",
+      "description": "My creative spirit comes alive in the digital realm. With nimble fingers flying across the keyboard, I craft clear experiences out of nothing but ones and zeroes."
     }
   }
 }
