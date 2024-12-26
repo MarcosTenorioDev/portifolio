@@ -31,7 +31,8 @@
     },
     "Projects": {
       "title": "Featured Cases",
-      "description": "My creative spirit comes alive in the digital realm. With nimble fingers flying across the keyboard, I craft clear experiences out of nothing but ones and zeroes..."
+      "description": "My creative spirit comes alive in the digital realm. With nimble fingers flying across the keyboard, I craft clear experiences out of nothing but ones and zeroes...",
+      "cardDetails":"See project details"
     },
     "Contact": {
       "title": {
@@ -45,6 +46,11 @@
       },
       "rightMessage": "With a keyboard as my brush, I paint vivid experiences using nothing but the language of ones and zeroes.",
       "about": "Based in Recife, Brazil, I am an innovative fullstack developer and digital creator. My passion for clean, minimalist design, scalable architecture, and intuitive user experiences is evident in every project I build."
+    },
+    "Footer":{
+      "by":"By",
+      "backToTop":"Go back to top"
     }
+    
   }
 }

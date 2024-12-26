@@ -20,6 +20,7 @@ import { useTranslations } from "next-intl";
 import { Locale } from "@/i18n/routing";
 import { useParams } from "next/navigation";
 import { experiences } from "@/constants/experience";
+import { projectPreview } from "@/constants/projects";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
@@ -97,26 +98,16 @@ export default function HomePage() {
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-10">
-            <ProjectCard
-              imageSrc={obon}
-              subtitle="///Events platform"
-              title="Obon"
-            />
-            <ProjectCard
-              imageSrc={obon}
-              subtitle="///Events platform"
-              title="Obon"
-            />
-            <ProjectCard
-              imageSrc={obon}
-              subtitle="///Events platform"
-              title="Obon"
-            />
-            <ProjectCard
-              imageSrc={obon}
-              subtitle="///Events platform"
-              title="Obon"
-            />
+            {projectPreview.map((project, index) => {
+              return (
+                <ProjectCard
+                  imageSrc={project.previewImage}
+                  subtitle={project.description[locale]}
+                  title={project.name}
+                  key={index}
+                />
+              );
+            })}
           </div>
         </div>
 

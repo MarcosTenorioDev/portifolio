@@ -1,14 +1,16 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
+  const t = useTranslations("HomePage");
   return (
     <footer className="w-full border-t py-2 sm:py-4 sm:mt-6">
       <div className="max-w-[1680px] mx-auto flex flex-col sm:flex-row justify-between items-center px-6">
         <div className="w-fit">
           <span className="flex items-center justify-center font-roboto">
             {" "}
-            <p className="font-normal font-roboto text-sm md:text-md">&copy; By </p>
+            <p className="font-normal font-roboto text-sm md:text-md">&copy; {t("Footer.by")}</p>
             <Link
               href={"https://github.com/MarcosTenorioDev"}
               className=""
@@ -33,7 +35,7 @@ const Footer = () => {
             className="dark:text-white text-sm md:text-md px-2 font-normal font-roboto"
             title="Go to top"
           >
-            Go back to top
+            {t("Footer.backToTop")}
           </Button>
         </Link>
       </div>
