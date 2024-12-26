@@ -7,7 +7,6 @@ import DetailsProfileCard from "@/components/DetailsProfileCard";
 import DescriptionProfileCard from "@/components/DescriptionProfileCard";
 import ExperienceCard from "@/components/ExperienceCardProps";
 import EducationCard from "@/components/EducationCard";
-import obon from "@/../public/images/projects/obon/obon-home.png";
 import ProjectCard from "@/components/ProjectCard";
 import { education } from "@/constants/education";
 import cyberpunkBoy from "@/../public/images/cyberpunkBoy.svg";
