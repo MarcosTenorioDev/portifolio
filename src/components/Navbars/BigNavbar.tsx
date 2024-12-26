@@ -110,7 +110,7 @@ const BigNavbar = () => {
               </SheetTrigger>
             </div>
             <SheetContent
-              className="border-0 !max-w-full w-full md:w-[600px] flex flex-col overflow-auto justify-between"
+              className="border-0 !max-w-full w-full md:w-[600px] flex flex-col overflow-auto justify-between pb-10"
               hiddenCloseBtn={true}
             >
               <SheetClose className="w-fit self-end clip-custom-button !border-0">
