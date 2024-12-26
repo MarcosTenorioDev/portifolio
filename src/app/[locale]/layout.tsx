@@ -96,7 +96,7 @@ export default async function RootLayout({
   const messages = await getMessages({locale});
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${robotoMono.variable} ${spaceGrotesk.variable} antialiased`}>
         <ThemeProvider
           attribute="class"

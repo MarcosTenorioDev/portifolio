@@ -14,6 +14,9 @@ import {
 } from "@/components/ui/sheet";
 import MobileMenuLink from "../MobileMenuLink";
 import ButtonAnimated from "../ButtonAnimated";
+import { PlusIcon } from "lucide-react";
+import { socialMedias } from "@/constants/socialMedias";
+import Link from "next/link";
 
 const BigNavbar = () => {
   const t = useTranslations("HomePage");
@@ -58,7 +61,9 @@ const BigNavbar = () => {
   return (
     <div
       className={`${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10 pointer-events-none"
+        isVisible
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 -translate-y-10 pointer-events-none"
       } transition-all duration-300 ease-out w-full flex justify-between fixed max-w-[1680px] px-4 sm:px-10 md:px-20 top-0 z-[30] left-1/2 transform -translate-x-1/2 pt-7`}
     >
       <div className="card-wrap w-full hidden md:block">
@@ -84,7 +89,7 @@ const BigNavbar = () => {
               </li>
               <div className="flex-1 flex gap-7 justify-end">
                 <li className="text-white">
-                  <LocaleSwitcherButtons label="Change language" />
+                  <LocaleSwitcherButtons />
                 </li>
                 <li>
                   <ModeToggle />
@@ -98,9 +103,7 @@ const BigNavbar = () => {
       <div className="w-full fixed top-0 right-0 z-50 px-6 md:hidden">
         <div className="w-full flex justify-end max-w-[1680px] mx-auto p-6 px-4 sm:px-10 md:px-20">
           <Sheet open={isMenuOpen} onOpenChange={handleMenuToggle}>
-            <div
-              className={`w-full flex justify-between`}
-            >
+            <div className={`w-full flex justify-between`}>
               <ModeToggle />
               <SheetTrigger>
                 <ButtonAnimated>MENU</ButtonAnimated>
@@ -111,7 +114,7 @@ const BigNavbar = () => {
               hiddenCloseBtn={true}
             >
               <SheetClose className="w-fit self-end clip-custom-button !border-0">
-              <ButtonAnimated>MENU</ButtonAnimated>
+                <ButtonAnimated>MENU</ButtonAnimated>
               </SheetClose>
               <div className="menuBg"></div>
               <SheetTitle className="hidden">Menu</SheetTitle>
@@ -141,12 +144,51 @@ const BigNavbar = () => {
                     index={3}
                   />
 
-                  <li>
-                    <LocaleSwitcherButtons label="Change language" />
+                  <li className="group border-b border-dashed border-muted-foreground flex justify-center gap-2 pb-4 pt-2">
+                    <PlusIcon className="mt-1 w-3 sm:w-4 h-3 sm:h-4" />
+                    <div className="relative overflow-hidden">
+                      <span className="block transition-transform duration-300 group-hover:-translate-y-[105%]">
+                        <LocaleSwitcherButtons className="text-black dark:text-white w-full h-full text-4xl sm:text-6xl font-bold font-spaceGrotesk flex justify-center gap-1 sm:gap-2 !no-underline" />
+                      </span>
+                      <span className="absolute -bottom-[105%] left-0 transition-all duration-300 ease-out group-hover:bottom-0">
+                        <LocaleSwitcherButtons className="text-black dark:text-white w-full h-full text-4xl sm:text-6xl font-bold font-spaceGrotesk flex justify-center gap-1 sm:gap-2 !no-underline" />
+                      </span>
+                    </div>
+                    <span className="text-xs sm:text-sm font-bold mt-2 font-roboto">
+                      /04
+                    </span>
                   </li>
                 </ul>
               </nav>
-              <h1>teste</h1>
+              <div className="flex justify-around text-base font-spaceGrotesk">
+                {socialMedias.map(({ ariaLabel, href, label, title }, index) => {
+                  return (
+                    <div className="group flex justify-center gap-2 p-2 border border-dashed border-muted-foreground w-full py-2 sm:py-3" key={index}>
+                      <div className="relative overflow-hidden">
+                        <Link
+                          href={href}
+                          className="flex items-center justify-center group"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={ariaLabel}
+                        >
+                          <Button
+                            variant={"link"}
+                            className="dark:text-white text-2xl sm:text-4xl px-2 relative !no-underline"
+                            title={title}
+                          >
+                            <span className="relative z-10">{label}</span>
+                            <span
+                              className="absolute bottom-4 left-0 h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full"
+                              aria-hidden="true"
+                            ></span>
+                          </Button>
+                        </Link>{" "}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </SheetContent>
           </Sheet>
         </div>

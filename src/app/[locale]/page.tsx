@@ -13,6 +13,7 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 import ExternalLink from "@/components/ExternalLink";
 import ButtonAnimated from "@/components/ButtonAnimated";
+import { socialMedias } from "@/constants/socialMedias";
 
 export default function HomePage() {
   /* const t = useTranslations("HomePage"); */
@@ -171,24 +172,17 @@ export default function HomePage() {
           </p>
 
           <div className="flex flex-wrap justify-center items-center gap-4 w-full mt-5">
-            <ExternalLink
-              ariaLabel="Acesse meu perfil no GitHub"
-              href={"https://github.com/MarcosTenorioDev"}
-              label="Github"
-              title="Acesse meu perfil no GitHub"
-            />
-            <ExternalLink
-              ariaLabel="Acesse meu perfil no GitHub"
-              href={"https://github.com/MarcosTenorioDev"}
-              label="Github"
-              title="Acesse meu perfil no GitHub"
-            />
-            <ExternalLink
-              ariaLabel="Acesse meu perfil no GitHub"
-              href={"https://github.com/MarcosTenorioDev"}
-              label="Github"
-              title="Acesse meu perfil no GitHub"
-            />
+            {socialMedias.map((socialMedia, index) => {
+              return (
+                <ExternalLink
+                  key={index}
+                  ariaLabel={socialMedia.ariaLabel}
+                  href={socialMedia.href}
+                  label={socialMedia.label}
+                  title={socialMedia.title}
+                />
+              );
+            })}
           </div>
         </div>
       </div>
