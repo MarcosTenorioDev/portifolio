@@ -12,6 +12,14 @@
     },
     "ProfileCard": {
       "Description": "A Software Engineer who has developed countless innovative solutions."
+    },
+    "DescriptionCard": {
+      "Content": "Fullstack developer with a technologist degree in Internet Systems at Catholic University of Pernambuco, experienced in SaaS solutions, CRMs, and intuitive interfaces. I've worked on event management projects, hospital CRM, and content creation platforms... Always focused on best practices, accessibility, and responsive design.",
+      "ButtonLabel": "Download CV"
+    },
+    "TechsCard": {
+      "Title": "Technologies I work with",
+      "Description": " These are the technologies I have mastered and use to bring ideas tolife."
     }
   }
 }

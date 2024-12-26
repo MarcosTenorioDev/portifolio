@@ -23,7 +23,7 @@ export default function HomePage() {
       <div className="grid pb-10 font-roboto max-w-[1680px] mx-auto items-start gap-12 px-4 sm:px-10 md:px-20 mt-[52px] md:mt-[145px]">
         <BigNavbar />
         <div className="w-full h-full flex flex-col xl:flex-row gap-10 mt-8 md:mt-0">
-          <div className="w-full">
+          <div className="xl:max-w-[400px]">
             <ProfileCard />
           </div>
           <div className="flex flex-col h-full gap-12">

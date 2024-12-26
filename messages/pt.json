@@ -1,17 +1,25 @@
 {
-    "HomePage": {
-      "Navbar": {
-        "Projects": "Projetos",
-        "Blog": "Blog",
-        "ContactMe": "Contato",
-        "LightMode": "Modo Claro",
-        "DarkMode": "Modo Escuro",
-        "Light": "Claro",
-        "Dark": "Escuro",
-        "System": "Sistema"
-      },
-      "ProfileCard": {
+  "HomePage": {
+    "Navbar": {
+      "Projects": "Projetos",
+      "Blog": "Blog",
+      "ContactMe": "Contato",
+      "LightMode": "Modo Claro",
+      "DarkMode": "Modo Escuro",
+      "Light": "Claro",
+      "Dark": "Escuro",
+      "System": "Sistema"
+    },
+    "ProfileCard": {
       "Description": "Um Engenheiro de Software que desenvolveu inúmeras soluções inovadoras."
-    }
+    },
+    "DescriptionCard": {
+      "Content": "Desenvolvedor Fullstack formado em Tecnologia em Sistemas para Internet pela UNIVERSIDADE CATÓLICA DE PERNAMBUCO, com experiência em soluções SaaS, CRMs e interfaces intuitivas. Atuei em projetos de gestão de eventos, CRM Hospitalar, plataforma de criação de conteúdos... Sempre focado em boas práticas, acessibilidade e design responsivo.",
+      "ButtonLabel": "Baixar CV"
+    },
+    "TechsCard":{
+      "Title": "Ferramentas e Tecnologias",
+      "Description": "Essas são as tecnologias que domino e utilizo para transformar ideias em realidade."
     }
   }
+}
