@@ -20,13 +20,6 @@ export default function EducationCard({
   description,
   alt = "Institution logo",
 }: EducationCardProps) {
-  console.log(logo,
-    hoverImage,
-    title,
-    institution,
-    dateRange,
-    description,
-    alt)
   return (
     <Card className="relative hover:clip-custom-card group flex items-start gap-6 bg-transparent py-4 border-0 shadow-none md:min-h-[170px] md:h-[170px] overflow-hidden">
       {/* Static Content */}

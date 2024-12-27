@@ -17,6 +17,8 @@ import ButtonAnimated from "../ButtonAnimated";
 import { PlusIcon } from "lucide-react";
 import { socialMedias } from "@/constants/socialMedias";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { fadeInBottomNavbar } from "../Animation/animations";
 
 const BigNavbar = () => {
   const t = useTranslations("HomePage");
@@ -66,6 +68,13 @@ const BigNavbar = () => {
           : "opacity-0 -translate-y-10 pointer-events-none"
       } transition-all duration-300 ease-out w-full flex justify-between fixed max-w-[1680px] px-4 sm:px-10 md:px-20 top-0 z-[30] left-1/2 transform -translate-x-1/2 pt-7`}
     >
+    <motion.div
+      variants={fadeInBottomNavbar}
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+      className="w-full"
+    >
       <div className="card-wrap w-full hidden md:block">
         <div className="clip-custom-card bg-primary p-6 pr-10 !border-0 dark:!border-2">
           <nav>
@@ -111,8 +120,8 @@ const BigNavbar = () => {
         </div>
       </div>
 
-      <div className="w-full fixed top-0 right-0 z-50 px-6 md:hidden">
-        <div className="w-full flex justify-end max-w-[1680px] mx-auto p-6 px-4 sm:px-10 md:px-20">
+      <div className="w-full px-6 md:hidden">
+        <div className="w-full flex justify-end max-w-[1680px] mx-auto">
           <Sheet open={isMenuOpen} onOpenChange={handleMenuToggle}>
             <div className={`w-full flex justify-between`}>
               <ModeToggle />
@@ -229,6 +238,7 @@ const BigNavbar = () => {
           </Sheet>
         </div>
       </div>
+      </motion.div>
     </div>
   );
 };
