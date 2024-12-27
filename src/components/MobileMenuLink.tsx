@@ -25,7 +25,7 @@ const MobileMenuLink = ({
         aria-label={ariaLabel}
         href={href}
         title={title}
-        className="w-full h-full text-4xl sm:text-6xl pb-4 pt-2 font-bold font-spaceGrotesk flex justify-center gap-1 sm:gap-2 group relative"
+        className="w-full h-full text-4xl sm:text-6xl py-3 font-bold font-spaceGrotesk flex justify-center gap-1 sm:gap-2 group relative"
         onClick={onClick}
       >
         <PlusIcon className="mt-1 w-3 sm:w-4 h-3 sm:h-4" />

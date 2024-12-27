@@ -145,7 +145,7 @@ const BigNavbar = () => {
                     label={t("Navbar.Experience")}
                     title={t("Navbar.Experience")}
                     ariaLabel={t("Navbar.Experience")}
-                    index={3}
+                    index={2}
                     onClick={() => setIsMenuOpen(false)}
                   />
 
@@ -166,11 +166,20 @@ const BigNavbar = () => {
                     onClick={() => setIsMenuOpen(false)}
                   />
 
-                  <li className="group border-b border-dashed border-muted-foreground flex justify-center gap-2 pb-4 pt-2" onClick={() => setIsMenuOpen(false)}>
+                  <li
+                    className="group border-b border-dashed border-muted-foreground flex justify-center gap-2 py-3"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      document.getElementById("localeBtn")?.click();
+                    }}
+                  >
                     <PlusIcon className="mt-1 w-3 sm:w-4 h-3 sm:h-4" />
                     <div className="relative overflow-hidden">
                       <span className="block transition-transform duration-300 group-hover:-translate-y-[105%]">
-                        <LocaleSwitcherButtons className="text-black dark:text-white w-full h-full text-4xl sm:text-6xl font-bold font-spaceGrotesk flex justify-center gap-1 sm:gap-2 !no-underline" />
+                        <LocaleSwitcherButtons
+                          className="text-black dark:text-white w-full h-full text-4xl sm:text-6xl font-bold font-spaceGrotesk flex justify-center gap-1 sm:gap-2 !no-underline"
+                          id="localeBtn"
+                        />
                       </span>
                       <span className="absolute -bottom-[105%] left-0 transition-all duration-300 ease-out group-hover:bottom-0">
                         <LocaleSwitcherButtons className="text-black dark:text-white w-full h-full text-4xl sm:text-6xl font-bold font-spaceGrotesk flex justify-center gap-1 sm:gap-2 !no-underline" />
