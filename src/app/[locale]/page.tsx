@@ -121,6 +121,7 @@ export default function HomePage() {
                       imageSrc={project.previewImage}
                       subtitle={project.description[locale]}
                       title={project.name}
+                      url={project.url}
                       key={index}
                     />
                   );
