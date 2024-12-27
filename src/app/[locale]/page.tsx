@@ -28,7 +28,7 @@ export default function HomePage() {
 
   return (
     <>
-      <div className="grid pb-10 font-roboto max-w-[1680px] mx-auto items-start gap-12 px-4 sm:px-10 md:px-20 mt-[52px] md:mt-[145px]">
+      <div id="home" className="grid pb-10 font-roboto max-w-[1680px] mx-auto items-start gap-12 px-4 sm:px-10 md:px-20 pt-[52px] md:pt-[145px]">
         <BigNavbar />
         <div className="w-full h-full flex flex-col xl:flex-row gap-10 mt-8 md:mt-0">
           <div className="xl:max-w-[400px]">
@@ -44,7 +44,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="w-full">
+        <div className="w-full" id="experience">
           <h2 className="text-center lg:text-end w-full text-[42px] sm:text-[72px] italic font-bold mb-6">
             {t("Experience.first")} <br />
             {t("Experience.second")}
@@ -88,7 +88,7 @@ export default function HomePage() {
             );
           })}
         </div>
-        <div className="w-full">
+        <div className="w-full" id="projects">
           <h2 className="text-center lg:text-end w-full text-[42px] sm:text-[72px] italic font-bold">
             {t("Projects.title")}
           </h2>
@@ -150,7 +150,7 @@ export default function HomePage() {
           </div>
         </div> */}
 
-        <div className="w-full md:mt-16 flex flex-col justify-center items-center gap-4">
+        <div className="w-full md:mt-16 flex flex-col justify-center items-center gap-4" id="contact">
           <h2 className="text-center w-full text-[42px] sm:text-[72px] italic font-bold">
             {t("Contact.title.first")} <br /> {t("Contact.title.second")}
           </h2>

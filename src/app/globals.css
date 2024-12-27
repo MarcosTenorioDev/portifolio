@@ -311,3 +311,7 @@
 
 /* hsl(var(--border))
  */
+
+ html {
+  scroll-behavior: smooth;
+}

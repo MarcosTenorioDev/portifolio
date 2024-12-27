@@ -29,7 +29,7 @@ const Footer = () => {
           </span>
         </div>
 
-        <Link href={"#"} className="" aria-label="Go to top">
+        <Link href={"#home"} className="" aria-label="Go to top">
           <Button
             variant={"link"}
             className="dark:text-white text-sm md:text-md px-2 font-normal font-roboto"

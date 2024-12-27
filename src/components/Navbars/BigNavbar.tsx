@@ -71,21 +71,32 @@ const BigNavbar = () => {
           <nav>
             <ul className="flex text-base">
               <li>
-                <Button variant={"link"} className="text-white">
-                  {t("Navbar.Projects")}
-                </Button>
+                <a href="#projects">
+                  <Button variant={"link"} className="text-white">
+                    {t("Navbar.Projects")}
+                  </Button>
+                </a>
               </li>
               <li>
+                <a href="#experience">
+                  <Button variant={"link"} className="text-white">
+                    {t("Navbar.Experience")}
+                  </Button>
+                </a>
+              </li>
+              {/* <li>
                 {" "}
                 <Button variant={"link"} className="text-white">
                   {t("Navbar.Blog")}
                 </Button>
-              </li>
+              </li> */}
               <li>
                 {" "}
-                <Button variant={"link"} className="text-white">
-                  {t("Navbar.ContactMe")}
-                </Button>
+                <a href="#contact">
+                  <Button variant={"link"} className="text-white">
+                    {t("Navbar.ContactMe")}
+                  </Button>
+                </a>
               </li>
               <div className="flex-1 flex gap-7 justify-end">
                 <li className="text-white">
@@ -121,30 +132,41 @@ const BigNavbar = () => {
               <nav className=" py-10">
                 <ul className="flex text-base font-spaceGrotesk flex-col text-center border-x border-t border-dashed border-muted-foreground">
                   <MobileMenuLink
-                    href="/"
+                    href="#projects"
                     label={t("Navbar.Projects")}
                     title={t("Navbar.Projects")}
                     ariaLabel={t("Navbar.Projects")}
                     index={1}
+                    onClick={() => setIsMenuOpen(false)}
                   />
 
                   <MobileMenuLink
+                    href="#experience"
+                    label={t("Navbar.Experience")}
+                    title={t("Navbar.Experience")}
+                    ariaLabel={t("Navbar.Experience")}
+                    index={3}
+                    onClick={() => setIsMenuOpen(false)}
+                  />
+
+                  {/* <MobileMenuLink
                     href="/"
                     label={t("Navbar.Blog")}
                     title={t("Navbar.Blog")}
                     ariaLabel={t("Navbar.Blog")}
                     index={2}
-                  />
+                  /> */}
 
                   <MobileMenuLink
-                    href="/"
+                    href="#contact"
                     label={t("Navbar.ContactMe")}
                     title={t("Navbar.ContactMe")}
                     ariaLabel={t("Navbar.ContactMe")}
                     index={3}
+                    onClick={() => setIsMenuOpen(false)}
                   />
 
-                  <li className="group border-b border-dashed border-muted-foreground flex justify-center gap-2 pb-4 pt-2">
+                  <li className="group border-b border-dashed border-muted-foreground flex justify-center gap-2 pb-4 pt-2" onClick={() => setIsMenuOpen(false)}>
                     <PlusIcon className="mt-1 w-3 sm:w-4 h-3 sm:h-4" />
                     <div className="relative overflow-hidden">
                       <span className="block transition-transform duration-300 group-hover:-translate-y-[105%]">
@@ -161,33 +183,38 @@ const BigNavbar = () => {
                 </ul>
               </nav>
               <div className="flex justify-around text-base font-spaceGrotesk">
-                {socialMedias.map(({ ariaLabel, href, label, title }, index) => {
-                  return (
-                    <div className="group flex justify-center gap-2 p-2 border border-dashed border-muted-foreground w-full py-2 sm:py-3" key={index}>
-                      <div className="relative overflow-hidden">
-                        <Link
-                          href={href}
-                          className="flex items-center justify-center group"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={ariaLabel}
-                        >
-                          <Button
-                            variant={"link"}
-                            className="dark:text-white text-2xl sm:text-4xl px-2 relative !no-underline"
-                            title={title}
+                {socialMedias.map(
+                  ({ ariaLabel, href, label, title }, index) => {
+                    return (
+                      <div
+                        className="group flex justify-center gap-2 p-2 border border-dashed border-muted-foreground w-full py-2 sm:py-3"
+                        key={index}
+                      >
+                        <div className="relative overflow-hidden">
+                          <Link
+                            href={href}
+                            className="flex items-center justify-center group"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={ariaLabel}
                           >
-                            <span className="relative z-10">{label}</span>
-                            <span
-                              className="absolute bottom-4 left-0 h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full"
-                              aria-hidden="true"
-                            ></span>
-                          </Button>
-                        </Link>{" "}
+                            <Button
+                              variant={"link"}
+                              className="dark:text-white text-2xl sm:text-4xl px-2 relative !no-underline"
+                              title={title}
+                            >
+                              <span className="relative z-10">{label}</span>
+                              <span
+                                className="absolute bottom-4 left-0 h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full"
+                                aria-hidden="true"
+                              ></span>
+                            </Button>
+                          </Link>{" "}
+                        </div>
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  }
+                )}
               </div>
             </SheetContent>
           </Sheet>
