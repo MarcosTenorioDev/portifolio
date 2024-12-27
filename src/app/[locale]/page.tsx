@@ -28,7 +28,7 @@ export default function HomePage() {
   const locale = params.locale as Locale;
 
   return (
-    <>
+    <div className="overflow-hidden">
       {" "}
       <BigNavbar />
       <div
@@ -226,6 +226,6 @@ export default function HomePage() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
