@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import notFoundImage from "@/../public/images/404.avif";
+import notFoundImage from "@/../public/images/404.svg";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
@@ -13,7 +13,6 @@ const NotFound = () => {
         src={notFoundImage}
         alt="404 - Page Not Found"
         fill={true}
-        objectFit="cover"
         quality={100}
         priority
       />

@@ -315,3 +315,10 @@
  html {
   scroll-behavior: smooth;
 }
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted-foreground)) #0000000;
+  }

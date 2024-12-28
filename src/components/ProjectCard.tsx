@@ -3,17 +3,21 @@ import Image, { StaticImageData } from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import { Locale } from "@/i18n/routing";
+import { useParams } from "next/navigation";
 
 interface ProjectCardProps {
   imageSrc: StaticImageData;
   title: string;
   subtitle: string;
-  url:string
+  url: string;
 }
 
 const ProjectCard = ({ imageSrc, subtitle, title, url }: ProjectCardProps) => {
-    const t = useTranslations("HomePage");
-  
+  const t = useTranslations("HomePage");
+  const params = useParams();
+  const locale = params.locale as Locale;
+
   return (
     <div className="overflow-hidden !border-0 group">
       <div className="clip-custom-card bg-primary text-white aspect-square relative overflow-hidden !border-0">
@@ -23,7 +27,10 @@ const ProjectCard = ({ imageSrc, subtitle, title, url }: ProjectCardProps) => {
 
           <div className="w-full flex justify-end absolute inset-0">
             {/* Botão animado */}
-            <Link href={`/project/${url}`} className="bg-black/40 p-2 cursor-pointer hover:underline sm:px-4 lg:p-4 relative top-6 right-6 lg:w-[300px] flex items-center justify-center z-20 gap-4 h-min clip-custom-button !border-0 transition-all duration-500 md:group-hover:right-6 md:right-[-120%]">
+            <Link
+              href={`${locale}/project/${url}`}
+              className="bg-black/40 p-2 cursor-pointer hover:underline sm:px-4 lg:p-4 relative top-6 right-6 lg:w-[300px] flex items-center justify-center z-20 gap-4 h-min clip-custom-button !border-0 transition-all duration-500 md:group-hover:right-6 md:right-[-120%]"
+            >
               <p className="text-white text-xs lg:text-base">
                 {t("Projects.cardDetails")}
               </p>
