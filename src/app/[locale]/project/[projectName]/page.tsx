@@ -1,6 +1,6 @@
 "use client";
 
-import { FileDown, LinkIcon } from "lucide-react";
+import { LinkIcon } from "lucide-react";
 import obon from "@/../public/images/projects/obon/obon-home.png";
 import arquitetura from "@/../public/images/projects/obon/obon-architecture.jpeg";
 import ProjectNavbar from "@/components/Navbars/ProjectNavbar";
@@ -17,18 +17,13 @@ import {
 import ProjectImagesCard from "@/components/ProjectImagesCard";
 import { type CarouselApi } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
-import DescriptionProfileCard from "@/components/DescriptionProfileCard";
-import DetailsProfileCard from "@/components/DetailsProfileCard";
-import ButtonAnimated from "@/components/ButtonAnimated";
 import {
   Card,
   CardContent,
-  CardFooter,
   CardHeader,
 } from "@/components/ui/card";
 import TechIcon from "@/components/TechIcon";
 import techIcons from "@/constants/techs";
-import { group } from "console";
 
 const Page = () => {
   const project = {

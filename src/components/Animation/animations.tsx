@@ -63,14 +63,6 @@ const AnimationWrapper: React.FC<AnimationWrapperProps> = ({
     fadeInCenter,
   };
 
-  // Função para detectar se o scroll está indo para baixo
-  const isScrollingDown = () => {
-    const currentScrollY = window.scrollY;
-    const scrollingDown = currentScrollY > lastScrollY;
-    setLastScrollY(currentScrollY); // Atualiza o último valor de scroll
-    return scrollingDown;
-  };
-
   // Verifica se o componente já está visível no carregamento inicial
   const checkIfVisible = () => {
     const rect = elementRef.current?.getBoundingClientRect();
@@ -81,6 +73,16 @@ const AnimationWrapper: React.FC<AnimationWrapperProps> = ({
 
   // Hook para ativar o Intersection Observer e detectar rolagem
   useEffect(() => {
+    const currentElement = elementRef.current; // Captura o valor atual de elementRef
+
+    // Função para detectar se o scroll está indo para baixo
+    const isScrollingDown = () => {
+      const currentScrollY = window.scrollY;
+      const scrollingDown = currentScrollY > lastScrollY;
+      setLastScrollY(currentScrollY); // Atualiza o último valor de scroll
+      return scrollingDown;
+    };
+
     // Verificação inicial
     if (checkIfVisible()) {
       setIsInView(true);
@@ -100,13 +102,13 @@ const AnimationWrapper: React.FC<AnimationWrapperProps> = ({
       }
     );
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
+    if (currentElement) {
+      observer.observe(currentElement);
     }
 
     return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
+      if (currentElement) {
+        observer.unobserve(currentElement);
       }
     };
   }, [lastScrollY]);

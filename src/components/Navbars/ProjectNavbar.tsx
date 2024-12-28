@@ -1,7 +1,6 @@
 "use client"
 
 import React from "react";
-import { useTranslations } from "next-intl";
 import LocaleSwitcherButtons from "../LocaleSwitcherButton";
 import { ModeToggle } from "../ModeToggle";
 import { Button } from "../ui/button";
@@ -9,7 +8,6 @@ import { useParams } from "next/navigation";
 import { Locale } from "@/i18n/routing";
 
 const ProjectNavbar = () => {
-  const t = useTranslations("HomePage");
   const params = useParams()
   const locale = params.locale as Locale
   return (
