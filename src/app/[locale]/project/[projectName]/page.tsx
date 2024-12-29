@@ -245,7 +245,7 @@ const Page = () => {
         </div>
 
         <div className="w-full h-full card-wrap">
-          <Card className="clip-custom-card w-full my-6 h-[89%] bg-primary !border-black !border-0 dark:!border-border dark:!border-2">
+          <Card className="clip-custom-card w-full mt-6 lg:my-6 h-[89%] bg-primary !border-black !border-0 dark:!border-border dark:!border-2">
             <CardHeader className="pb-0 w-full mx-auto text-white">
               <h2 className="text-2xl font-bold text-center xl:text-start">
                 Tech Stack
