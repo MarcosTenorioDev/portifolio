@@ -21,11 +21,7 @@ const Page = () => {
   const params = useParams();
   const { projectName } = params;
 
-  if (!projectName) {
-    return notFound();
-  }
-
-  const projectIndex = urls.findIndex((url) => url.toLowerCase() === (Array.isArray(projectName) ? projectName[0].toLowerCase() : projectName.toLowerCase()))
+  const projectIndex = urls.findIndex((url) => url.toLowerCase() === (Array.isArray(projectName) ? projectName[0].toLowerCase() : projectName?.toLowerCase()))
   const project = projects[projectIndex];
 
   const [api, setApi] = useState<CarouselApi>();
