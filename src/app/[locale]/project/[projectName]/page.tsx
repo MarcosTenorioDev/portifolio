@@ -220,7 +220,7 @@ const Page = () => {
     <div className="mx-auto lg:h-screen bg-[#ededed] dark:bg-background flex flex-col lg:flex-row font-roboto overflow-hidden">
       <div className="w-full lg:w-1/2 lg:h-full flex flex-col items-center justify-start p-4 lg:p-7 !pb-0 lg:overflow-y-auto lg:overflow-x-hidden">
         <ProjectNavbar />
-        <div className="h-fit flex flex-col lg:flex-row gap-4 lg:gap-6 mt-6">
+        <div className="h-fit flex flex-col lg:flex-row gap-4 lg:gap-6 mt-20 lg:mt-6">
           <ProjectDetailsCard
             description={project.description}
             detail={project.detail}
