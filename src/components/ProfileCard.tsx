@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "./ui/card";
-import Me from "@/../public/images/me.jpg";
+import Me from "@/../public/images/me.webp";
 import Image from "next/image";
 import { Github, Linkedin, Mail } from "lucide-react";
 import SocialMediaButton from "./SocialMediaButton";

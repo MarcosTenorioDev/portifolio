@@ -175,37 +175,37 @@ export const projects: Project[] = [
     ],
     images: [
       {
-        src: "/images/projects/obon/obon-architecture.jpeg",
+        src: "/images/projects/obon/obon-architecture.webp",
         alt: "homepage do  site obon",
         label: "Arquitetura do sistema",
       },
       {
-        src: "/images/projects/mestresonline/mestresonline-home.png",
+        src: "/images/projects/mestresonline/mestresonline-home.webp",
         alt: "homepage do  site obon",
         label: "homepage do  site obon",
       },
       {
-        src: "/images/projects/nutri/nutri-home.png",
+        src: "/images/projects/nutri/nutri-home.webp",
         alt: "homepage do  site obon",
         label: "homepage",
       },
       {
-        src: "/images/projects/contentai/contentai-home.png",
+        src: "/images/projects/contentai/contentai-home.webp",
         alt: "homepage do  site obon",
         label: "homepage",
       },
       {
-        src: "/images/projects/obon/obon-home.png",
+        src: "/images/projects/obon/obon-home.webp",
         alt: "homepage do  site obon",
         label: "homepage",
       },
       {
-        src: "/images/projects/obon/obon-home.png",
+        src: "/images/projects/obon/obon-home.webp",
         alt: "homepage do  site obon",
         label: "homepage",
       },
       {
-        src: "/images/projects/obon/obon-home.png",
+        src: "/images/projects/obon/obon-home.webp",
         alt: "homepage do  site obon",
         label: "homepage",
       },
@@ -216,7 +216,7 @@ export const projects: Project[] = [
 export const projectPreview = [
   {
     name: "Obon",
-    previewImage: "/images/projects/obon/obon-home.png",
+    previewImage: "/images/projects/obon/obon-home.webp",
     description: {
       pt: "/// Plataforma de eventos",
       en: "/// Events platform",
@@ -225,7 +225,7 @@ export const projectPreview = [
   },
   {
     name: "Mestres Online",
-    previewImage: "/images/projects/mestresonline/mestresonline-home.png",
+    previewImage: "/images/projects/mestresonline/mestresonline-home.webp",
     description: {
       pt: "/// Plataforma de Criação de Blogs",
       en: "/// Blog Creation Platform",
@@ -234,7 +234,7 @@ export const projectPreview = [
   },
   {
     name: "Content.AI",
-    previewImage: "/images/projects/contentai/contentai-home.png",
+    previewImage: "/images/projects/contentai/contentai-home.webp",
     description: {
       pt: "/// Ferramenta de transcrição de vídeos",
       en: "/// Video transcription tool",
@@ -243,7 +243,7 @@ export const projectPreview = [
   },
   {
     name: "Nutri.io",
-    previewImage: "/images/projects/nutri/nutri-home.png",
+    previewImage: "/images/projects/nutri/nutri-home.webp",
     description: {
       pt: "/// Gerador de Dietas com IA",
       en: "/// AI Diet Generator",
