@@ -20,6 +20,9 @@ import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import TechIcon from "@/components/TechIcon";
 import techIcons from "@/constants/techs";
+import ProjectDetailsCard from "@/components/ProjectDetailsCard";
+import ProjectLinksCard from "@/components/ProjectLinksCard";
+import ProjectTechStackCard from "@/components/ProjectTechStackCard";
 
 const Page = () => {
   const project = {
@@ -30,6 +33,16 @@ const Page = () => {
       "I developed a SaaS platform for event organizers with features like event creation, attendee management, ticket sales, and a customizable interface for users to register, view tickets, and track event details.",
     url: "obon",
     links: [
+      {
+        label: "Repositório Front-End",
+        icon: LinkIcon,
+        url: "https://obon.vercel.app",
+      },
+      {
+        label: "Repositório Back-End",
+        icon: LinkIcon,
+        url: "https://obon.vercel.app",
+      },
       {
         label: "Link da aplicação",
         icon: LinkIcon,
@@ -208,83 +221,30 @@ const Page = () => {
       <div className="w-full lg:w-1/2 lg:h-full flex flex-col items-center justify-start p-4 lg:p-7 !pb-0 lg:overflow-y-auto lg:overflow-x-hidden">
         <ProjectNavbar />
         <div className="h-fit flex flex-col lg:flex-row gap-4 lg:gap-6 mt-6">
-          <div className="card-wrap">
-            <Card className="clip-custom-card w-full pt-6 flex flex-col justify-between">
-              <div className="text-center mb-4">
-                <h1 className="text-3xl font-bold italic">{project.name}</h1>
-                <h2 className="text-muted-foreground text-sm font-light italic">
-                  {project.detail}
-                </h2>
-              </div>
-              <CardContent>
-                <p className="text-sm sm:text-justify text-center">
-                  {project.description}
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+          <ProjectDetailsCard
+            description={project.description}
+            detail={project.detail}
+            name={project.name}
+          />
           <div className="flex flex-wrap lg:flex-col justify-start gap-6 my-auto card-wrap">
             <div className="w-full flex flex-col sm:flex-row gap-6 lg:flex-col">
-              <Card className="clip-custom-card w-full xl:min-w-[200px] 2xl:min-w-[300px] h-fit flex justify-center p-5">
-                <CardContent className="p-0">
-                  <p className="text-xs font-semibold">Repositório Front-End</p>
-                </CardContent>
-              </Card>
-              <Card className="clip-custom-card w-full xl:min-w-[200px] 2xl:min-w-[300px] h-fit flex justify-center p-5">
-                <CardContent className="p-0">
-                  <p className="text-xs font-semibold">Repositório Back-End</p>
-                </CardContent>
-              </Card>
+              {project.links.slice(0, 2).map((link, index) =>
+                <ProjectLinksCard label={link.label} key={index} href={link.url} icon={link.icon} />
+              )}
             </div>
-            <Card className="clip-custom-card w-full xl:min-w-[200px] 2xl:min-w-[300px] h-fit flex justify-center p-5 bg-primary text-white dark:bg-white dark:text-black dark:!border-0">
-              <CardContent className="p-0">
-                <p className="text-xs font-semibold">Link da aplicação</p>
-              </CardContent>
-            </Card>
+            {project.links[2]?.label && project.links[2]?.url && (
+              <ProjectLinksCard label={project.links[2].label} key={3} className=" bg-primary text-white dark:bg-white dark:text-black dark:!border-0" href={project.links[2].url} icon={project.links[2].icon} />
+            )}
           </div>
+        </div>
+        <div className="w-full mt-6 flex flex-col gap-6">
+          {project.links.slice(3).map((link, index) =>
+            <ProjectLinksCard label={link.label} key={index} className="w-full max-w-full" href={link.url} icon={link.icon} />
+          )}
         </div>
 
         <div className="w-full h-full card-wrap">
-          <Card className="clip-custom-card w-full mt-6 lg:my-6 h-[89%] bg-primary !border-black !border-0 dark:!border-border dark:!border-2">
-            <CardHeader className="pb-0 w-full mx-auto text-white">
-              <h2 className="text-2xl font-bold text-center xl:text-start">
-                Tech Stack
-              </h2>
-            </CardHeader>
-            <CardContent className="w-full mx-auto">
-              <p className="text-sm font-light text-gray-400 text-center xl:text-start">
-                Techs used in this project development
-              </p>
-
-              <div className="flex flex-wrap justify-center gap-4 text-start mt-4">
-                {project.techGroups.map((group, index) => (
-                  <div className="w-full" key={index}>
-                    <h2 className="text-lg font-bold italic w-full text-white">
-                      {group.label}
-                    </h2>
-                    <Carousel className="w-full px-6 lg:px-8">
-                      <CarouselContent className="w-full flex justify-between">
-                        {group.techs.map((image, index) => (
-                          <CarouselItem
-                            key={index}
-                            className="w-fit basis-auto text-white"
-                          >
-                            <TechIcon
-                              image={image.image}
-                              alt={image.label}
-                              label={image.label}
-                            />
-                          </CarouselItem>
-                        ))}
-                      </CarouselContent>
-                      <CarouselPrevious className="-left-2 xl:left-2 disabled:hidden" />
-                      <CarouselNext className="-right-2 xl:right-2 disabled:hidden" />
-                    </Carousel>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+          <ProjectTechStackCard techGroups={project.techGroups} />
         </div>
       </div>
 
