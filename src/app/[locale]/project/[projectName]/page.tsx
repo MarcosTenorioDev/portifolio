@@ -17,8 +17,6 @@ import {
 import ProjectImagesCard from "@/components/ProjectImagesCard";
 import { type CarouselApi } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import TechIcon from "@/components/TechIcon";
 import techIcons from "@/constants/techs";
 import ProjectDetailsCard from "@/components/ProjectDetailsCard";
 import ProjectLinksCard from "@/components/ProjectLinksCard";

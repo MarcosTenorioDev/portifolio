@@ -3,7 +3,6 @@ import TechIcon from './TechIcon'
 import { Card, CardHeader, CardContent } from './ui/card'
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from './ui/carousel'
 import { cn } from '@/lib/utils'
-import { StaticImageData } from 'next/image'
 
 interface ProjectTechStackCardProps extends React.HTMLAttributes<HTMLDivElement> {
     techGroups: { label: string, techs: { label: string, image: string }[] }[]
