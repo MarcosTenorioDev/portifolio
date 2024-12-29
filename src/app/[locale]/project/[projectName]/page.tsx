@@ -17,11 +17,7 @@ import {
 import ProjectImagesCard from "@/components/ProjectImagesCard";
 import { type CarouselApi } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import TechIcon from "@/components/TechIcon";
 import techIcons from "@/constants/techs";
 
@@ -209,7 +205,7 @@ const Page = () => {
 
   return (
     <div className="mx-auto lg:h-screen bg-[#ededed] dark:bg-background flex flex-col lg:flex-row font-roboto overflow-hidden">
-      <div className="w-full lg:w-1/2 h-1/2 lg:h-full flex flex-col items-center justify-start p-4 lg:p-7 !pb-0 overflow-y-auto overflow-x-hidden">
+      <div className="w-full lg:w-1/2 lg:h-full flex flex-col items-center justify-start p-4 lg:p-7 !pb-0 lg:overflow-y-auto overflow-x-hidden">
         <ProjectNavbar />
         <div className="h-fit flex flex-col lg:flex-row gap-4 lg:gap-6 mt-6">
           <div className="card-wrap">
@@ -227,7 +223,7 @@ const Page = () => {
               </CardContent>
             </Card>
           </div>
-          <div className="flex flex-wrap lg:flex-col justify-start gap-6 my-auto">
+          <div className="flex flex-wrap lg:flex-col justify-start gap-6 my-auto card-wrap">
             <div className="w-full flex flex-col sm:flex-row gap-6 lg:flex-col">
               <Card className="clip-custom-card w-full xl:min-w-[200px] 2xl:min-w-[300px] h-fit flex justify-center p-5">
                 <CardContent className="p-0">
@@ -248,7 +244,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="w-full h-full ">
+        <div className="w-full h-full card-wrap">
           <Card className="clip-custom-card w-full my-6 h-[89%] bg-primary !border-black !border-0 dark:!border-border dark:!border-2">
             <CardHeader className="pb-0 w-full mx-auto text-white">
               <h2 className="text-2xl font-bold text-center xl:text-start">
@@ -292,22 +288,25 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="w-full lg:w-1/2 lg:h-full overflow-hidden lg:overflow-y-scroll">
-        <div className="space-y-4 p-4 lg:p-7 hidden lg:block">
+      <div className="w-full lg:w-1/2 lg:h-full overflow-hidden lg:overflow-y-scroll p-4 lg:p-7">
+        <h2 className="text-2xl sm:text-4xl font-bold text-center mb-2 sm:mb-6">
+          Imagens do projeto
+        </h2>
+        <div className="space-y-4 hidden lg:block card-wrap">
           {project.images.map((image, index) => (
             <ProjectImagesCard key={index} {...image} />
           ))}
         </div>
         <div className="lg:hidden">
-          <h2 className="text-2xl font-bold text-center xl:text-start my-4 px-4 lg:px-7">
-            Imagens do projeto
-          </h2>
           <Carousel className="w-full" setApi={setApi}>
             <CarouselContent>
               {project.images.map((image, index) => (
                 <CarouselItem key={index}>
                   <div className="p-1 relative">
-                    <ProjectImagesCard key={index} {...image} />
+                    <div className="card-wrap">
+                      <ProjectImagesCard key={index} {...image} />
+                    </div>
+
                     <CarouselPrevious className="left-4 focus:bg-black" />
                     <CarouselNext className="right-4 focus:bg-black" />
                     <div className="py-2 text-center text-sm text-muted-foreground">
