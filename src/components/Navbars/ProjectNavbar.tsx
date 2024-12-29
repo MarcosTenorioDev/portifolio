@@ -41,7 +41,7 @@ const ProjectNavbar = () => {
         <nav>
           <ul className="flex text-base">
             <li>
-              <a href={`/ ${locale}`}>
+              <a href={`/${locale}`}>
                 <Button variant={"link"} className="text-white">
                   Home
                 </Button>
