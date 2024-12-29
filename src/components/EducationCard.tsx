@@ -2,8 +2,8 @@ import Image, { StaticImageData } from "next/image";
 import { Card } from "@/components/ui/card";
 
 interface EducationCardProps {
-  logo: string | StaticImageData;
-  hoverImage: string | StaticImageData;
+  logo: string;
+  hoverImage: string;
   title: string;
   institution: string;
   dateRange: string;
@@ -50,7 +50,7 @@ export default function EducationCard({
         className="absolute inset-0 opacity-0 hover:clip-custom-card group-hover:opacity-100 transition-opacity duration-300 bg-cover bg-center z-0"
         style={{
           backgroundImage: `url(${
-            typeof hoverImage === "string" ? hoverImage : hoverImage.src
+            hoverImage
           })`,
         }}
       >
