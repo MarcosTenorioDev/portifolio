@@ -1,19 +1,59 @@
-import { LinkIcon } from "lucide-react";
-import React from "@/../public/images/techs/react-framework.svg";
-import obon from "@/../public/images/projects/obon/obon-home.png";
-import mestresonline from "@/../public/images/projects/mestresonline/mestresonline-home.png";
-import nutri from "@/../public/images/projects/nutri/nutri-home.png";
-import contentai from "@/../public/images/projects/contentai/contentai-home.png";
+import { LinkIcon, LucideIcon } from "lucide-react";
+import techIcons from "./techs";
 
-export const projects = [
+
+interface Project {
+  name: string;
+  detail: string;
+  description: string;
+  url: string;
+  links: Link[];
+  techGroups: TechGroup[];
+  images: ProjectImage[];
+}
+
+interface Link {
+  label: string;
+  icon: LucideIcon;
+  url: string;
+}
+
+interface TechGroup {
+  label: string;
+  techs: Tech[];
+}
+
+interface Tech {
+  label: string;
+  image: string; // URL ou path para o ícone da tecnologia
+}
+
+interface ProjectImage {
+  src: string; // URL ou path da imagem
+  alt: string; // Descrição alternativa para acessibilidade
+  label: string; // Label da imagem
+}
+
+export default Project;
+
+export const projects: Project[] = [
   {
     name: "obon",
-    previewImage: obon,
     detail: "I developed",
     description:
       "I developed a SaaS platform for event organizers with features like event creation, attendee management, ticket sales, and a customizable interface for users to register, view tickets, and track event details.",
     url: "obon",
     links: [
+      {
+        label: "Repositório Front-End",
+        icon: LinkIcon,
+        url: "https://obon.vercel.app",
+      },
+      {
+        label: "Repositório Back-End",
+        icon: LinkIcon,
+        url: "https://obon.vercel.app",
+      },
       {
         label: "Link da aplicação",
         icon: LinkIcon,
@@ -26,24 +66,157 @@ export const projects = [
         techs: [
           {
             label: "React",
-            image: React,
+            image: techIcons.ReactFramework,
+          },
+          {
+            label: "Angular",
+            image: techIcons.Angular,
+          },
+          {
+            label: "React",
+            image: techIcons.AWSLogo,
+          },
+          {
+            label: "React",
+            image: techIcons.Bootstrap,
+          },
+          {
+            label: "React",
+            image: techIcons.MySQL,
+          },
+          {
+            label: "React",
+            image: techIcons.PostgreSQLLight,
+          },
+          {
+            label: "React",
+            image: techIcons.TailwindCSSIcon,
+          },
+          {
+            label: "React",
+            image: techIcons.NodeJsIcon,
+          },
+        ],
+      },
+      {
+        label: "Backend",
+        techs: [
+          {
+            label: "React",
+            image: techIcons.ReactFramework,
+          },
+          {
+            label: "Angular",
+            image: techIcons.Angular,
+          },
+          {
+            label: "React",
+            image: techIcons.AWSLogo,
+          },
+          {
+            label: "React",
+            image: techIcons.Bootstrap,
+          },
+          {
+            label: "React",
+            image: techIcons.MySQL,
+          },
+          {
+            label: "React",
+            image: techIcons.PostgreSQLLight,
+          },
+          {
+            label: "React",
+            image: techIcons.TailwindCSSIcon,
+          },
+          {
+            label: "React",
+            image: techIcons.NodeJsIcon,
+          },
+        ],
+      },
+      {
+        label: "Backend",
+        techs: [
+          {
+            label: "React",
+            image: techIcons.ReactFramework,
+          },
+          {
+            label: "Angular",
+            image: techIcons.Angular,
+          },
+          {
+            label: "React",
+            image: techIcons.AWSLogo,
+          },
+          {
+            label: "React",
+            image: techIcons.Bootstrap,
+          },
+          {
+            label: "React",
+            image: techIcons.MySQL,
+          },
+          {
+            label: "React",
+            image: techIcons.PostgreSQLLight,
+          },
+          {
+            label: "React",
+            image: techIcons.TailwindCSSIcon,
+          },
+          {
+            label: "React",
+            image: techIcons.NodeJsIcon,
           },
         ],
       },
     ],
     images: [
       {
-        src: obon,
+        src: "/images/projects/obon/obon-architecture.jpeg",
         alt: "homepage do  site obon",
+        label: "Arquitetura do sistema",
+      },
+      {
+        src: "/images/projects/mestresonline/mestresonline-home.png",
+        alt: "homepage do  site obon",
+        label: "homepage do  site obon",
+      },
+      {
+        src: "/images/projects/nutri/nutri-home.png",
+        alt: "homepage do  site obon",
+        label: "homepage",
+      },
+      {
+        src: "/images/projects/contentai/contentai-home.png",
+        alt: "homepage do  site obon",
+        label: "homepage",
+      },
+      {
+        src: "/images/projects/obon/obon-home.png",
+        alt: "homepage do  site obon",
+        label: "homepage",
+      },
+      {
+        src: "/images/projects/obon/obon-home.png",
+        alt: "homepage do  site obon",
+        label: "homepage",
+      },
+      {
+        src: "/images/projects/obon/obon-home.png",
+        alt: "homepage do  site obon",
+        label: "homepage",
       },
     ],
-  },
+  }
 ];
 
 export const projectPreview = [
   {
     name: "Obon",
-    previewImage: obon,
+    previewImage: "/images/projects/obon/obon-home.png",
     description: {
       pt: "/// Plataforma de eventos",
       en: "/// Events platform",
@@ -52,7 +225,7 @@ export const projectPreview = [
   },
   {
     name: "Mestres Online",
-    previewImage: mestresonline,
+    previewImage: "/images/projects/mestresonline/mestresonline-home.png",
     description: {
       pt: "/// Plataforma de Criação de Blogs",
       en: "/// Blog Creation Platform",
@@ -61,7 +234,7 @@ export const projectPreview = [
   },
   {
     name: "Content.AI",
-    previewImage: contentai,
+    previewImage: "/images/projects/contentai/contentai-home.png",
     description: {
       pt: "/// Ferramenta de transcrição de vídeos",
       en: "/// Video transcription tool",
@@ -70,7 +243,7 @@ export const projectPreview = [
   },
   {
     name: "Nutri.io",
-    previewImage: nutri,
+    previewImage: "/images/projects/nutri/nutri-home.png",
     description: {
       pt: "/// Gerador de Dietas com IA",
       en: "/// AI Diet Generator",
@@ -78,3 +251,5 @@ export const projectPreview = [
     url: "nutri",
   },
 ];
+
+export const urls = ["obon", "mestresonline", "contentai", "nutri"];

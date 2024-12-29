@@ -1,5 +1,5 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -7,7 +7,7 @@ import { Locale } from "@/i18n/routing";
 import { useParams } from "next/navigation";
 
 interface ProjectCardProps {
-  imageSrc: StaticImageData;
+  imageSrc: string;
   title: string;
   subtitle: string;
   url: string;
@@ -42,6 +42,8 @@ const ProjectCard = ({ imageSrc, subtitle, title, url }: ProjectCardProps) => {
             src={imageSrc}
             alt="Imagem do Card"
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+            width={1200}
+            height={1200}
           />
 
           {/* Contêiner dinâmico para título e subtítulo */}

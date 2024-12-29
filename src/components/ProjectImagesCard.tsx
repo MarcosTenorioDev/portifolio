@@ -1,10 +1,10 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import React from "react";
 import { buttonVariants } from "./ui/button";
 import { cn } from "@/lib/utils";
 
 interface ProjectImagesCardProps {
-  src: StaticImageData;
+  src: string;
   alt: string;
   label: string;
 }
@@ -13,7 +13,13 @@ const ProjectImagesCard = ({ alt, label, src }: ProjectImagesCardProps) => {
   return (
     <div className="clip-custom-card w-full flex flex-col">
       <div className="relative max-h-full">
-        <Image src={src} alt={alt} className="w-full"/>
+        <Image
+          src={src}
+          alt={alt}
+          className="w-full"
+          width={1200} 
+          height={1200} 
+        />
         <div className="card-wrap self-end absolute bottom-0 right-0 z-50">
           <div
             className={cn(

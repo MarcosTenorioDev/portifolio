@@ -1,12 +1,6 @@
 "use client";
 
-import { LinkIcon } from "lucide-react";
-import obon from "@/../public/images/projects/obon/obon-home.png";
-import arquitetura from "@/../public/images/projects/obon/obon-architecture.jpeg";
 import ProjectNavbar from "@/components/Navbars/ProjectNavbar";
-import mestresonline from "@/../public/images/projects/mestresonline/mestresonline-home.png";
-import nutri from "@/../public/images/projects/nutri/nutri-home.png";
-import contentai from "@/../public/images/projects/contentai/contentai-home.png";
 import {
   Carousel,
   CarouselContent,
@@ -17,187 +11,22 @@ import {
 import ProjectImagesCard from "@/components/ProjectImagesCard";
 import { type CarouselApi } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
-import techIcons from "@/constants/techs";
 import ProjectDetailsCard from "@/components/ProjectDetailsCard";
 import ProjectLinksCard from "@/components/ProjectLinksCard";
 import ProjectTechStackCard from "@/components/ProjectTechStackCard";
+import { projects, urls } from "@/constants/projects";
+import { notFound, useParams } from "next/navigation";
 
 const Page = () => {
-  const project = {
-    name: "obon",
-    previewImage: obon,
-    detail: "I developed",
-    description:
-      "I developed a SaaS platform for event organizers with features like event creation, attendee management, ticket sales, and a customizable interface for users to register, view tickets, and track event details.",
-    url: "obon",
-    links: [
-      {
-        label: "Repositório Front-End",
-        icon: LinkIcon,
-        url: "https://obon.vercel.app",
-      },
-      {
-        label: "Repositório Back-End",
-        icon: LinkIcon,
-        url: "https://obon.vercel.app",
-      },
-      {
-        label: "Link da aplicação",
-        icon: LinkIcon,
-        url: "https://obon.vercel.app",
-      },
-    ],
-    techGroups: [
-      {
-        label: "Frontend",
-        techs: [
-          {
-            label: "React",
-            image: techIcons.ReactFramework,
-          },
-          {
-            label: "Angular",
-            image: techIcons.Angular,
-          },
-          {
-            label: "React",
-            image: techIcons.AWSLogo,
-          },
-          {
-            label: "React",
-            image: techIcons.Bootstrap,
-          },
-          {
-            label: "React",
-            image: techIcons.MySQL,
-          },
-          {
-            label: "React",
-            image: techIcons.PostgreSQLLight,
-          },
-          {
-            label: "React",
-            image: techIcons.TailwindCSSIcon,
-          },
-          {
-            label: "React",
-            image: techIcons.NodeJsIcon,
-          },
-        ],
-      },
-      {
-        label: "Backend",
-        techs: [
-          {
-            label: "React",
-            image: techIcons.ReactFramework,
-          },
-          {
-            label: "Angular",
-            image: techIcons.Angular,
-          },
-          {
-            label: "React",
-            image: techIcons.AWSLogo,
-          },
-          {
-            label: "React",
-            image: techIcons.Bootstrap,
-          },
-          {
-            label: "React",
-            image: techIcons.MySQL,
-          },
-          {
-            label: "React",
-            image: techIcons.PostgreSQLLight,
-          },
-          {
-            label: "React",
-            image: techIcons.TailwindCSSIcon,
-          },
-          {
-            label: "React",
-            image: techIcons.NodeJsIcon,
-          },
-        ],
-      },
-      {
-        label: "Backend",
-        techs: [
-          {
-            label: "React",
-            image: techIcons.ReactFramework,
-          },
-          {
-            label: "Angular",
-            image: techIcons.Angular,
-          },
-          {
-            label: "React",
-            image: techIcons.AWSLogo,
-          },
-          {
-            label: "React",
-            image: techIcons.Bootstrap,
-          },
-          {
-            label: "React",
-            image: techIcons.MySQL,
-          },
-          {
-            label: "React",
-            image: techIcons.PostgreSQLLight,
-          },
-          {
-            label: "React",
-            image: techIcons.TailwindCSSIcon,
-          },
-          {
-            label: "React",
-            image: techIcons.NodeJsIcon,
-          },
-        ],
-      },
-    ],
-    images: [
-      {
-        src: arquitetura,
-        alt: "homepage do  site obon",
-        label: "Arquitetura do sistema",
-      },
-      {
-        src: mestresonline,
-        alt: "homepage do  site obon",
-        label: "homepage do  site obon",
-      },
-      {
-        src: nutri,
-        alt: "homepage do  site obon",
-        label: "homepage",
-      },
-      {
-        src: contentai,
-        alt: "homepage do  site obon",
-        label: "homepage",
-      },
-      {
-        src: obon,
-        alt: "homepage do  site obon",
-        label: "homepage",
-      },
-      {
-        src: obon,
-        alt: "homepage do  site obon",
-        label: "homepage",
-      },
-      {
-        src: obon,
-        alt: "homepage do  site obon",
-        label: "homepage",
-      },
-    ],
-  };
+  const params = useParams();
+  const { projectName } = params;
+
+  if (!projectName) {
+    return notFound();
+  }
+
+  const projectIndex = urls.findIndex((url) => url.toLowerCase() === (Array.isArray(projectName) ? projectName[0].toLowerCase() : projectName.toLowerCase()))
+  const project = projects[projectIndex];
 
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
@@ -213,6 +42,11 @@ const Page = () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
   }, [api]);
+
+
+  if (!project) {
+    return notFound()
+  }
 
   return (
     <div className="mx-auto lg:h-screen bg-[#ededed] dark:bg-background flex flex-col lg:flex-row font-roboto overflow-hidden">
