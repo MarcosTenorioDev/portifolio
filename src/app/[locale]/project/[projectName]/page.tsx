@@ -16,10 +16,13 @@ import ProjectLinksCard from "@/components/ProjectLinksCard";
 import ProjectTechStackCard from "@/components/ProjectTechStackCard";
 import { projects, urls } from "@/constants/projects";
 import { notFound, useParams } from "next/navigation";
+import { Locale } from "@/i18n/routing";
 
 const Page = () => {
   const params = useParams();
   const { projectName } = params;
+
+  const locale = params.locale as Locale;
 
   const projectIndex = urls.findIndex((url) => url.toLowerCase() === (Array.isArray(projectName) ? projectName[0].toLowerCase() : projectName?.toLowerCase()))
   const project = projects[projectIndex];
@@ -50,29 +53,29 @@ const Page = () => {
         <ProjectNavbar />
         <div className="h-fit flex flex-col lg:flex-row gap-4 lg:gap-6 mt-20 lg:mt-6">
           <ProjectDetailsCard
-            description={project.description}
-            detail={project.detail}
+            description={project.description[locale]}
+            detail={project.detail[locale]}
             name={project.name}
           />
           <div className="flex flex-wrap lg:flex-col justify-start gap-6 my-auto card-wrap">
             <div className="w-full flex flex-col sm:flex-row gap-6 lg:flex-col">
               {project.links.slice(0, 2).map((link, index) =>
-                <ProjectLinksCard label={link.label} key={index} href={link.url} icon={link.icon} />
+                <ProjectLinksCard label={link.label[locale]} key={index} href={link.url} icon={link.icon} />
               )}
             </div>
             {project.links[2]?.label && project.links[2]?.url && (
-              <ProjectLinksCard label={project.links[2].label} key={3} className=" bg-primary text-white dark:bg-white dark:text-black dark:!border-0" href={project.links[2].url} icon={project.links[2].icon} />
+              <ProjectLinksCard label={project.links[2].label[locale]} key={3} className=" bg-primary text-white dark:bg-white dark:text-black dark:!border-0" href={project.links[2].url} icon={project.links[2].icon} />
             )}
           </div>
         </div>
         <div className="w-full mt-6 flex flex-col gap-6">
           {project.links.slice(3).map((link, index) =>
-            <ProjectLinksCard label={link.label} key={index} className="w-full max-w-full" href={link.url} icon={link.icon} />
+            <ProjectLinksCard label={link.label[locale]} key={index} className="w-full max-w-full" href={link.url} icon={link.icon} />
           )}
         </div>
 
         <div className="w-full h-full card-wrap">
-          <ProjectTechStackCard techGroups={project.techGroups} />
+          <ProjectTechStackCard techGroups={project.techGroups} locale={locale} />
         </div>
       </div>
 
@@ -82,7 +85,7 @@ const Page = () => {
         </h2>
         <div className="space-y-4 hidden lg:block card-wrap">
           {project.images.map((image, index) => (
-            <ProjectImagesCard key={index} {...image} />
+            <ProjectImagesCard key={index} alt={image.alt} label={image.label[locale]} src={image.src} />
           ))}
         </div>
         <div className="lg:hidden">
@@ -92,7 +95,7 @@ const Page = () => {
                 <CarouselItem key={index}>
                   <div className="p-1 relative">
                     <div className="card-wrap">
-                      <ProjectImagesCard key={index} {...image} />
+                    <ProjectImagesCard key={index} alt={image.alt} label={image.label[locale]} src={image.src} />
                     </div>
 
                     <CarouselPrevious className="left-4 focus:bg-black" />

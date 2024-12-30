@@ -3,12 +3,15 @@ import TechIcon from './TechIcon'
 import { Card, CardHeader, CardContent } from './ui/card'
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from './ui/carousel'
 import { cn } from '@/lib/utils'
+import { Locale } from '@/i18n/routing'
+import { TechGroup } from '@/constants/projects'
 
 interface ProjectTechStackCardProps extends React.HTMLAttributes<HTMLDivElement> {
-    techGroups: { label: string, techs: { label: string, image: string }[] }[]
+    techGroups: TechGroup[]
+    locale: Locale
 }
 
-const ProjectTechStackCard = ({ className, techGroups, ...props }: ProjectTechStackCardProps) => {
+const ProjectTechStackCard = ({ className, techGroups, locale, ...props }: ProjectTechStackCardProps) => {
     return (
         <Card className={cn("clip-custom-card w-full mt-6 lg:my-6 h-[89%] bg-primary !border-black !border-0 dark:!border-border dark:!border-2", className)} {...props}>
             <CardHeader className="pb-0 w-full mx-auto text-white">
@@ -25,7 +28,7 @@ const ProjectTechStackCard = ({ className, techGroups, ...props }: ProjectTechSt
                     {techGroups.map((group, index) => (
                         <div className="w-full" key={index}>
                             <h2 className="text-lg font-bold italic w-full text-white">
-                                {group.label}
+                                {group.label[locale]}
                             </h2>
                             <Carousel className="w-full px-6 lg:px-8">
                                 <CarouselContent className="w-full flex justify-between">

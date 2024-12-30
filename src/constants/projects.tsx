@@ -4,8 +4,8 @@ import techIcons from "./techs";
 
 interface Project {
   name: string;
-  detail: string;
-  description: string;
+  detail: Record<string, string>; // Internacionalizado
+  description: Record<string, string>; // Internacionalizado
   url: string;
   links: Link[];
   techGroups: TechGroup[];
@@ -13,13 +13,13 @@ interface Project {
 }
 
 interface Link {
-  label: string;
+  label: Record<string, string>; // Internacionalizado
   icon: LucideIcon;
   url: string;
 }
 
-interface TechGroup {
-  label: string;
+export interface TechGroup {
+  label: Record<string, string>; // Internacionalizado
   techs: Tech[];
 }
 
@@ -31,38 +31,53 @@ interface Tech {
 interface ProjectImage {
   src: string; // URL ou path da imagem
   alt: string; // Descrição alternativa para acessibilidade
-  label: string; // Label da imagem
+  label: Record<string, string>; // Internacionalizado
 }
-
-export default Project;
 
 export const projects: Project[] = [
   {
     name: "obon",
-    detail: "I developed",
-    description:
-      "I developed a SaaS platform for event organizers with features like event creation, attendee management, ticket sales, and a customizable interface for users to register, view tickets, and track event details.",
+    detail: {
+      pt: "Eu desenvolvi",
+      en: "I developed",
+    },
+    description: {
+      pt: "Eu desenvolvi uma plataforma SaaS para organizadores de eventos com recursos como criação de eventos, gestão de participantes, vendas de ingressos e interface personalizável para usuários se registrarem, visualizarem ingressos e acompanharem detalhes do evento.",
+      en: "I developed a SaaS platform for event organizers with features like event creation, attendee management, ticket sales, and a customizable interface for users to register, view tickets, and track event details.",
+    },
     url: "obon",
     links: [
       {
-        label: "Repositório Front-End",
+        label: {
+          pt: "Repositório Front-End",
+          en: "Front-End Repository",
+        },
         icon: LinkIcon,
         url: "https://obon.vercel.app",
       },
       {
-        label: "Repositório Back-End",
+        label: {
+          pt: "Repositório Back-End",
+          en: "Back-End Repository",
+        },
         icon: LinkIcon,
         url: "https://obon.vercel.app",
       },
       {
-        label: "Link da aplicação",
+        label: {
+          pt: "Link da aplicação",
+          en: "Application Link",
+        },
         icon: LinkIcon,
         url: "https://obon.vercel.app",
       },
     ],
     techGroups: [
       {
-        label: "Frontend",
+        label: {
+          pt: "Frontend",
+          en: "Frontend",
+        },
         techs: [
           {
             label: "React",
@@ -74,33 +89,68 @@ export const projects: Project[] = [
           },
           {
             label: "React",
-            image: techIcons.AWSLogo,
+            image: techIcons.ReactFramework,
+          },
+          {
+            label: "Angular",
+            image: techIcons.Angular,
           },
           {
             label: "React",
-            image: techIcons.Bootstrap,
+            image: techIcons.ReactFramework,
+          },
+          {
+            label: "Angular",
+            image: techIcons.Angular,
           },
           {
             label: "React",
-            image: techIcons.MySQL,
+            image: techIcons.ReactFramework,
+          },
+          {
+            label: "Angular",
+            image: techIcons.Angular,
           },
           {
             label: "React",
-            image: techIcons.PostgreSQLLight,
+            image: techIcons.ReactFramework,
+          },
+          {
+            label: "Angular",
+            image: techIcons.Angular,
           },
           {
             label: "React",
-            image: techIcons.TailwindCSSIcon,
+            image: techIcons.ReactFramework,
           },
           {
-            label: "React",
-            image: techIcons.NodeJsIcon,
+            label: "Angular",
+            image: techIcons.Angular,
           },
         ],
       },
       {
-        label: "Backend",
+        label: {
+          pt: "Backend",
+          en: "Backend",
+        },
         techs: [
+          {
+            label: "Node.js",
+            image: techIcons.NodeJsIcon,
+          },
+          {
+            label: "PostgreSQL",
+            image: techIcons.PostgreSQLLight,
+          },
+          {
+            label: "Node.js",
+            image: techIcons.NodeJsIcon,
+          },
+          {
+            label: "PostgreSQL",
+            image: techIcons.PostgreSQLLight,
+          },
           {
             label: "React",
             image: techIcons.ReactFramework,
@@ -110,65 +160,12 @@ export const projects: Project[] = [
             image: techIcons.Angular,
           },
           {
-            label: "React",
-            image: techIcons.AWSLogo,
-          },
-          {
-            label: "React",
-            image: techIcons.Bootstrap,
-          },
-          {
-            label: "React",
-            image: techIcons.MySQL,
-          },
-          {
-            label: "React",
-            image: techIcons.PostgreSQLLight,
-          },
-          {
-            label: "React",
-            image: techIcons.TailwindCSSIcon,
-          },
-          {
-            label: "React",
+            label: "Node.js",
             image: techIcons.NodeJsIcon,
           },
-        ],
-      },
-      {
-        label: "Backend",
-        techs: [
           {
-            label: "React",
-            image: techIcons.ReactFramework,
-          },
-          {
-            label: "Angular",
-            image: techIcons.Angular,
-          },
-          {
-            label: "React",
-            image: techIcons.AWSLogo,
-          },
-          {
-            label: "React",
-            image: techIcons.Bootstrap,
-          },
-          {
-            label: "React",
-            image: techIcons.MySQL,
-          },
-          {
-            label: "React",
+            label: "PostgreSQL",
             image: techIcons.PostgreSQLLight,
-          },
-          {
-            label: "React",
-            image: techIcons.TailwindCSSIcon,
-          },
-          {
-            label: "React",
-            image: techIcons.NodeJsIcon,
           },
         ],
       },
@@ -176,41 +173,23 @@ export const projects: Project[] = [
     images: [
       {
         src: "/images/projects/obon/obon-architecture.webp",
-        alt: "homepage do  site obon",
-        label: "Arquitetura do sistema",
-      },
-      {
-        src: "/images/projects/mestresonline/mestresonline-home.webp",
-        alt: "homepage do  site obon",
-        label: "homepage do  site obon",
-      },
-      {
-        src: "/images/projects/nutri/nutri-home.webp",
-        alt: "homepage do  site obon",
-        label: "homepage",
-      },
-      {
-        src: "/images/projects/contentai/contentai-home.webp",
-        alt: "homepage do  site obon",
-        label: "homepage",
+        alt: "Homepage do site Obon",
+        label: {
+          pt: "Arquitetura do sistema",
+          en: "System Architecture",
+        },
       },
       {
         src: "/images/projects/obon/obon-home.webp",
-        alt: "homepage do  site obon",
-        label: "homepage",
-      },
-      {
-        src: "/images/projects/obon/obon-home.webp",
-        alt: "homepage do  site obon",
-        label: "homepage",
-      },
-      {
-        src: "/images/projects/obon/obon-home.webp",
-        alt: "homepage do  site obon",
-        label: "homepage",
+        alt: "Homepage do site Obon",
+        label: {
+          pt: "Página inicial",
+          en: "Homepage",
+        },
       },
     ],
-  }
+  },
+  // Outros projetos podem ser configurados da mesma forma
 ];
 
 export const projectPreview = [
