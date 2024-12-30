@@ -27,14 +27,14 @@ const ProjectTechStackCard = ({ className, techGroups, locale, ...props }: Proje
                 {t('techCardDescription')}
                 </p>
 
-                <div className="flex flex-wrap justify-center gap-4 text-start mt-4">
+                <div className="flex flex-wrap justify-center gap-4 text-start mt-4 mb-6">
                     {techGroups.map((group, index) => (
                         <div className="w-full" key={index}>
                             <h2 className="text-lg font-bold italic w-full text-white">
                                 {group.label[locale]}
                             </h2>
                             <Carousel className="w-full px-6 lg:px-8">
-                                <CarouselContent className="w-full flex justify-between">
+                                <CarouselContent className="w-full flex justify-evenly">
                                     {group.techs.map((image, index) => (
                                         <CarouselItem
                                             key={index}

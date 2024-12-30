@@ -15,6 +15,11 @@ import SonarQubeLogo from "@/../public/images/techs/sonarqube-logo.svg";
 import StyledComponents from "@/../public/images/techs/styledcomponents.svg";
 import TailwindCSSIcon from "@/../public/images/techs/tailwindcss-icon.svg";
 import TypeScriptIcon from "@/../public/images/techs/typescript-icon.svg";
+import ClerkIcon from "@/../public/images/techs/clerk.svg";
+import Prisma from "@/../public/images/techs/prisma.svg";
+import S3 from "@/../public/images/techs/s3.svg";
+import Vite from "@/../public/images/techs/vite.svg";
+import Apidog from "@/../public/images/techs/apidog.png";
 
 export const techs = [
   {
@@ -63,6 +68,11 @@ export const techs = [
     alt: "Express Logo",
   },
   {
+    label: "Prisma",
+    image: Prisma,
+    alt: "Prisma Logo",
+  },
+  {
     label: "Fastify",
     image: FastifyLogo,
     alt: "Fastify Logo",
@@ -105,6 +115,11 @@ export const techs = [
 ];
 
 const techIcons = {
+  ClerkIcon,
+  Apidog,
+  Prisma,
+  Vite,
+  S3,
   Angular,
   AWSLogo,
   Bootstrap,

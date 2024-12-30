@@ -36,10 +36,10 @@ interface ProjectImage {
 
 export const projects: Project[] = [
   {
-    name: "obon",
+    name: "Obon",
     detail: {
-      pt: "Eu desenvolvi",
-      en: "I developed",
+      pt: "Plataforma de Eventos",
+      en: "Events Platform",
     },
     description: {
       pt: "Eu desenvolvi uma plataforma SaaS para organizadores de eventos com recursos como criação de eventos, gestão de participantes, vendas de ingressos e interface personalizável para usuários se registrarem, visualizarem ingressos e acompanharem detalhes do evento.",
@@ -53,7 +53,7 @@ export const projects: Project[] = [
           en: "Front-End Repository",
         },
         icon: LinkIcon,
-        url: "https://obon.vercel.app",
+        url: "https://github.com/MarcosTenorioDev/Site-de-eventos-frontend",
       },
       {
         label: {
@@ -61,7 +61,7 @@ export const projects: Project[] = [
           en: "Back-End Repository",
         },
         icon: LinkIcon,
-        url: "https://obon.vercel.app",
+        url: "https://github.com/MarcosTenorioDev/obon-backend",
       },
       {
         label: {
@@ -80,52 +80,24 @@ export const projects: Project[] = [
         },
         techs: [
           {
-            label: "React",
-            image: techIcons.ReactFramework,
-          },
-          {
-            label: "Angular",
-            image: techIcons.Angular,
+            label: "Vite",
+            image: techIcons.Vite,
           },
           {
             label: "React",
             image: techIcons.ReactFramework,
           },
           {
-            label: "Angular",
-            image: techIcons.Angular,
+            label: "Typescript",
+            image: techIcons.TypeScriptIcon,
           },
           {
-            label: "React",
-            image: techIcons.ReactFramework,
+            label: "Tailwind CSS",
+            image: techIcons.TailwindCSSIcon,
           },
           {
-            label: "Angular",
-            image: techIcons.Angular,
-          },
-          {
-            label: "React",
-            image: techIcons.ReactFramework,
-          },
-          {
-            label: "Angular",
-            image: techIcons.Angular,
-          },
-          {
-            label: "React",
-            image: techIcons.ReactFramework,
-          },
-          {
-            label: "Angular",
-            image: techIcons.Angular,
-          },
-          {
-            label: "React",
-            image: techIcons.ReactFramework,
-          },
-          {
-            label: "Angular",
-            image: techIcons.Angular,
+            label: "Clerk",
+            image: techIcons.ClerkIcon,
           },
         ],
       },
@@ -140,40 +112,68 @@ export const projects: Project[] = [
             image: techIcons.NodeJsIcon,
           },
           {
+            label: "Fastify",
+            image: techIcons.FastifyLogo,
+          },
+          {
+            label: "Typescript",
+            image: techIcons.TypeScriptIcon,
+          },
+          {
+            label: "Prisma",
+            image: techIcons.Prisma,
+          },
+          {
+            label: "Clerk",
+            image: techIcons.ClerkIcon,
+          },
+        ],
+      },
+      {
+        label: {
+          pt: "Banco de dados e armazenamento",
+          en: "Database and Storage",
+        },
+        techs: [
+          {
             label: "PostgreSQL",
             image: techIcons.PostgreSQLLight,
           },
           {
-            label: "Node.js",
-            image: techIcons.NodeJsIcon,
+            label: "Redis",
+            image: techIcons.Redis,
           },
           {
-            label: "PostgreSQL",
-            image: techIcons.PostgreSQLLight,
+            label: "AWS S3",
+            image: techIcons.S3,
+          },
+        ],
+      },
+      {
+        label: {
+          pt: "Segurança, CI/CD, Testes e Documentação",
+          en: "Security, CI/CD, Tests and Documentation",
+        },
+        techs: [
+          {
+            label: "Clerk",
+            image: techIcons.ClerkIcon,
           },
           {
-            label: "React",
-            image: techIcons.ReactFramework,
+            label: "SonarQube",
+            image: techIcons.SonarQubeLogo,
           },
           {
-            label: "Angular",
-            image: techIcons.Angular,
-          },
-          {
-            label: "Node.js",
-            image: techIcons.NodeJsIcon,
-          },
-          {
-            label: "PostgreSQL",
-            image: techIcons.PostgreSQLLight,
-          },
+            label: "ApiDog",
+            image: techIcons.Apidog,
+          }
         ],
       },
     ],
     images: [
       {
         src: "/images/projects/obon/obon-architecture.webp",
-        alt: "Homepage do site Obon",
+        alt: "Arquitetura do sistema do site Obon",
         label: {
           pt: "Arquitetura do sistema",
           en: "System Architecture",
@@ -187,6 +187,54 @@ export const projects: Project[] = [
           en: "Homepage",
         },
       },
+      {
+        src: "/images/projects/obon/obon-ticket-reservation.webp",
+        alt: "Página de reserva de ticket do site Obon",
+        label: {
+          pt: "Reserva de ingresso",
+          en: "Ticket reservation",
+        },
+      },
+      {
+        src: "/images/projects/obon/obon-tickets.webp",
+        alt: "Página de visualização de ticket do site Obon",
+        label: {
+          pt: "Visualize seus ingressos",
+          en: "View your tickets",
+        },
+      },
+      {
+        src: "/images/projects/obon/obon-create-event.webp",
+        alt: "Página de criação de evento do site Obon",
+        label: {
+          pt: "Crie seu evento",
+          en: "Create your event",
+        },
+      },
+      {
+        src: "/images/projects/obon/obon-edit-event.webp",
+        alt: "Página de edição de evento do site Obon",
+        label: {
+          pt: "Gerencie seu evento",
+          en: "Manage your event",
+        },
+      },
+      {
+        src: "/images/projects/obon/obon-user-managment.webp",
+        alt: "Página de gerenciamento do usuário do site Obon",
+        label: {
+          pt: "Gerencie seu usuário",
+          en: "Manage your user",
+        },
+      },
+      {
+        src: "/images/projects/obon/obon-security.webp",
+        alt: "Página de segurança do site Obon",
+        label: {
+          pt: "Segurança",
+          en: "Security",
+        },
+      }
     ],
   },
   // Outros projetos podem ser configurados da mesma forma
