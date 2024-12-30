@@ -3,7 +3,7 @@
     "Navbar": {
       "Projects": "Projetos",
       "Blog": "Blog",
-      "Experience":"Experiência",
+      "Experience": "Experiência",
       "ContactMe": "Contato",
       "LightMode": "Modo Claro",
       "DarkMode": "Modo Escuro",
@@ -33,7 +33,7 @@
     "Projects": {
       "title": "Projetos",
       "description": "Meu espírito criativo ganha vida no reino digital. Com o teclado, transformo ideias em soluções inovadoras e de alta qualidade, tudo a partir de uns e zeros...",
-      "cardDetails":"Ver detalhes do projeto"
+      "cardDetails": "Ver detalhes do projeto"
     },
     "Contact": {
       "title": {
@@ -41,16 +41,22 @@
         "second": "CONTATO"
       },
       "button": "Contate agora*",
-      "leftMessage":{
-        "first":"software é o resultado",
+      "leftMessage": {
+        "first": "software é o resultado",
         "second": "para a sua ideia."
       },
-      "rightMessage":"Com um teclado como pincel, pinto experiências vívidas usando nada além da linguagem de uns e zeros.",
-      "about":"Residente em <span>Recife, Brasil,</span> sou um desenvolvedor fullstack altamente qualificado, sempre trabalhando com inovação. Minha paixão por design limpo e minimalista, arquitetura escalável e experiência de usuário intuitiva é evidente em todos os projetos que construo."
+      "rightMessage": "Com um teclado como pincel, pinto experiências vívidas usando nada além da linguagem de uns e zeros.",
+      "about": "Residente em <span>Recife, Brasil,</span> sou um desenvolvedor fullstack altamente qualificado, sempre trabalhando com inovação. Minha paixão por design limpo e minimalista, arquitetura escalável e experiência de usuário intuitiva é evidente em todos os projetos que construo."
     },
-    "Footer":{
-      "by":"Feito por",
-      "backToTop":"Voltar para o início"
+    "Footer": {
+      "by": "Feito por",
+      "backToTop": "Voltar para o início"
     }
+  },
+  "ProjectPage": {
+    "homeBtn": "Início",
+    "techCardTitle": "Ferramentas e Tecnologias",
+    "techCardDescription": "Tecnologias utilizadas no desenvolvimento deste projeto",
+    "projectImages": "Imagens do Projeto"
   }
 }

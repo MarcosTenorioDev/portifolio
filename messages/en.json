@@ -53,5 +53,11 @@
       "backToTop":"Go back to top"
     }
     
-  }
+  },
+  "ProjectPage": {
+  "homeBtn": "Home",
+  "techCardTitle": "Tech Stack",
+  "techCardDescription": "Techs used in this project development",
+  "projectImages": "Project Images"
+}
 }

@@ -10,17 +10,19 @@ import {
 } from "@/components/ui/carousel";
 import ProjectImagesCard from "@/components/ProjectImagesCard";
 import { type CarouselApi } from "@/components/ui/carousel";
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import ProjectDetailsCard from "@/components/ProjectDetailsCard";
 import ProjectLinksCard from "@/components/ProjectLinksCard";
 import ProjectTechStackCard from "@/components/ProjectTechStackCard";
 import { projects, urls } from "@/constants/projects";
 import { notFound, useParams } from "next/navigation";
 import { Locale } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 const Page = () => {
   const params = useParams();
   const { projectName } = params;
+  const t = useTranslations('ProjectPage');
 
   const locale = params.locale as Locale;
 
@@ -81,7 +83,7 @@ const Page = () => {
 
       <div className="w-full lg:w-1/2 lg:h-full overflow-hidden lg:overflow-y-scroll p-4 lg:p-7">
         <h2 className="text-2xl sm:text-4xl font-bold text-center mb-2 sm:mb-6">
-          Imagens do projeto
+          {t("projectImages")}
         </h2>
         <div className="space-y-4 hidden lg:block card-wrap">
           {project.images.map((image, index) => (

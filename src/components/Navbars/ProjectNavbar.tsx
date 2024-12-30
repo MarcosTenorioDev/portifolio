@@ -6,10 +6,12 @@ import { ModeToggle } from "../ModeToggle";
 import { Button } from "../ui/button";
 import { useParams } from "next/navigation";
 import { Locale } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 const ProjectNavbar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const t = useTranslations('ProjectPage');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,7 +45,7 @@ const ProjectNavbar = () => {
             <li>
               <a href={`/${locale}`}>
                 <Button variant={"link"} className="text-white">
-                  Home
+                  {t("homeBtn")}
                 </Button>
               </a>
             </li>
