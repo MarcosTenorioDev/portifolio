@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import ProjectImagesCard from "@/components/ProjectImagesCard";
 import { type CarouselApi } from "@/components/ui/carousel";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ProjectDetailsCard from "@/components/ProjectDetailsCard";
 import ProjectLinksCard from "@/components/ProjectLinksCard";
 import ProjectTechStackCard from "@/components/ProjectTechStackCard";
