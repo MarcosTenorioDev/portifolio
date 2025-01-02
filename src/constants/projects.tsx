@@ -425,7 +425,7 @@ export const projectPreview = [
   },
   {
     name: "Mestres Online",
-    previewImage: "/images/projects/mestresonline/mestresonline-home.webp",
+    previewImage: "/images/projects/mestresonline/mestresonline-home-preview.webp",
     description: {
       pt: "/// Plataforma de Criação de Blogs",
       en: "/// Blog Creation Platform",
