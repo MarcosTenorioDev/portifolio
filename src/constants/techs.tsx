@@ -21,6 +21,8 @@ import S3 from "@/../public/images/techs/s3.svg";
 import Vite from "@/../public/images/techs/vite.svg";
 import Apidog from "@/../public/images/techs/apidog.png";
 import Stripe from "@/../public/images/techs/stripe.svg";
+import FFMPEG from "@/../public/images/techs/ffmpeg.svg";
+import OpenAi from "@/../public/images/techs/openai.svg";
 
 export const techs = [
   {
@@ -119,6 +121,8 @@ const techIcons = {
   ClerkIcon,
   Apidog,
   Stripe,
+  FFMPEG,
+  OpenAi,
   Prisma,
   Vite,
   S3,

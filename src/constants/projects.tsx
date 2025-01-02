@@ -322,7 +322,7 @@ export const projects: Project[] = [
             label: "Typescript",
             image: techIcons.TypeScriptIcon,
           },
-          
+
           {
             label: "PostgreSQL",
             image: techIcons.PostgreSQLLight,
@@ -410,6 +410,116 @@ export const projects: Project[] = [
         },
       },
     ],
+  },
+  {
+    name: "Content.AI",
+    detail: {
+      pt: "Ferramenta inteligente para transcrição de vídeos e chat AI",
+      en: "Smart tool for video transcription and AI assistant",
+    },
+    description: {
+      pt: "Content.AI transcreve vídeos para texto, gera resumos, cria títulos/descrições e permite a interação com o vídeo por meio de perguntas utilizando IA, tudo baseado em tecnologias web modernas. Desenvolvi esta ferramenta para auxiliar na criação eficiente de conteúdo, resumos e transcrições de vídeos.",
+      en: "Content.AI transcribes videos to text, generates summaries, creates titles/descriptions, and enables interactive querying of the video using AI, all powered by modern web technologies. I developed this tool to assist in the efficient creation of content, summaries, and transcriptions from videos.",
+    },
+    url: "contentai",
+    links: [
+      {
+        label: {
+          pt: "Repositório Front-End",
+          en: "Front-End Repository",
+        },
+        icon: LinkIcon,
+        url: "https://github.com/MarcosTenorioDev/Content.AI",
+      },
+      {
+        label: {
+          pt: "Repositório Back-End",
+          en: "Back-End Repository",
+        },
+        icon: LinkIcon,
+        url: "https://github.com/MarcosTenorioDev/Content.AI-Backend",
+      },
+      {
+        label: {
+          pt: "Link da aplicação",
+          en: "Application Link",
+        },
+        icon: LinkIcon,
+        url: "https://content-io.vercel.app/",
+      },
+    ],
+    techGroups: [
+      {
+        label: {
+          pt: "Frontend",
+          en: "Frontend",
+        },
+        techs: [
+          {
+            label: "Vite",
+            image: techIcons.Vite,
+          },
+          {
+            label: "React",
+            image: techIcons.ReactFramework,
+          },
+          {
+            label: "ffmpeg",
+            image: techIcons.FFMPEG,
+          },
+          {
+            label: "Typescript",
+            image: techIcons.TypeScriptIcon,
+          },
+          {
+            label: "Tailwind CSS",
+            image: techIcons.TailwindCSSIcon,
+          },
+        ],
+      },
+      {
+        label: {
+          pt: "Backend e Banco de Dados",
+          en: "Backend and Database",
+        },
+        techs: [
+          {
+            label: "Node.js",
+            image: techIcons.NodeJsIcon,
+          },
+          {
+            label: "Fastify",
+            image: techIcons.FastifyLogo,
+          },
+          {
+            label: "Typescript",
+            image: techIcons.TypeScriptIcon,
+          },
+          {
+            label: "OpenAI API",
+            image: techIcons.OpenAi,
+          },
+          {
+            label: "PostgreSQL",
+            image: techIcons.PostgreSQLLight,
+          },
+          {
+            label: "Prisma",
+            image: techIcons.Prisma,
+          },
+        ],
+      },
+    ],
+    images: [
+      {
+        src: "/images/projects/contentai/contentai-home.webp",
+        alt: "Página inicial do site Content AI",
+        label: {
+          pt: "Página inicial",
+          en: "Homepage",
+        },
+      },
+    ],
   }
 ];
 
@@ -434,7 +544,7 @@ export const projectPreview = [
   },
   {
     name: "Content.AI",
-    previewImage: "/images/projects/contentai/contentai-home.webp",
+    previewImage: "/images/projects/contentai/contentai-home-preview.webp",
     description: {
       pt: "/// Ferramenta de transcrição de vídeos",
       en: "/// Video transcription tool",
