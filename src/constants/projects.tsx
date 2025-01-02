@@ -237,7 +237,180 @@ export const projects: Project[] = [
       }
     ],
   },
-  // Outros projetos podem ser configurados da mesma forma
+  {
+    name: "Mestres Online",
+    detail: {
+      pt: "Plataforma de Criação de Blogs",
+      en: "Blog Creation Platform",
+    },
+    description: {
+      pt: "Mestres_Online é uma plataforma no formato de SAAS para criar blogs personalizados, com suporte a posts multimídia, autores, tópicos, integração de API pública e planos gerenciados via gateway de pagamento.",
+      en: "Mestres_Online is a SAAS platform for creating personalized blogs, supporting multimedia posts, authors, topics, public API integration, and managed plans through a payment gateway.",
+    },
+    url: "mestresonline",
+    links: [
+      {
+        label: {
+          pt: "Repositório Front-End",
+          en: "Front-End Repository",
+        },
+        icon: LinkIcon,
+        url: "https://github.com/MarcosTenorioDev/mestresonline",
+      },
+      {
+        label: {
+          pt: "Repositório Back-End",
+          en: "Back-End Repository",
+        },
+        icon: LinkIcon,
+        url: "https://github.com/MarcosTenorioDev/mestres-online-backend",
+      },
+      {
+        label: {
+          pt: "Link da aplicação",
+          en: "Application Link",
+        },
+        icon: LinkIcon,
+        url: "https://mestresonline.vercel.app/",
+      },
+    ],
+    techGroups: [
+      {
+        label: {
+          pt: "Frontend",
+          en: "Frontend",
+        },
+        techs: [
+          {
+            label: "Vite",
+            image: techIcons.Vite,
+          },
+          {
+            label: "React",
+            image: techIcons.ReactFramework,
+          },
+          {
+            label: "Typescript",
+            image: techIcons.TypeScriptIcon,
+          },
+          {
+            label: "Tailwind CSS",
+            image: techIcons.TailwindCSSIcon,
+          },
+          { label: "Stripe", image: techIcons.Stripe },
+          {
+            label: "Clerk",
+            image: techIcons.ClerkIcon,
+          },
+        ],
+      },
+      {
+        label: {
+          pt: "Backend e Banco de Dados",
+          en: "Backend and Database",
+        },
+        techs: [
+          {
+            label: "Node.js",
+            image: techIcons.NodeJsIcon,
+          },
+          {
+            label: "Fastify",
+            image: techIcons.FastifyLogo,
+          },
+          {
+            label: "Typescript",
+            image: techIcons.TypeScriptIcon,
+          },
+          
+          {
+            label: "PostgreSQL",
+            image: techIcons.PostgreSQLLight,
+          },
+          {
+            label: "Prisma",
+            image: techIcons.Prisma,
+          },
+          {
+            label: "AWS S3",
+            image: techIcons.S3,
+          },
+          { label: "Stripe", image: techIcons.Stripe },
+
+          {
+            label: "Clerk",
+            image: techIcons.ClerkIcon,
+          },
+        ],
+      },
+    ],
+    images: [
+      {
+        src: "/images/projects/mestresonline/mestresonline-home.webp",
+        alt: "Página inicial do site Mestres online",
+        label: {
+          pt: "Página inicial",
+          en: "Homepage",
+        },
+      },
+      {
+        src: "/images/projects/mestresonline/mestresonline-profiles.webp",
+        alt: "Página de perfis do site Mestres online",
+        label: {
+          pt: "Crie diversos perfis",
+          en: "Create multiple profiles",
+        },
+      },
+      {
+        src: "/images/projects/mestresonline/mestresonline-myprofile.webp",
+        alt: "Página do perfil do site Mestres online",
+        label: {
+          pt: "Gerencie seu perfil",
+          en: "Manage your profile",
+        },
+      },
+      {
+        src: "/images/projects/mestresonline/mestresonline-publication.webp",
+        alt: "Página de publicação do site Mestres online",
+        label: {
+          pt: "Publique seu trabalho",
+          en: "Publish your work",
+        },
+      },
+      {
+        src: "/images/projects/mestresonline/mestresonline-authors.webp",
+        alt: "Página de criação de autores do site Mestres online",
+        label: {
+          pt: "Crie diversos autores",
+          en: "Create multiple authors",
+        },
+      },
+      {
+        src: "/images/projects/mestresonline/mestresonline-topics.webp",
+        alt: "Página de criação de tópicos do site Mestres online",
+        label: {
+          pt: "Crie diversos tópicos",
+          en: "Create multiple topics",
+        },
+      },
+      {
+        src: "/images/projects/mestresonline/mestresonline-managesubscription.webp",
+        alt: "Página do stripe para gerenciamento de planos",
+        label: {
+          pt: "Gerencie seus planos",
+          en: "Manage your plans",
+        },
+      },
+      {
+        src: "/images/projects/mestresonline/mestresonline-gateway.webp",
+        alt: "Página do stripe para compra de um plano",
+        label: {
+          pt: "Gateway de pagamento Stripe",
+          en: "Stripe payment gateway",
+        },
+      },
+    ],
+  }
 ];
 
 export const projectPreview = [

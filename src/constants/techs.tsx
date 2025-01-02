@@ -20,6 +20,7 @@ import Prisma from "@/../public/images/techs/prisma.svg";
 import S3 from "@/../public/images/techs/s3.svg";
 import Vite from "@/../public/images/techs/vite.svg";
 import Apidog from "@/../public/images/techs/apidog.png";
+import Stripe from "@/../public/images/techs/stripe.svg";
 
 export const techs = [
   {
@@ -117,6 +118,7 @@ export const techs = [
 const techIcons = {
   ClerkIcon,
   Apidog,
+  Stripe,
   Prisma,
   Vite,
   S3,
