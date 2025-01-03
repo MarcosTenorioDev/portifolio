@@ -13,7 +13,7 @@ const ProjectDetailsCard = ({name, detail, description}: ProjectDetailsCardProps
       <Card className="clip-custom-card w-full pt-6 flex flex-col justify-between">
         <div className="text-center mb-4">
           <h1 className="text-3xl font-bold italic">{name}</h1>
-          <h2 className="text-muted-foreground text-sm font-light italic">
+          <h2 className="text-muted-foreground text-sm font-light italic px-4">
             {detail}
           </h2>
         </div>

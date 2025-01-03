@@ -520,6 +520,177 @@ export const projects: Project[] = [
         },
       },
     ],
+  },
+  {
+    name: "Nutri-io",
+    detail: {
+      pt: "Gerador de Dietas com IA",
+      en: "AI Diet Generator",
+    },
+    description: {
+      pt: "Nutri.io é uma aplicação web que gera dietas personalizadas com base em preferências alimentares, restrições e objetivos de saúde. A aplicação utiliza uma IA para sugerir alimentos e quantidades ideais para cada refeição, além de permitir exportar a dieta como PDF ou CSV.",
+      en: "Nutri.io is a web application that generates personalized diets based on dietary preferences, restrictions, and health goals. The application uses AI to suggest ideal foods and quantities for each meal, as well as allowing the diet to be exported as a PDF or CSV.",
+    },
+    url: "nutri",
+    links: [
+      {
+        label: {
+          pt: "Repositório Front-End",
+          en: "Front-End Repository",
+        },
+        icon: LinkIcon,
+        url: "https://github.com/MarcosTenorioDev/nutri",
+      },
+      {
+        label: {
+          pt: "Repositório Back-End",
+          en: "Back-End Repository",
+        },
+        icon: LinkIcon,
+        url: "https://github.com/MarcosTenorioDev/nutri-backend",
+      },
+      {
+        label: {
+          pt: "Link da aplicação",
+          en: "Application Link",
+        },
+        icon: LinkIcon,
+        url: "https://nutri-io.com/",
+      },
+    ],
+    techGroups: [
+      {
+        label: {
+          pt: "Frontend",
+          en: "Frontend",
+        },
+        techs: [
+          {
+            label: "Vite",
+            image: techIcons.Vite,
+          },
+          {
+            label: "React",
+            image: techIcons.ReactFramework,
+          },
+          {
+            label: "Typescript",
+            image: techIcons.TypeScriptIcon,
+          },
+          {
+            label: "Tailwind CSS",
+            image: techIcons.TailwindCSSIcon,
+          },
+          {
+            label: "Clerk",
+            image: techIcons.ClerkIcon,
+          },
+        ],
+      },
+      {
+        label: {
+          pt: "Backend e Banco de Dados",
+          en: "Backend and Database",
+        },
+        techs: [
+          {
+            label: "Node.js",
+            image: techIcons.NodeJsIcon,
+          },
+          {
+            label: "Fastify",
+            image: techIcons.FastifyLogo,
+          },
+          {
+            label: "Typescript",
+            image: techIcons.TypeScriptIcon,
+          },
+          {
+            label: "Stripe",
+            image: techIcons.Stripe,
+          },
+          {
+            label: "OpenAI API",
+            image: techIcons.OpenAi,
+          },
+          {
+            label: "PostgreSQL",
+            image: techIcons.PostgreSQLLight,
+          },
+          {
+            label: "Prisma",
+            image: techIcons.Prisma,
+          },
+        ],
+      },
+    ],
+    images: [
+      {
+        src: "/images/projects/nutri/nutri-homepage.webp",
+        alt: "Página inicial do site Nutri.io",
+        label: {
+          pt: "Página inicial",
+          en: "Homepage",
+        },
+      },
+      {
+        src: "/images/projects/nutri/nutri-alldiets.webp",
+        alt: "Página de dietas do site Nutri.io",
+        label: {
+          pt: "Visualize suas dietas",
+          en: "View your diets",
+        },
+      },
+      {
+        src: "/images/projects/nutri/nutri-form.webp",
+        alt: "Formulário de criação de dieta",
+        label: {
+          pt: "Crie sua dieta com IA",
+          en: "Create your diet with AI",
+        },
+      },
+      {
+        src: "/images/projects/nutri/nutri-diet.webp",
+        alt: "Página da sua dieta do site Nutri.io",
+        label: {
+          pt: "Exporte como pdf ou csv",
+          en: "Export as pdf or csv",
+        },
+      },
+      {
+        src: "/images/projects/nutri/nutri-userconfig.webp",
+        alt: "Configurações do usuário do site Nutri.io",
+        label: {
+          pt: "Gerencie seu usuário",
+          en: "Manage your user",
+        },
+      },
+      {
+        src: "/images/projects/nutri/nutri-security.webp",
+        alt: "Página de segurança do usuário do site Nutri.io",
+        label: {
+          pt: "Segurança",
+          en: "Security",
+        },
+      },
+      {
+        src: "/images/projects/nutri/nutri-plans.webp",
+        alt: "Sessão de planos do site Nutri.io",
+        label: {
+          pt: "Escolha seu plano",
+          en: "Choose your plan",
+        },
+      },
+      {
+        src: "/images/projects/nutri/nutri-gateway.webp",
+        alt: "Gateway de pagamento do site Nutri.io",
+        label: {
+          pt: "Gateway de pagamento Stripe",
+          en: "Stripe payment gateway",
+        },
+      },
+
+    ],
   }
 ];
 
@@ -553,7 +724,7 @@ export const projectPreview = [
   },
   {
     name: "Nutri.io",
-    previewImage: "/images/projects/nutri/nutri-home.webp",
+    previewImage: "/images/projects/nutri/nutri-home-preview.webp",
     description: {
       pt: "/// Gerador de Dietas com IA",
       en: "/// AI Diet Generator",
