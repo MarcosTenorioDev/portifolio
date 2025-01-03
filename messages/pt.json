@@ -18,6 +18,11 @@
       "Content": "Desenvolvedor Fullstack formado em Tecnologia em Sistemas para Internet pela UNIVERSIDADE CATÓLICA DE PERNAMBUCO, com experiência em soluções SaaS, CRMs e interfaces intuitivas. Atuei em projetos de gestão de eventos, CRM Hospitalar, plataforma de criação de conteúdos... Sempre focado em boas práticas, acessibilidade e design responsivo.",
       "ButtonLabel": "Baixar CV"
     },
+    "DetailsCard": {
+      "Card1": "Criando soluções criativas...",
+      "Card2": "Lendo: Entendendo Algoritmos - Aditya Y. Bhargava...",
+      "Card3": "Interesses: Matemática & Estatística | Web 3.0 | IA | Robótica."
+    },
     "TechsCard": {
       "Title": "Ferramentas e Tecnologias",
       "Description": "Essas são as tecnologias que domino e utilizo para transformar ideias em realidade."

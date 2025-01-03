@@ -9,7 +9,7 @@ const DescriptionProfileCard = () => {
     <div className="card-wrap">
       <Card className="clip-custom-card w-full pt-6 flex flex-col justify-between">
         <CardContent>
-          <p className="sm:text-justify text-center">
+          <p className="text-xs sm:text-sm sm:text-justify text-center">
             {t("DescriptionCard.Content")}
           </p>
         </CardContent>

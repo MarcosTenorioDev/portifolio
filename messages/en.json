@@ -18,6 +18,11 @@
       "Content": "Fullstack developer with a technologist degree in Internet Systems at Catholic University of Pernambuco, experienced in SaaS solutions, CRMs, and intuitive interfaces. I've worked on event management projects, hospital CRM, and content creation platforms... Always focused on best practices, accessibility, and responsive design.",
       "ButtonLabel": "Download CV"
     },
+    "DetailsCard": {
+      "Card1": "I just like build creative stuff...",
+      "Card2": "Reading: Grokking Algorithms - Aditya Y. Bhargava...",
+      "Card3": "Interests: Math and statistics | Web 3.0 | AI | Robotic"
+    },
     "TechsCard": {
       "Title": "Technologies I work with",
       "Description": " These are the technologies I have mastered and use to bring ideas to life."

@@ -41,7 +41,7 @@ export default function HomePage() {
               <ProfileCard />
             </div>
             <div className="flex flex-col h-full gap-12">
-              <div className="h-fit flex flex-col sm:flex-row gap-10">
+              <div className="h-fit flex flex-col md:flex-row gap-10">
                 <DescriptionProfileCard />
                 <DetailsProfileCard />
               </div>
