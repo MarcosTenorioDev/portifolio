@@ -53,6 +53,20 @@
       "rightMessage": "Com um teclado como pincel, pinto experiências vívidas usando nada além da linguagem de uns e zeros.",
       "about": "Residente em <span>Recife, Brasil,</span> sou um desenvolvedor fullstack altamente qualificado, sempre trabalhando com inovação. Minha paixão por design limpo e minimalista, arquitetura escalável e experiência de usuário intuitiva é evidente em todos os projetos que construo."
     },
+    "ContactForm":{
+      "title":"Entre em Contato!",
+      "description":" Entre em contato para criarmos algo incrível juntos. Vamos fazer acontecer.",
+      "name":"Nome",
+      "email":"Email",
+      "message":"Mensagem",
+      "send":"Enviar",
+      "validators":{
+        "name": "Por favor, insira seu nome.",
+        "email": "Por favor, insira um email válido.",
+        "message":"A mensagem deve ter pelo menos 10 caracteres.",
+        "sucess":"Mensagem enviada com sucesso!"
+      }
+    },
     "Footer": {
       "by": "Feito por",
       "backToTop": "Voltar para o início"

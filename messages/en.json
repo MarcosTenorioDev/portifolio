@@ -53,6 +53,20 @@
       "rightMessage": "With a keyboard as my brush, I paint vivid experiences using nothing but the language of ones and zeroes.",
       "about": "Based in <span>Recife, Brazil,</span> I am an innovative fullstack developer, always working with innovation and creativity. My passion for clean, minimalist design, scalable architecture, and intuitive user experiences is evident in every project I build."
     },
+    "ContactForm":{
+      "title":"Ring A Bell!",
+      "description":" Reach out and let's create something amazing together. Let's achieve greatness.",
+      "name":"Name",
+      "email":"Email",
+      "message":"Message",
+      "send":"Send",
+      "validators":{
+        "name": "Please enter a valid name.",
+        "email": "Please enter a valid email.",
+        "message":"The message must be at least 10 characters.",
+        "sucess":"Message sent successfully!"
+      }
+    },
     "Footer":{ 
       "by":"By",
       "backToTop":"Go back to top"

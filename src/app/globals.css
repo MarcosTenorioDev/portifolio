@@ -23,7 +23,7 @@
     --input: 258 30% 50%;
     --ring: 258 0% 0%;
     --radius: 0rem;
-   }
+  }
   .dark {
     --background: 239 10% 10%;
     --foreground: 239 0% 100%;
@@ -196,6 +196,53 @@
   }
 }
 
+@layer utilities {
+  .clip-custom-input-container {
+    position: relative;
+  }
+
+  .clip-custom-input {
+    position: relative;
+    z-index: 1;
+    clip-path: polygon(
+      0px 0px,
+      calc(100% - 13px) 0px,
+      100% 13px,
+      100% 100%,
+      13px 100%,
+      0px calc(100% - 13px)
+    );
+    border: 2px solid hsl(var(--border));
+  }
+
+  .clip-custom-input-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -38px;
+    rotate: 45deg;
+    width: 100px;
+    height: 4px;
+    background-color: hsl(var(--border));
+    border: 2.8px solid hsl(var(--border));
+    pointer-events: none;
+  }
+
+  .clip-custom-input-container::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -38px;
+    rotate: 45deg;
+    width: 100px;
+    height: 4px;
+    background-color: hsl(var(--border));
+    border: 2.8px solid hsl(var(--border));
+    pointer-events: none;
+  }
+}
+
+
 .card-wrap {
   filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
 }
@@ -262,7 +309,6 @@
   }
 }
 
-
 @layer utilities {
   .BtnAnimated {
     position: absolute;
@@ -312,13 +358,13 @@
 /* hsl(var(--border))
  */
 
- html {
+html {
   scroll-behavior: smooth;
 }
 
 /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: hsl(var(--muted-foreground)) #0000000;
-  }
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--muted-foreground)) #0000000;
+}

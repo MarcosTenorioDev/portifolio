@@ -21,11 +21,21 @@ import { useParams } from "next/navigation";
 import { experiences } from "@/constants/experience";
 import { projectPreview } from "@/constants/projects";
 import { AnimationWrapper } from "@/components/Animation/animations";
+import { useState } from "react";
+import ZodContactForm from "@/components/ContactForm";
+import contactImage from "@/../public/images/contact.svg";
+import { motion } from "framer-motion";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
   const params = useParams();
   const locale = params.locale as Locale;
+
+  const [showForm, setShowForm] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowForm(true);
+  };
 
   return (
     <div className="overflow-hidden">
@@ -179,16 +189,16 @@ export default function HomePage() {
               </h2>
 
               <div>
-                <ButtonAnimated className="p-6 px-8">
+                <ButtonAnimated className={`${showForm ? "hidden" : ""} p-6 px-8`} onClick={() => handleButtonClick()}>
                   {t("Contact.button")}
                 </ButtonAnimated>
               </div>
-              <div className="w-full flex justify-around items-center">
+              <div className={`${showForm ? "hidden" : "w-full flex justify-around items-center"}`}>
                 <p className="w-[200px] lg:w-[270px] text-center font-light italic hidden sm:flex">
                   {t("Contact.leftMessage.first")} <br />{" "}
                   {t("Contact.leftMessage.second")}{" "}
                 </p>
-                <div className="clip-custom-card aspect-auto p-10 px-[20%] sm:px-10 max-w-[370px] sm:max-w-[200px] lg:max-w-[400px] xl:max-w-[500px] mx-10 absolute lg:px-28 xl:px-40 bg-black dark:bg-white mt-10">
+                <div className="clip-custom-card aspect-auto p-10 px-[20%] sm:px-10 max-w-[370px] sm:max-w-[200px] lg:max-w-[400px] xl:max-w-[500px] mx-10 absolute lg:px-28 xl:px-40 bg-black dark:bg-white mt-10 !border-0">
                   <Image
                     src={cyberpunkBoy}
                     alt="A cyberpunk boy with robotic parts"
@@ -200,6 +210,32 @@ export default function HomePage() {
                   {t("Contact.rightMessage")}
                 </p>
               </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={showForm ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className={`${showForm ? "w-full mt-10" : "hidden"}`}
+              >
+                <h2 className="font-spaceGrotesk font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center lg:text-start">
+                {t("ContactForm.title")}
+                </h2>
+                <h3 className="text-center lg:text-start w-full text-sm md:text-base lg:text-lg text-muted-foreground mx-auto lg:mx-0 italic font-light mb-6 max-w-[600px]">
+                {t("ContactForm.description")}
+                </h3>
+                <div className="flex justify-between w-full">
+                  <div className="p-10 px-[20%] sm:px-4 w-2/4 lg:px-24 xl:px-36 hidden md:block">
+                    <Image
+                      src={contactImage}
+                      alt="A cyberpunk boy with robotic parts"
+                      quality={100}
+                    />
+                  </div>
+                  <div className="w-full md:w-2/4">
+                    <ZodContactForm />
+                  </div>
+                </div>
+              </motion.div>
 
               <p className="text-base font-bold italic text-center max-w-[730px] mt-10 uppercase">
                 {t.rich("Contact.about", {
@@ -225,8 +261,8 @@ export default function HomePage() {
             </div>
           </AnimationWrapper>
         </div>
-      </div>
+      </div >
       <Footer />
-    </div>
+    </div >
   );
 }

@@ -39,17 +39,19 @@ const fadeInBottomNavbar = {
 // Componente de animação com lógica de scroll
 interface AnimationWrapperProps {
   animation:
-    | "fadeInUp"
-    | "fadeInRight"
-    | "fadeInLeft"
-    | "fadeInBottom"
-    | "fadeInCenter";
+  | "fadeInUp"
+  | "fadeInRight"
+  | "fadeInLeft"
+  | "fadeInBottom"
+  | "fadeInCenter";
   children: React.ReactNode;
+  className?: string;
 }
 
 const AnimationWrapper: React.FC<AnimationWrapperProps> = ({
   animation,
   children,
+  className
 }) => {
   const [isInView, setIsInView] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -119,6 +121,7 @@ const AnimationWrapper: React.FC<AnimationWrapperProps> = ({
       variants={animationVariants[animation]}
       initial="hidden"
       animate={isInView ? "show" : "hidden"}
+      className={className}
     >
       {children}
     </motion.div>
