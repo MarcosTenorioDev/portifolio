@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { Locale, routing } from "@/i18n/routing";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import { Toaster } from "@/components/ui/toaster";
 
 const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
@@ -105,6 +106,7 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
+          <Toaster />
             {children}
           </NextIntlClientProvider>
         </ThemeProvider>

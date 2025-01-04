@@ -4,8 +4,10 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
 import { useTranslations } from "next-intl";
+import { useToast } from "@/hooks/use-toast";
 
 const ZodContactForm = () => {
+    const { toast } = useToast()
     const t = useTranslations("HomePage");
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
     const [errors, setErrors] = useState<{ name?: string; email?: string; message?: string }>({});
@@ -38,10 +40,12 @@ const ZodContactForm = () => {
         e.preventDefault();
 
         try {
-            schema.parse(formData); // Validação completa do formulário
-            alert(t("ContactForm.validators.sucess")); // Enviar formulário
+            schema.parse(formData);
+            toast({
+                title: t("ContactForm.validators.sucess"),
+            })
 
-            // Resetar formulário
+
             setFormData({ name: "", email: "", message: "" });
             setErrors({});
         } catch (err) {
