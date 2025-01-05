@@ -60,8 +60,8 @@ export default function EducationCard({
 
       {/* Hover Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 text-white">
-        <h3 className="text-xl font-bold text-center">{title}</h3>
-        <p className="text-sm text-center px-4">{description}</p>
+        <h3 className="text-xl font-bold text-center pointer-events-none">{title}</h3>
+        <p className="text-sm text-center px-4 pointer-events-none">{description}</p>
       </div>
     </Card>
   );
