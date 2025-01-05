@@ -33,7 +33,8 @@
     },
     "Academic": {
       "first": "Academic Summary",
-      "second": "and courses"
+      "second": "and courses",
+      "seeMore": "See more"
     },
     "Projects": {
       "title": "Featured Cases",

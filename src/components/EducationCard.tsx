@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
+import { useTranslations } from "next-intl";
 
 interface EducationCardProps {
   logo: string;
@@ -20,6 +21,7 @@ export default function EducationCard({
   description,
   alt = "Institution logo",
 }: EducationCardProps) {
+  const t = useTranslations("HomePage");
   return (
     <Card className="relative hover:clip-custom-card group flex items-start gap-6 bg-transparent py-4 border-0 shadow-none md:min-h-[170px] md:h-[170px] overflow-hidden">
       {/* Static Content */}
@@ -32,8 +34,8 @@ export default function EducationCard({
             height={140}
             className="object-contain border border-black aspect-square rounded-xl"
           />
+          <p className="text-xs mt-1 underline sm:hidden">{t("Academic.seeMore")}</p>
         </div>
-
         <div className="space-y-1 flex flex-col h-[140px] pt-2">
           <h2 className="text-2xl leading-tight font-semibold w-full text-center sm:text-start">{title}</h2>
           <p className="text-sm uppercase text-muted-foreground italic">
@@ -49,9 +51,8 @@ export default function EducationCard({
       <div
         className="absolute inset-0 opacity-0 hover:clip-custom-card group-hover:opacity-100 transition-opacity duration-300 bg-cover bg-center z-0"
         style={{
-          backgroundImage: `url(${
-            hoverImage
-          })`,
+          backgroundImage: `url(${hoverImage
+            })`,
         }}
       >
         <div className="absolute inset-0 bg-black/70"></div> {/* Overlay */}

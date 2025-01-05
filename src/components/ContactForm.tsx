@@ -125,7 +125,7 @@ const ZodContactForm = () => {
             </div>
             {errors.message && <p className="text-red-500 text-xs lg:text-sm mt-1">{errors.message}</p>}
 
-            <Button type="submit">{t("ContactForm.send")}</Button>
+            <Button type="submit" className="dark:bg-white dark:text-black">{t("ContactForm.send")}</Button>
         </form>
     );
 };
