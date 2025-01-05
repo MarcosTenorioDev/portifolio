@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: "Marcos Tenorio | Fullstack Developer",
     description:
       "Portfólio de Marcos Tenorio, desenvolvedor fullstack com experiência em projetos SaaS, frontend com React e Angular, backend com Node.js e Fastify, além de banco de dados PostgreSQL e MongoDB.",
-    url: "", //insert url after deploy
+    url: "https://marcostenorio.me", //insert url after deploy
     siteName: "Portfólio de Marcos Tenorio",
     images: [
       {

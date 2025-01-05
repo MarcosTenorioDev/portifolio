@@ -45,7 +45,6 @@ export default function HomePage() {
         id="home"
         className="grid pb-10 font-roboto max-w-[1680px] mx-auto items-start gap-12 px-4 sm:px-10 md:px-20 pt-[52px] md:pt-[145px]"
       >
-        <AnimationWrapper animation="fadeInBottom">
           <div className="w-full h-full flex flex-col xl:flex-row gap-10 mt-8 md:mt-0">
             <div className="xl:max-w-[400px]">
               <ProfileCard />
@@ -60,7 +59,6 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </AnimationWrapper>
 
         <div id="experience">
           <AnimationWrapper animation="fadeInRight">
