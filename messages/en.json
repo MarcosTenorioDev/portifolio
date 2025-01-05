@@ -64,7 +64,8 @@
         "name": "Please enter a valid name.",
         "email": "Please enter a valid email.",
         "message":"The message must be at least 10 characters.",
-        "sucess":"Message sent successfully!"
+        "success":"Message sent successfully!",
+        "error":"Oops... an error occurred while sending the message. Please try again later."
       }
     },
     "Footer":{ 

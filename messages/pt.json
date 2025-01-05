@@ -64,7 +64,8 @@
         "name": "Por favor, insira seu nome.",
         "email": "Por favor, insira um email válido.",
         "message":"A mensagem deve ter pelo menos 10 caracteres.",
-        "sucess":"Mensagem enviada com sucesso!"
+        "success":"Mensagem enviada com sucesso!",
+        "error":"Oops... ocorreu um erro ao enviar a mensagem. Por favor, tente novamente."
       }
     },
     "Footer": {
