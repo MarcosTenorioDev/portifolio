@@ -20,6 +20,7 @@ const ProfileCard = () => {
               alt="Marcos Tenório, desenvolvedor de software"
               className="object-cover w-full h-full object-right"
               quality={100}
+              priority
             />
           </div>
 
