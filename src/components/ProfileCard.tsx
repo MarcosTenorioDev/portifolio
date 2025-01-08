@@ -48,7 +48,7 @@ const ProfileCard = () => {
             <SocialMediaButton
               icon={Mail}
               label="Email"
-              href="mailto:marcostenorio2003@gmail.com"
+              href="https://mailto:marcostenorio2003@gmail.com"
             />
           </div>
         </div>
