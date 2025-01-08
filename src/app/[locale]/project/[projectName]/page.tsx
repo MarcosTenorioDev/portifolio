@@ -66,7 +66,7 @@ const Page = () => {
               )}
             </div>
             {project.links[2]?.label && project.links[2]?.url && (
-              <ProjectLinksCard label={project.links[2].label[locale]} key={3} className=" bg-primary text-white dark:bg-white dark:text-black dark:!border-0" href={project.links[2].url} icon={project.links[2].icon} />
+              <ProjectLinksCard label={project.links[2].label[locale]} key={3} disabled={project.isDown} className=" bg-primary text-white dark:bg-white dark:text-black dark:!border-0" href={project.links[2].url} icon={project.links[2].icon} />
             )}
           </div>
         </div>

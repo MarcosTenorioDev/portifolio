@@ -1,4 +1,4 @@
-import { LinkIcon, LucideIcon } from "lucide-react";
+import { CloudOff, LinkIcon, LucideIcon } from "lucide-react";
 import techIcons from "./techs";
 
 
@@ -10,6 +10,7 @@ interface Project {
   links: Link[];
   techGroups: TechGroup[];
   images: ProjectImage[];
+  isDown: boolean;
 }
 
 interface Link {
@@ -37,6 +38,7 @@ interface ProjectImage {
 export const projects: Project[] = [
   {
     name: "Obon",
+    isDown: false,
     detail: {
       pt: "Plataforma de Eventos",
       en: "Events Platform",
@@ -239,6 +241,7 @@ export const projects: Project[] = [
   },
   {
     name: "Mestres Online",
+    isDown:false,
     detail: {
       pt: "Plataforma de Criação de Blogs",
       en: "Blog Creation Platform",
@@ -413,6 +416,7 @@ export const projects: Project[] = [
   },
   {
     name: "Content.AI",
+    isDown:false,
     detail: {
       pt: "Ferramenta inteligente para transcrição de vídeos e chat AI",
       en: "Smart tool for video transcription and AI assistant",
@@ -523,6 +527,7 @@ export const projects: Project[] = [
   },
   {
     name: "Nutri-io",
+    isDown:true,
     detail: {
       pt: "Gerador de Dietas com IA",
       en: "AI Diet Generator",
@@ -551,10 +556,10 @@ export const projects: Project[] = [
       },
       {
         label: {
-          pt: "Link da aplicação",
-          en: "Application Link",
+          pt: "Serviço indisponível",
+          en: "Service unavailable",
         },
-        icon: LinkIcon,
+        icon: CloudOff,
         url: "https://nutri-io.com/",
       },
     ],
