@@ -195,7 +195,7 @@ const BigNavbar = () => {
                 </nav>
                 <div className="flex justify-around text-base font-spaceGrotesk">
                   {socialMedias.map(
-                    ({ ariaLabel, href, label, title }, index) => {
+                    ({ ariaLabel, href, label, title }) => {
                       return (
                         <div
                           className="group flex justify-center gap-2 p-2 border border-dashed border-muted-foreground w-full py-2 sm:py-3"
