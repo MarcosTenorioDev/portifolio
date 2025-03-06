@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/sheet";
 import MobileMenuLink from "../MobileMenuLink";
 import ButtonAnimated from "../ButtonAnimated";
-import { PlusIcon } from "lucide-react";
+import { ExternalLinkIcon, PlusIcon } from "lucide-react";
 import { socialMedias } from "@/constants/socialMedias";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -77,12 +77,14 @@ const BigNavbar = () => {
                     </Button>
                   </a>
                 </li>
-                {/* <li>
-                {" "}
-                <Button variant={"link"} className="text-white">
-                  {t("Navbar.Blog")}
-                </Button>
-              </li> */}
+                <li>
+                  {" "}
+                  <a href="https://blog.marcostenorio.me" target="_blank" rel="noopener noreferrer">
+                    <Button variant={"link"} className="text-white">
+                      {t("Navbar.Blog")}
+                    </Button>
+                  </a>
+                </li>
                 <li>
                   {" "}
                   <a href="#contact">
@@ -107,7 +109,7 @@ const BigNavbar = () => {
         <div className="w-full px-6 md:hidden">
           <div className="w-full flex justify-end max-w-[1680px] mx-auto">
             <Sheet>
-              <div className={`w-full flex justify-between`}>
+              <div className={"w-full flex justify-between"}>
                 <ModeToggle />
                 <SheetTrigger>
                   <ButtonAnimated>MENU</ButtonAnimated>
@@ -120,7 +122,7 @@ const BigNavbar = () => {
                 <SheetClose className="w-fit self-end clip-custom-button !border-0">
                   <ButtonAnimated>MENU</ButtonAnimated>
                 </SheetClose>
-                <div className="menuBg"></div>
+                <div className="menuBg" />
                 <SheetTitle className="hidden">Menu</SheetTitle>
                 <nav className=" py-10">
                   <ul className="flex text-base font-spaceGrotesk flex-col text-center border-x border-t border-dashed border-muted-foreground">
@@ -167,6 +169,11 @@ const BigNavbar = () => {
                       onClick={() => {
                         document.getElementById("localeBtn")?.click();
                       }}
+                      onKeyUp={(e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          document.getElementById("localeBtn")?.click();
+                        }
+                      }}
                     >
                       <PlusIcon className="mt-1 w-3 sm:w-4 h-3 sm:h-4" />
                       <div className="relative overflow-hidden">
@@ -192,7 +199,7 @@ const BigNavbar = () => {
                       return (
                         <div
                           className="group flex justify-center gap-2 p-2 border border-dashed border-muted-foreground w-full py-2 sm:py-3"
-                          key={index}
+                          key={href}
                         >
                           <div className="relative overflow-hidden">
                             <Link
@@ -204,14 +211,15 @@ const BigNavbar = () => {
                             >
                               <Button
                                 variant={"link"}
-                                className="dark:text-white text-2xl sm:text-4xl px-2 relative !no-underline"
+                                className="dark:text-white text-2xl sm:text-4xl px-2 relative !no-underline sm:my-1"
                                 title={title}
                               >
                                 <span className="relative z-10">{label}</span>
+                                <ExternalLinkIcon className="min-w-[18px] min-h-[18px] sm:min-w-[26px] sm:min-h-[26px]" />
                                 <span
                                   className="absolute bottom-4 left-0 h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full"
                                   aria-hidden="true"
-                                ></span>
+                                />
                               </Button>
                             </Link>{" "}
                           </div>
