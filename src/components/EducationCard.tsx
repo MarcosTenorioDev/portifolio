@@ -32,11 +32,11 @@ export default function EducationCard({
             alt={alt}
             width={140}
             height={140}
-            className="object-contain border border-black aspect-square rounded-xl"
+            className="object-cover border border-black aspect-square rounded-xl"
           />
           <p className="text-xs mt-1 underline sm:hidden">{t("Academic.seeMore")}</p>
         </div>
-        <div className="space-y-1 flex flex-col h-[140px] pt-2">
+        <div className="space-y-1 flex flex-col sm:h-[140px] pt-2">
           <h2 className="text-2xl leading-tight font-semibold w-full text-center sm:text-start">{title}</h2>
           <p className="text-sm uppercase text-muted-foreground italic">
             {institution}
@@ -55,7 +55,7 @@ export default function EducationCard({
             })`,
         }}
       >
-        <div className="absolute inset-0 bg-black/70"></div> {/* Overlay */}
+        <div className="absolute inset-0 bg-black/70" /> {/* Overlay */}
       </div>
 
       {/* Hover Content */}

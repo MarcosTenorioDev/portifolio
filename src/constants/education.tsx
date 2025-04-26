@@ -1,6 +1,26 @@
 export const education = [
   {
     pt: {
+      logo: "/images/academic/CIn.webp",
+      title: "Pós graduação - Especialização em Engenharia de Software",
+      institution: "UNIVERSIDADE FEDERAL DE PERNAMBUCO",
+      dateRange: "Mar-2025 / Mar-2026",
+      alt: "Logo da Universidade Federal de Pernambuco",
+      hoverImage: "/images/academic/banner-CIn.webp",
+      description: "",
+    },
+    en: {
+      logo: "/images/academic/CIn.webp",
+      title: "Postgraduate - Specialization in Software Engineering",
+      institution: "FEDERAL UNIVERSITY OF PERNAMBUCO",
+      dateRange: "Mar-2025 / Mar-2026",
+      alt: "Federal University of Pernambuco Logo",
+      hoverImage: "/images/academic/banner-CIn.webp",
+      description: "",
+    },
+  },
+  {
+    pt: {
       logo: "/images/academic/unicap-logo.webp",
       title: "Tecnologia em Sistemas para Internet",
       institution: "UNIVERSIDADE CATÓLICA DE PERNAMBUCO",
@@ -26,7 +46,7 @@ export const education = [
       logo: "/images/academic/fcx-logo.webp",
       title: "Residência de Software, Porto Digital",
       institution: "Ferreira Costa - FCx Labs",
-      dateRange: "Fev-2023 / Jul-2023 (5 Meses)",
+      dateRange: "Fev-2023 / Jul-2023",
       alt: "Logo Ferreira Costa - FCx Labs",
       hoverImage: "/images/academic/banner-fcx.webp",
       description:
@@ -36,7 +56,7 @@ export const education = [
       logo: "/images/academic/fcx-logo.webp",
       title: "Software Residency, Porto Digital",
       institution: "Ferreira Costa - FCx Labs",
-      dateRange: "Feb-2023 / Jul-2023 (5 Months)",
+      dateRange: "Feb-2023 / Jul-2023",
       alt: "Ferreira Costa - FCx Labs logo",
       hoverImage: "/images/academic/banner-fcx.webp",
       description:
