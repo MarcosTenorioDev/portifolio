@@ -26,6 +26,7 @@ import ZodContactForm from "@/components/ContactForm";
 import contactImage from "@/../public/images/contact.svg";
 import { motion } from "framer-motion";
 import PostsCard from "@/components/PostsCard";
+import { PostResponse } from "@/constants/posts";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
@@ -33,7 +34,7 @@ export default function HomePage() {
   const locale = params.locale as Locale;
 
   const [showForm, setShowForm] = useState(false);
-  const [latestPosts, setLatestPosts] = useState<any[]>([]);
+  const [latestPosts, setLatestPosts] = useState<PostResponse[]>([]);
 
   const handleButtonClick = () => {
     setShowForm(true);
@@ -42,7 +43,7 @@ export default function HomePage() {
   useEffect(() => {
     fetch("https://blog.marcostenorio.me/api/posts/latest")
       .then((res) => res.json())
-      .then((data) => setLatestPosts(data))
+      .then((data:PostResponse[]) => setLatestPosts(data))
       .catch(() => setLatestPosts([]));
   }, []);
 
@@ -161,7 +162,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {latestPosts.map((post, index) => (
                 <div
-                  key={post.key || post.id}
+                  key={post.id}
                   className={
                     latestPosts.length % 2 !== 0 && index === latestPosts.length - 1
                       ? "sm:col-span-2 flex justify-center"
