@@ -72,6 +72,10 @@
     "Footer":{ 
       "by":"By",
       "backToTop":"Go back to top"
+    },
+    "Posts":{
+      "title":"Latest Posts",
+      "description":"Explore insights on tech, health, and psychology. Dive into my blog, where I share bite-sized reflections and practical ideas. If something sparks your curiosity, feel free to reach out—I'd love to chat and hear your thoughts!"
     }
     
   },

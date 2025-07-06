@@ -15,4 +15,20 @@ export const experiences = [
       dateRange: "Nov-2023 / Jul-2024", 
     },
   },
+  {
+    pt: {
+      title: "Projeto CIn/Motorola",
+      subtitle: "Engenheiro de Qualidade de Software",
+      description:
+        "Em breve...",
+      dateRange: "Mar-2025 - Atual",
+    },
+    en: {
+      title: "Projeto CIn/Motorola",
+      subtitle: "QA Test Engineer",
+      description:
+        "Coming soon...",
+      dateRange: "Mar-2025 - Present", 
+    },
+  },
 ];

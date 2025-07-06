@@ -21,10 +21,11 @@ import { useParams } from "next/navigation";
 import { experiences } from "@/constants/experience";
 import { projectPreview } from "@/constants/projects";
 import { AnimationWrapper } from "@/components/Animation/animations";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ZodContactForm from "@/components/ContactForm";
 import contactImage from "@/../public/images/contact.svg";
 import { motion } from "framer-motion";
+import PostsCard from "@/components/PostsCard";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
@@ -32,10 +33,18 @@ export default function HomePage() {
   const locale = params.locale as Locale;
 
   const [showForm, setShowForm] = useState(false);
+  const [latestPosts, setLatestPosts] = useState<any[]>([]);
 
   const handleButtonClick = () => {
     setShowForm(true);
   };
+
+  useEffect(() => {
+    fetch("https://blog.marcostenorio.me/api/posts/latest")
+      .then((res) => res.json())
+      .then((data) => setLatestPosts(data))
+      .catch(() => setLatestPosts([]));
+  }, []);
 
   return (
     <div className="overflow-hidden">
@@ -45,20 +54,20 @@ export default function HomePage() {
         id="home"
         className="grid pb-10 font-roboto max-w-[1680px] mx-auto items-start gap-12 px-4 sm:px-10 md:px-20 pt-[52px] md:pt-[145px]"
       >
-          <div className="w-full h-full flex flex-col xl:flex-row gap-10 mt-8 md:mt-0">
-            <div className="xl:max-w-[400px]">
-              <ProfileCard />
+        <div className="w-full h-full flex flex-col xl:flex-row gap-10 mt-8 md:mt-0">
+          <div className="xl:max-w-[400px]">
+            <ProfileCard />
+          </div>
+          <div className="flex flex-col h-full gap-12">
+            <div className="h-fit flex flex-col md:flex-row gap-10">
+              <DescriptionProfileCard />
+              <DetailsProfileCard />
             </div>
-            <div className="flex flex-col h-full gap-12">
-              <div className="h-fit flex flex-col md:flex-row gap-10">
-                <DescriptionProfileCard />
-                <DetailsProfileCard />
-              </div>
-              <div className="card-wrap w-full flex-grow">
-                <TechSkillsCard />
-              </div>
+            <div className="card-wrap w-full flex-grow">
+              <TechSkillsCard />
             </div>
           </div>
+        </div>
 
         <div id="experience">
           <AnimationWrapper animation="fadeInRight">
@@ -139,46 +148,39 @@ export default function HomePage() {
           </AnimationWrapper>
         </div>
 
-        {/* Blog - Coming soon */}
-        {/* <div className="w-full">
-          <h2 className="text-center w-full text-[34px] sm:text-[64px] italic font-bold">
-            Latest Posts
-          </h2>
-          <h3 className="text-center w-full text-sm md:text-base lg:text-lg text-muted-foreground mx-auto italic font-light mb-16 max-w-[800px]">
-            Explore insights on tech, health, and psychology.Dive into my blog,
-            where I share bite-sized reflections and practical ideas. If
-            something sparks your curiosity, feel free to reach out—I&apos;d
-            love to chat and hear your thoughts!
-          </h3>
+        {/* Latest Posts Section */}
+        {latestPosts.length > 0 && (
+          <div className="w-full mt-20">
+            <h2 className="text-center w-full text-[34px] sm:text-[64px] italic font-bold mb-2">
+              {t("Posts.title")}
+            </h2>
+            <h3 className="text-center w-full text-sm md:text-base lg:text-lg text-muted-foreground mx-auto italic font-light mb-12 max-w-[800px]">
+              {t("Posts.description")}
+            </h3>
 
-          <div className="flex flex-col gap-8 sm:grid sm:grid-cols-2 sm:gap-y-16 sm:gap-x-8 sm:mx-auto ">
-            <PostsCard
-              alt="Imagem de um computador"
-              description="JavaScript can be a little tricky sometimes, even when you re dealing with simple-lookingJavaScript can be a little tricky sometimes, even when you re dealing with simple-looking"
-              src={obon}
-              title="If You Can Answer These 7 Questions If You Can Answer These 7 Questions"
-            />
-            <PostsCard
-              alt="Imagem de um computador"
-              description="JavaScript can be a little tricky sometimes, even when you re dealing with simple-lookingJavaScript can be a little tricky sometimes, even when you re dealing with simple-looking"
-              src={obon}
-              title="If You Can Answer These 7 Questions If You Can Answer These 7 Questions"
-            />
-            <PostsCard
-              alt="Imagem de um computador"
-              description="JavaScript can be a little tricky sometimes, even when you re dealing with simple-lookingJavaScript can be a little tricky sometimes, even when you re dealing with simple-looking"
-              src={obon}
-              title="If You Can Answer These 7 Questions If You Can Answer These 7 Questions"
-            />
-            <PostsCard
-              alt="Imagem de um computador"
-              description="JavaScript can be a little tricky sometimes, even when you re dealing with simple-lookingJavaScript can be a little tricky sometimes, even when you re dealing with simple-looking"
-              src={obon}
-              title="If You Can Answer These 7 Questions If You Can Answer These 7 Questions"
-            />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {latestPosts.map((post, index) => (
+                <div
+                  key={post.key || post.id}
+                  className={
+                    latestPosts.length % 2 !== 0 && index === latestPosts.length - 1
+                      ? "sm:col-span-2 flex justify-center"
+                      : ""
+                  }
+                >
+                  <PostsCard
+                    id={post.id}
+                    title={post.frontMatter.title}
+                    description={post.frontMatter.summary}
+                    tags={post.frontMatter.tags}
+                    time={post.frontMatter.time}
+                    locale={locale}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        </div> */}
-
+        )}
         <div id="contact">
           <AnimationWrapper animation="fadeInUp">
             <div className="w-full md:mt-16 flex flex-col justify-center items-center gap-4">
@@ -216,10 +218,10 @@ export default function HomePage() {
                 className={`${showForm ? "w-full mt-10" : "hidden"}`}
               >
                 <h2 className="font-spaceGrotesk font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center lg:text-start">
-                {t("ContactForm.title")}
+                  {t("ContactForm.title")}
                 </h2>
                 <h3 className="text-center lg:text-start w-full text-sm md:text-base lg:text-lg text-muted-foreground mx-auto lg:mx-0 italic font-light mb-6 max-w-[600px]">
-                {t("ContactForm.description")}
+                  {t("ContactForm.description")}
                 </h3>
                 <div className="flex justify-between w-full">
                   <div className="p-10 px-[20%] sm:px-4 w-2/4 lg:px-24 xl:px-36 hidden md:block">
