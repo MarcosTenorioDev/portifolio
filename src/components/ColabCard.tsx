@@ -10,12 +10,14 @@ interface ColabCardProps {
   title: string
   subtitle: string
   description: string
+  link: string
 }
 
 export default function ColabCard({
   title,
   subtitle,
   description,
+  link,
 }: ColabCardProps) {
   const t = useTranslations("HomePage");
 
@@ -25,7 +27,7 @@ export default function ColabCard({
     >
       <div className="p-4 sm:p-6">
         <div className="flex flex-col lg:flex-row items-start space-y-4 lg:space-y-0 md:space-x-4 lg:space-x-8">
-          <a className="flex-shrink-0 m-auto" target='_blank' rel='noreferrer' href='' >
+          <a className="flex-shrink-0 m-auto" target='_blank' rel='noreferrer' href={link} >
             <Button variant={'link'} className="text-xs underline md:no-underline mx-auto w-fit text-white mt-0 pt-0 flex-col h-auto">
               <Image
                 src={techIcons.Colab}

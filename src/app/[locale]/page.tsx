@@ -154,6 +154,7 @@ export default function HomePage() {
                   title={colab[locale].title}
                   subtitle={colab[locale].subtitle}
                   description={colab[locale].description}
+                  link={colab[locale].link}
                   key={i}
                 />
               );
