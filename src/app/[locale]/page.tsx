@@ -27,6 +27,8 @@ import contactImage from "@/../public/images/contact.svg";
 import { motion } from "framer-motion";
 import PostsCard from "@/components/PostsCard";
 import { PostResponse } from "@/constants/posts";
+import ColabCard from "@/components/ColabCard";
+import { colabs } from "@/constants/colab";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
@@ -43,7 +45,7 @@ export default function HomePage() {
   useEffect(() => {
     fetch("https://blog.marcostenorio.me/api/posts/latest")
       .then((res) => res.json())
-      .then((data:PostResponse[]) => setLatestPosts(data))
+      .then((data: PostResponse[]) => setLatestPosts(data))
       .catch(() => setLatestPosts([]));
   }, []);
 
@@ -123,7 +125,7 @@ export default function HomePage() {
         </div>
 
         <div id="projects">
-          <AnimationWrapper animation="fadeInBottom">
+          <AnimationWrapper animation="fadeInBottom" className="flex flex-col gap-16">
             <div className="w-full">
               <h2 className="text-center lg:text-end w-full text-[42px] sm:text-[72px] italic font-bold">
                 {t("Projects.title")}
@@ -146,6 +148,16 @@ export default function HomePage() {
                 })}
               </div>
             </div>
+            {colabs.map((colab, i) => {
+              return (
+                <ColabCard
+                  title={colab[locale].title}
+                  subtitle={colab[locale].subtitle}
+                  description={colab[locale].description}
+                  key={i}
+                />
+              );
+            })}
           </AnimationWrapper>
         </div>
 

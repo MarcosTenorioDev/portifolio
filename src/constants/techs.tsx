@@ -23,6 +23,7 @@ import Apidog from "@/../public/images/techs/apidog.png";
 import Stripe from "@/../public/images/techs/stripe.svg";
 import FFMPEG from "@/../public/images/techs/ffmpeg.svg";
 import OpenAi from "@/../public/images/techs/openai.svg";
+import Colab from "@/../public/images/techs/colab.svg";
 
 export const techs = [
   {
@@ -143,6 +144,7 @@ const techIcons = {
   StyledComponents,
   TailwindCSSIcon,
   TypeScriptIcon,
+  Colab,
 };
 
 export default techIcons;
