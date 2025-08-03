@@ -369,6 +369,8 @@ body {
   /* Garantir que o scroll funcione corretamente no mobile */
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
+  /* Adicionar suporte para scroll suave em dispositivos que não suportam CSS scroll-behavior */
+  scroll-behavior: smooth;
 }
 
 /* ===== Scrollbar CSS ===== */
