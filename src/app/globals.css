@@ -360,6 +360,15 @@
 
 html {
   scroll-behavior: smooth;
+  /* Melhorar o comportamento de scroll no mobile */
+  -webkit-overflow-scrolling: touch;
+  scroll-padding-top: 20px; /* Adicionar padding para compensar a navbar fixa */
+}
+
+body {
+  /* Garantir que o scroll funcione corretamente no mobile */
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
 }
 
 /* ===== Scrollbar CSS ===== */
