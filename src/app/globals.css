@@ -379,3 +379,7 @@ body {
   scrollbar-width: thin;
   scrollbar-color: hsl(var(--muted-foreground)) #0000000;
 }
+
+body[data-radix-scroll-lock="true"] {
+  overflow: auto !important;
+}

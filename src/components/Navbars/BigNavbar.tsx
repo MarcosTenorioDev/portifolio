@@ -108,7 +108,7 @@ const BigNavbar = () => {
 
         <div className="w-full px-6 md:hidden">
           <div className="w-full flex justify-end max-w-[1680px] mx-auto">
-            <Sheet>
+            <Sheet modal={false}>
               <div className={"w-full flex justify-between"}>
                 <ModeToggle />
                 <SheetTrigger>

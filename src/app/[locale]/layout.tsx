@@ -98,6 +98,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <body className={`${robotoMono.variable} ${spaceGrotesk.variable} antialiased bg-background`}>
         <ThemeProvider
           attribute="class"
