@@ -1,0 +1,91 @@
+{
+    "HomePage": {
+      "Navbar": {
+        "Projects": "Projetos",
+        "Blog": "Blog",
+        "Experience": "Experiência",
+        "ContactMe": "Contato",
+        "LightMode": "Modo Claro",
+        "DarkMode": "Modo Escuro",
+        "Light": "Claro",
+        "Dark": "Escuro",
+        "System": "Sistema"
+      },
+      "ProfileCard": {
+        "Description": "QA Engineer focado em qualidade, automação e entrega de software confiável."
+      },
+      "DescriptionCard": {
+        "Content": "QA Engineer com experiência em testes manuais e automatizados, atuando na garantia de qualidade de aplicações web e mobile. Trabalho com automação de testes, pipelines de CI/CD e validação de requisitos, sempre buscando reduzir falhas em produção e melhorar a experiência do usuário por meio de processos bem definidos e testes eficientes.",
+        "ButtonLabel": "Baixar CV"
+      },
+      "DetailsCard": {
+        "Card1": "Garantindo qualidade em cada entrega...",
+        "Card2": "Estudando: Testes de Software, Automação e Boas Práticas de QA...",
+        "Card3": "Interesses: Qualidade de Software | Automação | CI/CD | Engenharia de Confiabilidade."
+      },
+      "TechsCard": {
+        "Title": "Ferramentas e Tecnologias",
+        "Description": "Ferramentas e tecnologias que utilizo para assegurar qualidade, estabilidade e confiança em produtos digitais."
+      },
+      "Experience": {
+        "first": "2 ANOS DE",
+        "second": "EXPERIÊNCIA"
+      },
+      "Academic": {
+        "first": "HISTÓRICO ACADÊMICO",
+        "second": "E CURSOS",
+        "seeMore": "Ver mais"
+      },
+      "Projects": {
+        "title": "Projetos",
+        "description": "Da análise de requisitos à automação de testes, meus projetos refletem o compromisso com qualidade, confiabilidade e melhoria contínua de software.",
+        "cardDetails": "Ver detalhes do projeto"
+      },
+      "Contact": {
+        "title": {
+          "first": "ENTRE EM",
+          "second": "CONTATO"
+        },
+        "button": "Contate agora*",
+        "leftMessage": {
+          "first": "qualidade é o resultado",
+          "second": "de processos bem testados."
+        },
+        "rightMessage": "Com testes como ferramenta, transformo requisitos em software confiável, prevenindo falhas antes que cheguem ao usuário final.",
+        "about": "Residente em <span>Recife, Brasil,</span> atuo como QA Engineer com foco em qualidade, automação e melhoria contínua. Acredito que bons testes, processos claros e colaboração entre times são essenciais para construir produtos robustos, escaláveis e centrados no usuário."
+      },
+      "ContactForm": {
+        "title": "Entre em Contato!",
+        "description": "Entre em contato para criarmos algo incrível juntos. Vamos fazer acontecer.",
+        "name": "Nome",
+        "email": "Email",
+        "message": "Mensagem",
+        "send": "Enviar",
+        "validators": {
+          "name": "Por favor, insira seu nome.",
+          "email": "Por favor, insira um email válido.",
+          "message": "A mensagem deve ter pelo menos 10 caracteres.",
+          "success": "Mensagem enviada com sucesso!",
+          "error": "Oops... ocorreu um erro ao enviar a mensagem. Por favor, tente novamente."
+        }
+      },
+      "Footer": {
+        "by": "Feito por",
+        "backToTop": "Voltar para o início"
+      },
+      "Posts": {
+        "title": "Últimos posts",
+        "description": "Explore percepções sobre tecnologia, saúde e psicologia. Navegue pelo meu blog, onde compartilho reflexões breves e ideias práticas. Se algum tópico despertar seu interesse, não hesite em me contatar — será um prazer conversar e saber o que você pensa!"
+      },
+      "Colab": {
+        "seeDetails": "Ver Detalhes"
+      }
+    },
+    "ProjectPage": {
+      "homeBtn": "Início",
+      "techCardTitle": "Ferramentas e Tecnologias",
+      "techCardDescription": "Tecnologias utilizadas no desenvolvimento e validação deste projeto",
+      "projectImages": "Imagens do Projeto"
+    }
+  }
+  

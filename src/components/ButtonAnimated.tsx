@@ -4,9 +4,10 @@ import { ButtonProps } from "@/components/ui/button";  // Importando Button e Bu
 
 interface ButtonAnimatedProps extends ButtonProps {
   className?: string; // Permite personalizar a classe externa
+  locale?: string;
 }
 
-const ButtonAnimated = ({ children, className, ...props }: ButtonAnimatedProps) => {
+const ButtonAnimated = ({ children, className,locale, ...props }: ButtonAnimatedProps) => {
   return (
     <div className="w-full h-full">
       <span
@@ -27,6 +28,7 @@ const ButtonAnimated = ({ children, className, ...props }: ButtonAnimatedProps) 
           )}
         >
            {children}
+           {locale === "en" ? "(en-US)" : "(pt-BR)"}
         </span>
       </span>
     </div>

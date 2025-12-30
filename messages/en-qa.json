@@ -1,0 +1,90 @@
+{
+  "HomePage": {
+    "Navbar": {
+      "Projects": "Projects",
+      "Blog": "Blog",
+      "Experience": "Experience",
+      "ContactMe": "Contact Me",
+      "LightMode": "Light Mode",
+      "DarkMode": "Dark Mode",
+      "Light": "Light",
+      "Dark": "Dark",
+      "System": "System"
+    },
+    "ProfileCard": {
+      "Description": "QA Engineer focused on quality, automation, and delivering reliable software."
+    },
+    "DescriptionCard": {
+      "Content": "QA Engineer with experience in manual and automated testing, working to ensure the quality of web and mobile applications. I work with test automation, CI/CD pipelines, and requirement validation, always aiming to reduce production issues and improve user experience through well-defined processes and efficient testing.",
+      "ButtonLabel": "Download CV"
+    },
+    "DetailsCard": {
+      "Card1": "Ensuring quality in every delivery...",
+      "Card2": "Currently studying: Software Testing, Automation, and QA Best Practices...",
+      "Card3": "Interests: Software Quality | Automation | CI/CD | Reliability Engineering."
+    },
+    "TechsCard": {
+      "Title": "Tools and Technologies",
+      "Description": "Tools and technologies I use to ensure quality, stability, and confidence in digital products."
+    },
+    "Experience": {
+      "first": "2 YEARS OF",
+      "second": "EXPERIENCE"
+    },
+    "Academic": {
+      "first": "Academic Summary",
+      "second": "and courses",
+      "seeMore": "See more"
+    },
+    "Projects": {
+      "title": "Featured Cases",
+      "description": "From requirements analysis to test automation, my projects reflect a commitment to quality, reliability, and continuous improvement in software.",
+      "cardDetails": "See project details"
+    },
+    "Contact": {
+      "title": {
+        "first": "LET'S WORK",
+        "second": "TOGETHER"
+      },
+      "button": "Contact now*",
+      "leftMessage": {
+        "first": "quality is the result",
+        "second": "of well-tested processes."
+      },
+      "rightMessage": "With tests as a tool, I transform requirements into reliable software, preventing failures before they reach the end user.",
+      "about": "Based in <span>Recife, Brazil,</span> I am a QA Engineer focused on quality, automation, and continuous improvement. I believe that clear processes, efficient testing, and collaboration between teams are essential to building robust, scalable, and user-centered products."
+    },
+    "ContactForm": {
+      "title": "Ring A Bell!",
+      "description": "Reach out and let's create something amazing together. Let's achieve greatness.",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send",
+      "validators": {
+        "name": "Please enter a valid name.",
+        "email": "Please enter a valid email.",
+        "message": "The message must be at least 10 characters.",
+        "success": "Message sent successfully!",
+        "error": "Oops... an error occurred while sending the message. Please try again later."
+      }
+    },
+    "Footer": {
+      "by": "By",
+      "backToTop": "Go back to top"
+    },
+    "Posts": {
+      "title": "Latest Posts",
+      "description": "Explore insights on tech, health, and psychology. Dive into my blog, where I share bite-sized reflections and practical ideas. If something sparks your curiosity, feel free to reach out—I'd love to chat and hear your thoughts!"
+    },
+    "Colab": {
+      "seeDetails": "See Details"
+    }
+  },
+  "ProjectPage": {
+    "homeBtn": "Home",
+    "techCardTitle": "Tech Stack",
+    "techCardDescription": "Techs used in this project development",
+    "projectImages": "Project Images"
+  }
+}

@@ -35,7 +35,7 @@ interface ProjectImage {
   label: Record<string, string>; // Internacionalizado
 }
 
-export const projects: Project[] = [
+const allProjects: Project[] = [
   {
     name: "Obon",
     isDown:true,
@@ -699,43 +699,54 @@ export const projects: Project[] = [
   }
 ];
 
-export const projectPreview = [
-  {
-    name: "Obon",
-    previewImage: "/images/projects/obon/obon-home.webp",
-    description: {
-      pt: "/// Plataforma de eventos",
-      en: "/// Events platform",
-    },
-    url: "obon",
-  },
-  {
-    name: "Mestres Online",
-    previewImage: "/images/projects/mestresonline/mestresonline-home-preview.webp",
-    description: {
-      pt: "/// Plataforma de Criação de Blogs",
-      en: "/// Blog Creation Platform",
-    },
-    url: "MestresOnline",
-  },
-  {
-    name: "Content.AI",
-    previewImage: "/images/projects/contentai/contentai-home-preview.webp",
-    description: {
-      pt: "/// Ferramenta de transcrição de vídeos",
-      en: "/// Video transcription tool",
-    },
-    url: "contentai",
-  },
-  {
-    name: "Nutri.io",
-    previewImage: "/images/projects/nutri/nutri-home-preview.webp",
-    description: {
-      pt: "/// Gerador de Dietas com IA",
-      en: "/// AI Diet Generator",
-    },
-    url: "nutri",
-  },
-];
+export const projects = {
+  dev: allProjects,
+  qa: []
+};
 
-export const urls = ["obon", "mestresonline", "contentai", "nutri"];
+export const projectPreview = {
+  dev: [
+    {
+      name: "Obon",
+      previewImage: "/images/projects/obon/obon-home.webp",
+      description: {
+        pt: "/// Plataforma de eventos",
+        en: "/// Events platform",
+      },
+      url: "obon",
+    },
+    {
+      name: "Mestres Online",
+      previewImage: "/images/projects/mestresonline/mestresonline-home-preview.webp",
+      description: {
+        pt: "/// Plataforma de Criação de Blogs",
+        en: "/// Blog Creation Platform",
+      },
+      url: "MestresOnline",
+    },
+    {
+      name: "Content.AI",
+      previewImage: "/images/projects/contentai/contentai-home-preview.webp",
+      description: {
+        pt: "/// Ferramenta de transcrição de vídeos",
+        en: "/// Video transcription tool",
+      },
+      url: "contentai",
+    },
+    {
+      name: "Nutri.io",
+      previewImage: "/images/projects/nutri/nutri-home-preview.webp",
+      description: {
+        pt: "/// Gerador de Dietas com IA",
+        en: "/// AI Diet Generator",
+      },
+      url: "nutri",
+    },
+  ],
+  qa: []
+};
+
+export const urls = {
+  dev: ["obon", "mestresonline", "contentai", "nutri"],
+  qa: []
+};

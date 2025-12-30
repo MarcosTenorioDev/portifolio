@@ -20,6 +20,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeInBottomNavbar } from "../Animation/animations";
 
+const socialMediasList = socialMedias.dev;
+
 const BigNavbar = () => {
   const t = useTranslations("HomePage");
   const [isVisible, setIsVisible] = useState(true);
@@ -194,7 +196,7 @@ const BigNavbar = () => {
                   </ul>
                 </nav>
                 <div className="flex justify-around text-base font-spaceGrotesk">
-                  {socialMedias.map(
+                  {socialMediasList.map(
                     ({ ariaLabel, href, label, title }) => {
                       return (
                         <div

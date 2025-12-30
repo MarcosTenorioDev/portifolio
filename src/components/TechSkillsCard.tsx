@@ -1,10 +1,19 @@
 import React from "react";
 import { Card, CardHeader, CardContent } from "./ui/card";
 import TechIcon from "./TechIcon";
-import { techs } from "@/constants/techs";
 import { useTranslations } from "next-intl";
 
-const TechSkillsCard = () => {
+interface TechItem {
+  label: string;
+  image: string | any; // StaticImageData do Next.js ou string
+  alt: string;
+}
+
+interface TechSkillsCardProps {
+  techsList: TechItem[];
+}
+
+const TechSkillsCard = ({ techsList }: TechSkillsCardProps) => {
   const t = useTranslations("HomePage");
   return (
     <Card className="clip-custom-card bg-primary text-white !border-black !border-0 dark:!border-border dark:!border-2">
@@ -19,7 +28,7 @@ const TechSkillsCard = () => {
         </p>
 
         <div className="flex gap-6 flex-wrap justify-center mt-4">
-          {techs.map((tech, index) => {
+          {techsList.map((tech, index) => {
             return <TechIcon key={index} {...tech} />;
           })}
         </div>

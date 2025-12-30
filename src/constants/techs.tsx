@@ -24,8 +24,19 @@ import Stripe from "@/../public/images/techs/stripe.svg";
 import FFMPEG from "@/../public/images/techs/ffmpeg.svg";
 import OpenAi from "@/../public/images/techs/openai.svg";
 import Colab from "@/../public/images/techs/colab.svg";
+import Playwright from "@/../public/images/techs/playwright.svg";
+import UIAutomator from "@/../public/images/techs/android.svg";
+import Selenium from "@/../public/images/techs/selenium.svg";
+import JMeter from "@/../public/images/techs/jmeter.svg";
+import Postman from "@/../public/images/techs/postman.svg";
+import ReactTestingLibrary from "@/../public/images/techs/react-testing-lib.svg";
+import Docker from "@/../public/images/techs/docker.svg";
+import CICD from "@/../public/images/techs/ci-cd.svg";
+import SQL from "@/../public/images/techs/sql.svg";
+import Python from "@/../public/images/techs/python.svg";
 
-export const techs = [
+
+const allTechs = [
   {
     label: "React",
     image: ReactFramework,
@@ -117,6 +128,80 @@ export const techs = [
     alt: "AWS Cloud Logo",
   },
 ];
+
+const qaTechs = [
+  {
+    label: "Cypress",
+    image: Cypress,
+    alt: "Cypress Testing Framework Logo",
+  },
+  {
+    label: "Playwright",
+    image: Playwright,
+    alt: "Playwright Testing Framework Logo",
+  },
+  {
+    label: "UI Automator",
+    image: UIAutomator,
+    alt: "Android UI Automator Logo",
+  },
+  {
+    label: "Selenium",
+    image: Selenium,
+    alt: "Selenium Automation Logo",
+  },
+  {
+    label: "JMeter",
+    image: JMeter,
+    alt: "Apache JMeter Logo",
+  },
+  {
+    label: "Postman",
+    image: Postman,
+    alt: "Postman API Testing Logo",
+  },
+  {
+    label: "React Testing Library",
+    image: ReactTestingLibrary,
+    alt: "React Testing Library Logo",
+  },
+  {
+    label: "SonarQube",
+    image: SonarQubeLogo,
+    alt: "SonarQube Code Quality Logo",
+  },
+  {
+    label: "Docker",
+    image: Docker,
+    alt: "Docker Logo",
+  },
+  {
+    label: "CI/CD",
+    image: CICD,
+    alt: "CI/CD Pipelines Icon",
+  },
+  {
+    label: "SQL",
+    image: SQL,
+    alt: "SQL Database Logo",
+  },
+  {
+    label: "TypeScript",
+    image: TypeScriptIcon,
+    alt: "TypeScript Logo",
+  },
+  {
+    label: "Python",
+    image: Python,
+    alt: "Python Programming Language Logo",
+  }
+];
+
+
+export const techs = {
+  dev: allTechs,
+  qa: qaTechs
+};
 
 const techIcons = {
   ClerkIcon,

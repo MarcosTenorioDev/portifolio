@@ -9,9 +9,12 @@ export default getRequestConfig(async ({requestLocale}) => {
   if (!locale || !routing.locales.includes(locale as Locale)) {
     locale = routing.defaultLocale;
   }
+
+  // Lê a variável de ambiente para determinar qual deploy usar
+  const deploy = (process.env.NEXT_PUBLIC_DEPLOY || 'dev').toLowerCase() as 'dev' | 'qa';
  
   return {
     locale,
-    messages: (await import(`../../messages/${locale}.json`)).default
+    messages: (await import(`../../messages/${locale}-${deploy}.json`)).default
   };
 });

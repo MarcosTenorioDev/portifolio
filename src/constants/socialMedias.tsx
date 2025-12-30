@@ -1,4 +1,4 @@
-export const socialMedias = [
+const allSocialMedias = [
   {
     ariaLabel: "Acesse meu perfil no GitHub",
     href: "https://github.com/MarcosTenorioDev",
@@ -12,3 +12,8 @@ export const socialMedias = [
     title: "Acesse o meu blog",
   }
 ];
+
+export const socialMedias = {
+  dev: allSocialMedias,
+  qa: []
+};
