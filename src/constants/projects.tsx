@@ -1,4 +1,4 @@
-import { CloudOff, LinkIcon, type LucideIcon } from "lucide-react";
+import { BookIcon, CloudOff, LinkIcon, MessageSquareIcon, type LucideIcon } from "lucide-react";
 import techIcons from "./techs";
 
 
@@ -38,7 +38,7 @@ interface ProjectImage {
 const allProjects: Project[] = [
   {
     name: "Obon",
-    isDown:true,
+    isDown: true,
     detail: {
       pt: "Plataforma de Eventos",
       en: "Events Platform",
@@ -241,7 +241,7 @@ const allProjects: Project[] = [
   },
   {
     name: "Mestres Online",
-    isDown:true,
+    isDown: true,
     detail: {
       pt: "Plataforma de Criação de Blogs",
       en: "Blog Creation Platform",
@@ -416,7 +416,7 @@ const allProjects: Project[] = [
   },
   {
     name: "Content.AI",
-    isDown:true,
+    isDown: true,
     detail: {
       pt: "Ferramenta inteligente para transcrição de vídeos e chat AI",
       en: "Smart tool for video transcription and AI assistant",
@@ -527,7 +527,7 @@ const allProjects: Project[] = [
   },
   {
     name: "Nutri-io",
-    isDown:true,
+    isDown: true,
     detail: {
       pt: "Gerador de Dietas com IA",
       en: "AI Diet Generator",
@@ -699,9 +699,52 @@ const allProjects: Project[] = [
   }
 ];
 
+const allProjectsQA: Project[] = [
+  {
+    "name": "BugFlow Multi Agents",
+    "isDown": false,
+    "detail": {
+      "pt": "Sistema inteligente de para automação da triagem e análise de bugs e incidentes que utiliza múltiplos agentes de IA especializados trabalhando em conjunto para automatizar o processamento de problemas técnicos em desenvolvimento de software.",
+      "en": "Intelligent bug and incident triage system that uses multiple specialized AI agents working together to automate the processing of technical issues in software development."
+    },
+    "description": {
+      "pt": "BugFlow Multi-Agents é um no qual desenvolvi um sistema inteligente para automação da triagem e análise de bugs, com foco em qualidade, padronização e escalabilidade. A solução utiliza IA generativa, arquitetura multi-agente e um mecanismo de RAG (Retrieval-Augmented Generation) para transformar bugs brutos em informações estruturadas, realizando automaticamente a classificação de componente (Frontend, Backend, Database, DevOps, Security, Integration, UI/UX, Infrastructure) e severidade (Crítico, Grave, Menor), análise técnica com identificação de possíveis causas raiz, atribuição de responsável e geração de documentação completa, além de permitir busca semântica contextual por bugs similares já registrados.",
+      "en": "BugFlow Multi-Agents is a self-developed project in which I developed an intelligent system for automating bug triage and analysis, focusing on quality, standardization, and scalability. The solution leverages generative AI, a multi-agent architecture, and a Retrieval-Augmented Generation (RAG) mechanism to transform raw bug reports into structured information, automatically classifying issues by component (Frontend, Backend, Database, DevOps, Security, Integration, UI/UX, Infrastructure) and severity (Critical, Serious, Minor), performing technical analysis with identification of potential root causes, assigning ownership, generating complete documentation, and enabling contextual semantic search for previously registered similar bugs."
+    },
+    "url": "",
+    "links": [],
+    "techGroups": [
+      {
+        "label": {
+          "pt": "",
+          "en": ""
+        },
+        "techs": [
+          {
+            "label": "CrewAI",
+            "image": techIcons.CrewAI
+          },
+          {
+            "label": "Pinecone",
+            "image": techIcons.Pinecone
+          },
+          {
+            "label": "LangChain",
+            "image": techIcons.LangChain
+          }
+        ]
+      },
+    ],
+    "images": [
+
+    ]
+  }
+
+];
+
 export const projects = {
   dev: allProjects,
-  qa: []
+  qa: allProjectsQA
 };
 
 export const projectPreview = {
@@ -743,10 +786,20 @@ export const projectPreview = {
       url: "nutri",
     },
   ],
-  qa: []
+  qa: [
+    {
+      name: "BugFlow AI",
+      previewImage: "",
+      description: {
+        pt: "/// Sistema inteligente de triagem de bugs e incidentes que utiliza múltiplos agentes de IA especializados trabalhando em conjunto para automatizar o processamento de change requests.",
+        en: "/// Intelligent bug and incident triage system that uses multiple specialized AI agents working together to automate the processing of technical issues in software development.",
+      },
+      url: "bugflow",
+    },
+  ]
 };
 
 export const urls = {
   dev: ["obon", "mestresonline", "contentai", "nutri"],
-  qa: []
+  qa: ["bugflow"]
 };

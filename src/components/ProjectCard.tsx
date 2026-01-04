@@ -11,17 +11,18 @@ interface ProjectCardProps {
   title: string;
   subtitle: string;
   url: string;
+  isFullWidth?: boolean;
 }
 
-const ProjectCard = ({ imageSrc, subtitle, title, url }: ProjectCardProps) => {
+const ProjectCard = ({ imageSrc, subtitle, title, url, isFullWidth = false }: ProjectCardProps) => {
   const t = useTranslations("HomePage");
   const params = useParams();
   const locale = params.locale as Locale;
 
   return (
-    <div className="overflow-hidden !border-0 group">
-      <div className="clip-custom-card bg-primary text-white aspect-square relative overflow-hidden !border-0">
-        <div className="overlay group relative">
+    <div className={`overflow-hidden !border-0 group ${isFullWidth ? 'w-full' : ''}`}>
+      <div className={`clip-custom-card bg-primary text-white relative overflow-hidden !border-0 ${isFullWidth ? 'md:h-[560px] w-full' : 'aspect-square'}`}>
+        <div className="overlay group relative h-full">
           {/* Filtro de escurecimento */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-950/80 z-10"></div>
 

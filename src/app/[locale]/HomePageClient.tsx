@@ -147,7 +147,7 @@ export default function HomePageClient({ deploy }: HomePageClientProps) {
                 {t("Projects.description")}
               </h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-10">
+              <div className={`${projectPreviewList.length === 1 ? "" : "grid grid-cols-1 md:grid-cols-2 w-full gap-10"} `}>
                 {projectPreviewList.map((project, index) => {
                   return (
                     <ProjectCard
@@ -155,6 +155,7 @@ export default function HomePageClient({ deploy }: HomePageClientProps) {
                       subtitle={project.description[locale]}
                       title={project.name}
                       url={project.url}
+                      isFullWidth={projectPreviewList.length === 1}
                       key={index}
                     />
                   );

@@ -34,6 +34,9 @@ import Docker from "@/../public/images/techs/docker.svg";
 import CICD from "@/../public/images/techs/ci-cd.svg";
 import SQL from "@/../public/images/techs/sql.svg";
 import Python from "@/../public/images/techs/python.svg";
+import CrewAI from "@/../public/images/techs/crewai.svg";
+import Pinecone from "@/../public/images/techs/pinecone.svg";
+import LangChain from "@/../public/images/techs/langchain.svg";
 
 
 const allTechs = [
@@ -230,6 +233,18 @@ const techIcons = {
   TailwindCSSIcon,
   TypeScriptIcon,
   Colab,
+  Python,
+  SQL,
+  Docker,
+  CICD,
+  Postman,
+  ReactTestingLibrary,
+  Selenium,
+  UIAutomator,
+  JMeter,
+  CrewAI,
+  Pinecone,
+  LangChain,
 };
 
 export default techIcons;
