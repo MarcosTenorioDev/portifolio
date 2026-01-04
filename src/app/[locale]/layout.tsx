@@ -22,61 +22,85 @@ const spaceGrotesk = Space_Grotesk({
   style: ["normal"],
 });
 
-export const metadata: Metadata = {
-  title: "Marcos Tenorio | Fullstack Developer",
-  description:
-    "Portfólio de Marcos Tenorio, desenvolvedor fullstack com experiência em React, Next.js, Node.js, Fastify, Angular e tecnologias modernas. Trabalhei em soluções SaaS e APIs robustas, aplicando boas práticas como SOLID, testes e metodologias ágeis.",
-  keywords: [
-    "Marcos Tenorio",
-    "Desenvolvedor Fullstack",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Fastify",
-    "Angular",
-    "PostgreSQL",
-    "Tailwind CSS",
-    "SaaS",
-    "API REST",
-    "Prisma",
-    "AWS S3",
-    "Desenvolvedor Recife",
-    "Programador Recife",
-    "Software developer",
-    "Software engineer",
-    "Portfólio Marcos Tenorio",
-  ],
-  authors: [
-    {
-      name: "Marcos Tenorio",
-      url: "https://github.com/marcostenoriodev",
-    },
-  ],
-  openGraph: {
-    title: "Marcos Tenorio | Fullstack Developer",
-    description:
-      "Portfólio de Marcos Tenorio, desenvolvedor fullstack com experiência em projetos SaaS, frontend com React e Angular, backend com Node.js e Fastify, além de banco de dados PostgreSQL e MongoDB.",
-    url: "https://marcostenorio.me", //insert url after deploy
-    siteName: "Portfólio de Marcos Tenorio",
-    images: [
+const deploy = process.env.NEXT_PUBLIC_DEPLOY;
+export async function generateMetadata(): Promise<Metadata> {
+  const isQA = deploy?.toLowerCase() === "qa";
+
+  return {
+    title: isQA
+      ? "Marcos Tenorio | QA Engineer"
+      : "Marcos Tenorio | Fullstack Developer",
+
+    description: isQA
+      ? "Portfólio de Marcos Tenorio, QA Engineer com foco em qualidade de software, testes funcionais, testes automatizados, garantia da qualidade, boas práticas de QA e melhoria contínua de processos."
+      : "Portfólio de Marcos Tenorio, desenvolvedor fullstack com experiência em React, Next.js, Node.js, Fastify, Angular e tecnologias modernas.",
+
+    keywords: isQA
+      ? [
+          "Marcos Tenorio",
+          "QA Engineer",
+          "Quality Assurance",
+          "Testes de Software",
+          "Testes Automatizados",
+          "Testes Manuais",
+          "Software Quality",
+          "Web Automation",
+          "Mobile Automation",
+          "CI/CD",
+        ]
+      : [
+          "Marcos Tenorio",
+          "Desenvolvedor Fullstack",
+          "React",
+          "Next.js",
+          "Node.js",
+          "Fastify",
+          "Angular",
+          "PostgreSQL",
+          "Tailwind CSS",
+        ],
+
+    authors: [
       {
-        url: "https://avatars.githubusercontent.com/u/107797969?v=4",
-        width: 1200,
-        height: 630,
-        alt: "Pré-visualização do Portfólio de Marcos Tenorio",
+        name: "Marcos Tenorio",
+        url: "https://github.com/marcostenoriodev",
       },
     ],
-    locale: "pt_BR",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Marcos Tenorio | Fullstack Developer",
-    description:
-      "Desenvolvedor fullstack com experiência em projetos SaaS, React, Next.js, Node.js, Fastify, PostgreSQL, Tailwind CSS e muito mais.",
-    images: ["https://avatars.githubusercontent.com/u/107797969?v=4"],
-  },
-}; 
+
+    openGraph: {
+      title: isQA
+        ? "Marcos Tenorio | QA Engineer"
+        : "Marcos Tenorio | Fullstack Developer",
+      description: isQA
+        ? "QA Engineer focado em qualidade de software, testes e confiabilidade de sistemas."
+        : "Desenvolvedor fullstack com experiência em projetos SaaS e APIs robustas.",
+      url: "https://marcostenorio.me",
+      siteName: "Portfólio de Marcos Tenorio",
+      images: [
+        {
+          url: "https://avatars.githubusercontent.com/u/107797969?v=4",
+          width: 1200,
+          height: 630,
+          alt: "Pré-visualização do Portfólio de Marcos Tenorio",
+        },
+      ],
+      locale: "pt_BR",
+      type: "website",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: isQA
+        ? "Marcos Tenorio | QA Engineer"
+        : "Marcos Tenorio | Fullstack Developer",
+      description: isQA
+        ? "QA Engineer com foco em testes, qualidade e confiabilidade de software."
+        : "Desenvolvedor fullstack com experiência em React, Next.js e Node.js.",
+      images: ["https://avatars.githubusercontent.com/u/107797969?v=4"],
+    },
+  };
+}
+
 
 export default async function RootLayout({
   children,
