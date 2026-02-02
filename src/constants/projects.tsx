@@ -741,7 +741,7 @@ const allProjectsQA: Project[] = [
     ],
     "images": [
       {
-        src: "/images/projects/bugflow/bugflow-etapas.png",
+        src: "/images/projects/bugflow/bugflow-etapas.webp",
         alt: "Etapas do processamento do BugFlow Multi Agents",
         label: {
           pt: "Etapas do processamento",
@@ -749,7 +749,7 @@ const allProjectsQA: Project[] = [
         },
       },
       {
-        src: "/images/projects/bugflow/bugflow-processamento.png",
+        src: "/images/projects/bugflow/bugflow-processamento.webp",
         alt: "Processamento de bugs do BugFlow Multi Agents",
         label: {
           pt: "Processamento de bugs",
@@ -757,7 +757,7 @@ const allProjectsQA: Project[] = [
         },
       },
       {
-        src: "/images/projects/bugflow/bugflow-resolucao.png",
+        src: "/images/projects/bugflow/bugflow-resolucao.webp",
         alt: "Resolução de bugs do BugFlow Multi Agents",
         label: {
           pt: "Criação de diagrama para resolução de bugs",
@@ -765,7 +765,7 @@ const allProjectsQA: Project[] = [
         },
       },
       {
-        src: "/images/projects/bugflow/bugflow-chat.png",
+        src: "/images/projects/bugflow/bugflow-chat.webp",
         alt: "Interface de chat do BugFlow Multi Agents",
         label: {
           pt: "Interface de chat com busca semântica",
@@ -773,7 +773,7 @@ const allProjectsQA: Project[] = [
         },
       },
       {
-        src: "/images/projects/bugflow/bugflow-terminal.png",
+        src: "/images/projects/bugflow/bugflow-terminal.webp",
         alt: "Agentes de IA do BugFlow Multi Agents",
         label: {
           pt: "Agentes de IA",
@@ -832,7 +832,7 @@ export const projectPreview = {
   qa: [
     {
       name: "BugFlow AI",
-      previewImage: "",
+      previewImage: "/images/projects/bugflow/bugflow-processamento.webp",
       description: {
         pt: "/// Sistema inteligente de triagem de bugs e incidentes que utiliza múltiplos agentes de IA especializados trabalhando em conjunto para automatizar o processamento de change requests.",
         en: "/// Intelligent bug and incident triage system that uses multiple specialized AI agents working together to automate the processing of technical issues in software development.",
