@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 
 interface TechItem {
   label: string;
-  image: string | any; // StaticImageData do Next.js ou string
+  image: string;
   alt: string;
 }
 
