@@ -1,4 +1,4 @@
-import { BookIcon, CloudOff, LinkIcon, MessageSquareIcon, type LucideIcon } from "lucide-react";
+import { CloudOff, LinkIcon, type LucideIcon } from "lucide-react";
 import techIcons from "./techs";
 
 
