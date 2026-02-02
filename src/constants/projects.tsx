@@ -708,7 +708,7 @@ const allProjectsQA: Project[] = [
       "en": "Intelligent bug and incident triage system that uses multiple specialized AI agents working together to automate the processing of technical issues in software development."
     },
     "description": {
-      "pt": "BugFlow Multi-Agents é um no qual desenvolvi um sistema inteligente para automação da triagem e análise de bugs, com foco em qualidade, padronização e escalabilidade. A solução utiliza IA generativa, arquitetura multi-agente e um mecanismo de RAG (Retrieval-Augmented Generation) para transformar bugs brutos em informações estruturadas, realizando automaticamente a classificação de componente (Frontend, Backend, Database, DevOps, Security, Integration, UI/UX, Infrastructure) e severidade (Crítico, Grave, Menor), análise técnica com identificação de possíveis causas raiz, atribuição de responsável e geração de documentação completa, além de permitir busca semântica contextual por bugs similares já registrados.",
+      "pt": "BugFlow Multi-Agents é projeto um no qual desenvolvi um sistema inteligente para automação da triagem e análise de bugs, com foco em qualidade, padronização e escalabilidade. A solução utiliza IA generativa, arquitetura multi-agente e um mecanismo de RAG (Retrieval-Augmented Generation) para transformar bugs brutos em informações estruturadas, realizando automaticamente a classificação de componente (Frontend, Backend, Database, DevOps, Security, Integration, UI/UX, Infrastructure) e severidade (Crítico, Grave, Menor), análise técnica com identificação de possíveis causas raiz, atribuição de responsável e geração de documentação completa, além de permitir busca semântica contextual por bugs similares já registrados.",
       "en": "BugFlow Multi-Agents is a self-developed project in which I developed an intelligent system for automating bug triage and analysis, focusing on quality, standardization, and scalability. The solution leverages generative AI, a multi-agent architecture, and a Retrieval-Augmented Generation (RAG) mechanism to transform raw bug reports into structured information, automatically classifying issues by component (Frontend, Backend, Database, DevOps, Security, Integration, UI/UX, Infrastructure) and severity (Critical, Serious, Minor), performing technical analysis with identification of potential root causes, assigning ownership, generating complete documentation, and enabling contextual semantic search for previously registered similar bugs."
     },
     "url": "",
@@ -731,12 +731,55 @@ const allProjectsQA: Project[] = [
           {
             "label": "LangChain",
             "image": techIcons.LangChain
-          }
+          },
+        {
+          "label": "Python",
+          "image": techIcons.Python
+        }
         ]
       },
     ],
     "images": [
-
+      {
+        src: "/images/projects/bugflow/bugflow-etapas.png",
+        alt: "Etapas do processamento do BugFlow Multi Agents",
+        label: {
+          pt: "Etapas do processamento",
+          en: "Processing steps",
+        },
+      },
+      {
+        src: "/images/projects/bugflow/bugflow-processamento.png",
+        alt: "Processamento de bugs do BugFlow Multi Agents",
+        label: {
+          pt: "Processamento de bugs",
+          en: "Bug processing",
+        },
+      },
+      {
+        src: "/images/projects/bugflow/bugflow-resolucao.png",
+        alt: "Resolução de bugs do BugFlow Multi Agents",
+        label: {
+          pt: "Criação de diagrama para resolução de bugs",
+          en: "Creation of diagram for bug resolution",
+        },
+      },
+      {
+        src: "/images/projects/bugflow/bugflow-chat.png",
+        alt: "Interface de chat do BugFlow Multi Agents",
+        label: {
+          pt: "Interface de chat com busca semântica",
+          en: "Chat interface with semantic search",
+        },
+      },
+      {
+        src: "/images/projects/bugflow/bugflow-terminal.png",
+        alt: "Agentes de IA do BugFlow Multi Agents",
+        label: {
+          pt: "Agentes de IA",
+          en: "AI agents",
+        },
+      },
     ]
   }
 
