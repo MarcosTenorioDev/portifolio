@@ -101,27 +101,32 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
 
   // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale)) {
+  if (!routing.locales.includes(locale as Locale)) {
     notFound();
   }
 
+  const validLocale = locale as Locale;
+
   // Providing all messages to the client
   // side is the easiest way to get started
-  const messages = await getMessages({locale});
+  const messages = await getMessages({locale: validLocale});
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={validLocale} suppressHydrationWarning>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <body className={`${robotoMono.variable} ${spaceGrotesk.variable} antialiased bg-background`}>
         <ThemeProvider
