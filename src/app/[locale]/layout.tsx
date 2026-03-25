@@ -63,7 +63,7 @@ export async function generateMetadata(): Promise<Metadata> {
     authors: [
       {
         name: "Marcos Tenorio",
-        url: "https://github.com/marcostenoriodev",
+        url: "https://github.com/marcosvtenorio",
       },
     ],
 

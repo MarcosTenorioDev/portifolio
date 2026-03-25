@@ -39,12 +39,12 @@ const ProfileCard = () => {
             <SocialMediaButton
               icon={Github}
               label="Github"
-              href="https://github.com/MarcosTenorioDev"
+              href="https://github.com/marcosvtenorio"
             />
             <SocialMediaButton
               icon={Linkedin}
               label="Linkedin"
-              href="https://www.linkedin.com/in/marcostenoriodev/"
+              href="https://www.linkedin.com/in/marcosvtenorio/"
             />
             <SocialMediaButton
               icon={Mail}

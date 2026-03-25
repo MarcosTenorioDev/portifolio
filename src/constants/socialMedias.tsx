@@ -1,7 +1,7 @@
 const allSocialMedias = [
   {
     ariaLabel: "Acesse meu perfil no GitHub",
-    href: "https://github.com/MarcosTenorioDev",
+    href: "https://github.com/marcosvtenorio",
     label: "Github",
     title: "Acesse meu perfil no GitHub",
   },

@@ -12,7 +12,7 @@ const Footer = () => {
             {" "}
             <p className="font-normal font-roboto text-sm md:text-md">&copy; {t("Footer.by")}</p>
             <Link
-              href={"https://github.com/MarcosTenorioDev"}
+              href={"https://github.com/marcosvtenorio"}
               className=""
               target="_blank"
               rel="noopener noreferrer"

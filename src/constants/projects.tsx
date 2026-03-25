@@ -55,7 +55,7 @@ const allProjects: Project[] = [
           en: "Front-End Repository",
         },
         icon: LinkIcon,
-        url: "https://github.com/MarcosTenorioDev/Site-de-eventos-frontend",
+        url: "https://github.com/marcosvtenorio/Site-de-eventos-frontend",
       },
       {
         label: {
@@ -63,7 +63,7 @@ const allProjects: Project[] = [
           en: "Back-End Repository",
         },
         icon: LinkIcon,
-        url: "https://github.com/MarcosTenorioDev/obon-backend",
+        url: "https://github.com/marcosvtenorio/obon-backend",
       },
       {
         label: {
@@ -258,7 +258,7 @@ const allProjects: Project[] = [
           en: "Front-End Repository",
         },
         icon: LinkIcon,
-        url: "https://github.com/MarcosTenorioDev/mestresonline",
+        url: "https://github.com/marcosvtenorio/mestresonline",
       },
       {
         label: {
@@ -266,7 +266,7 @@ const allProjects: Project[] = [
           en: "Back-End Repository",
         },
         icon: LinkIcon,
-        url: "https://github.com/MarcosTenorioDev/mestres-online-backend",
+        url: "https://github.com/marcosvtenorio/mestres-online-backend",
       },
       {
         label: {
@@ -433,7 +433,7 @@ const allProjects: Project[] = [
           en: "Front-End Repository",
         },
         icon: LinkIcon,
-        url: "https://github.com/MarcosTenorioDev/Content.AI",
+        url: "https://github.com/marcosvtenorio/Content.AI",
       },
       {
         label: {
@@ -441,7 +441,7 @@ const allProjects: Project[] = [
           en: "Back-End Repository",
         },
         icon: LinkIcon,
-        url: "https://github.com/MarcosTenorioDev/Content.AI-Backend",
+        url: "https://github.com/marcosvtenorio/Content.AI-Backend",
       },
       {
         label: {
@@ -544,7 +544,7 @@ const allProjects: Project[] = [
           en: "Front-End Repository",
         },
         icon: LinkIcon,
-        url: "https://github.com/MarcosTenorioDev/nutri",
+        url: "https://github.com/marcosvtenorio/nutri",
       },
       {
         label: {
@@ -552,7 +552,7 @@ const allProjects: Project[] = [
           en: "Back-End Repository",
         },
         icon: LinkIcon,
-        url: "https://github.com/MarcosTenorioDev/nutri-backend",
+        url: "https://github.com/marcosvtenorio/nutri-backend",
       },
       {
         label: {
